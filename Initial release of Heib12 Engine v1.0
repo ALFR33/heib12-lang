@@ -1,0 +1,87 @@
+/**
+ * 💎 HEIB12 PROGRAMMING LANGUAGE CORE - OFFICIAL ENGINE
+ * ------------------------------------------------------
+ * Developed by: Salh Alheib Klel
+ * Version: 1.0.0 "FXB Ultra" (2026)
+ * Blog: https://heib12.com
+ * Official Contact: aalhee34@gmail.com
+ * ------------------------------------------------------
+ * This engine handles direct video processing, automated 
+ * notifications, and secure PayPal monetization.
+ */
+
+const Heib12 = {
+    // 1. بيانات النظام الأساسية (الأمانة العلمية والملكية)
+    metadata: {
+        creator: "Salh Alheib Klel",
+        year: 2026,
+        license: "Proprietary - Salh Alheib Official",
+        admin_email: "aalhee34@gmail.com",
+        supported_platforms: ["TikTok", "YouTube", "Instagram"]
+    },
+
+    // 2. تشغيل المحرك الرئيسي
+    init: function() {
+        console.log("%c HEIB12 ENGINE STARTED ", "background: #d4af37; color: #000; font-weight: bold;");
+        this.updateSystemTime();
+    },
+
+    // 3. نظام الإشعارات الفوري (يرسل لإيميل صالح)
+    notifyAdmin: function(userAction, videoUrl) {
+        const notifyEndPoint = "https://formsubmit.co/aalhee34@gmail.com";
+        fetch(notifyEndPoint, {
+            method: "POST",
+            body: new URLSearchParams({
+                "Subject": "Heib12 System Alert",
+                "Action": userAction,
+                "Link": videoUrl,
+                "Time": new Date().toLocaleString()
+            }),
+            mode: 'no-cors'
+        });
+    },
+
+    // 4. منطق معالجة الفيديو (التحميل المباشر)
+    processVideo: function(url) {
+        if (!url || !url.includes('http')) {
+            return { status: "error", message: "Invalid URL provided to Heib12 Engine." };
+        }
+        
+        // إرسال إشعار لصالح عند كل محاولة استخراج
+        this.notifyAdmin("New Download Attempt", url);
+
+        // توليد الرابط المباشر
+        const encodedUrl = encodeURIComponent(url);
+        return {
+            status: "success",
+            mp4_link: `https://en.savefrom.net/1-youtube-video-downloader-360/?url=${encodedUrl}`,
+            mp3_link: `https://www.y2mate.com/search/${encodedUrl}`
+        };
+    },
+
+    // 5. بوابة الدفع الاحترافية (3 دولار / 45 يوم)
+    activatePremium: function() {
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${this.metadata.admin_email}&item_name=Salh%20Ultra%20Premium%20Plan&amount=3.00&currency_code=USD`;
+        window.open(paypalUrl, "_blank");
+    },
+
+    // 6. الساعة الرقمية لعام 2026 (للعرض في الواجهة)
+    updateSystemTime: function() {
+        setInterval(() => {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            // يمكن ربطها بعنصر HTML لاحقاً
+            return timeString;
+        }, 1000);
+    }
+};
+
+// جعل المحرك متاحاً عالمياً للمبرمجين
+if (typeof window !== 'undefined') {
+    window.Heib12 = Heib12;
+    Heib12.init();
+}
+
+if (typeof module !== 'undefined') {
+    module.exports = Heib12;
+}
