@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heib12 Language Core | صالح الهيب</title>
+</head>
+<body style="background-color: #0d1117; color: #c9d1d9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 40px; line-height: 1.6;">
+
+    <h1 style="color: #58a6ff; font-size: 2.5rem; margin-bottom: 10px;">Heib12 Programming Language 🚀</h1>
+    <p style="font-size: 1.2rem; color: #8b949e;">أول لغة برمجة هجينة مستقلة (عربية-إنجليزية) للذكاء المالي والسيو</p>
+
+    <div style="background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 30px; display: inline-block; text-align: left; margin-top: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); min-width: 320px;">
+        <div style="margin-bottom: 15px;">
+            <code style="color: #7ee787; font-size: 1.1rem;">// تعريف قائد النظام</code><br>
+            <code style="color: #79c0ff; font-size: 1.1rem;">user => "Salh Alheib"</code>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <code style="color: #7ee787; font-size: 1.1rem;">// تحديد الهدف المالي</code><br>
+            <code style="color: #79c0ff; font-size: 1.1rem;">target => 4000</code>
+        </div>
+
+        <div>
+            <code style="color: #d2a8ff; font-size: 1.1rem;">out: "Heib12 Engine Initialized for " + user</code><br>
+            <code style="color: #d2a8ff; font-size: 1.1rem;">verify? target >= 3000 -> out: "Elite Strategy Mode"</code>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; color: #484f58; font-size: 0.9rem;">
+        <p>© 2026 Heib12 Core Team | Created by Salh Alheib</p>
+    </footer>
+
+</body>
+</html>
+
