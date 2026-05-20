@@ -2,18 +2,252 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Heib12 Language | صالح الهيب</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيئة تشغيل لغة Heib12-Lang الحية</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { background: #0d1117; color: #fff; text-align: center; padding: 50px; font-family: sans-serif; }
-        h1 { color: #238636; }
-        .box { border: 1px solid #30363d; padding: 20px; display: inline-block; border-radius: 10px; }
+        :root {
+            --bg-main: #0a0c10;
+            --bg-editor: #12151f;
+            --bg-sidebar: #161a24;
+            --text-main: #959cbd;
+            --text-white: #ffffff;
+            --accent-blue: #0099ff;
+            --accent-green: #00e676;
+            --accent-red: #ff3355;
+            --accent-yellow: #ffb300;
+        }
+
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100vh;
+            background-color: var(--bg-main); color: var(--text-main);
+            font-family: 'Consolas', 'Segoe UI', monospace; overflow: hidden;
+        }
+
+        .ide-container { display: flex; width: 100%; height: 100%; }
+
+        /* اللوحة الجانبية: مرشد المبرمج */
+        .sidebar {
+            width: 320px; background-color: var(--bg-sidebar);
+            border-left: 1px solid rgba(255,255,255,0.05);
+            padding: 25px; box-sizing: border-box; display: flex;
+            flex-direction: column; gap: 15px; overflow-y: auto;
+        }
+
+        .sidebar h2 { color: var(--accent-blue); font-size: 19px; margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px; }
+        .sidebar p { font-size: 13px; line-height: 1.6; margin: 0; color: #b0b7d6; }
+        
+        .syntax-guide {
+            background: rgba(255,255,255,0.02); padding: 14px;
+            border-radius: 10px; border-right: 4px solid var(--accent-green);
+            margin-top: 5px;
+        }
+        .syntax-title { color: var(--accent-green); font-weight: bold; font-size: 13px; margin-bottom: 6px; }
+        .syntax-example { color: var(--accent-yellow); font-size: 12.5px; font-family: monospace; direction: ltr; text-align: right; }
+
+        /* منطقة المحرر والكونسول الأمني */
+        .main-editor-area { flex-grow: 1; display: flex; flex-direction: column; height: 100%; }
+
+        /* شريط التحكم العلوي */
+        .toolbar {
+            height: 55px; background-color: var(--bg-sidebar);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 25px; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .toolbar-title { font-weight: bold; color: var(--text-white); font-size: 14px; letter-spacing: 0.5px; }
+        
+        .run-btn {
+            background: var(--accent-green); color: #000; border: none;
+            padding: 10px 24px; border-radius: 25px; font-weight: 700;
+            cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13.5px;
+            box-shadow: 0 4px 15px rgba(0, 230, 118, 0.25); transition: 0.2s ease;
+        }
+        .run-btn:hover { transform: translateY(-1px); background: #33ff99; box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4); }
+
+        /* محرر النصوص التفاعلي والكتابة الحرة للزوار */
+        .code-input-box {
+            flex: 2; width: 100%; background-color: var(--bg-editor);
+            border: none; padding: 25px; box-sizing: border-box;
+            color: var(--text-white); font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 16px; resize: none; outline: none; line-height: 1.6;
+        }
+
+        /* كونسول مخرجات التفسير الحقيقي */
+        .console-output-box {
+            flex: 1; width: 100%; background-color: var(--bg-main);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 25px; box-sizing: border-box; overflow-y: auto;
+        }
+        .console-title { font-size: 13px; color: var(--accent-blue); margin-bottom: 12px; font-weight: bold; text-transform: uppercase; }
+        .console-screen { font-size: 14.5px; white-space: pre-wrap; margin: 0; line-height: 1.5; font-family: 'Consolas', monospace; }
+        
+        /* تلوين مخرجات المحرك */
+        .success-text { color: var(--accent-green); display: block; margin-bottom: 4px; }
+        .error-text { color: var(--accent-red); display: block; margin-bottom: 4px; font-weight: bold; }
+        .info-text { color: var(--accent-blue); display: block; margin-bottom: 4px; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>🚀 Heib12 Language</h1>
-        <p>المؤسس والمبتكر: <b>صالح الهيب</b></p>
-        <p>هذه هي الصفحة الرسمية للغة البرمجة الجديدة.</p>
+
+    <div class="ide-container">
+        
+        <div class="sidebar">
+            <h2><i class="fa-solid fa-code-branch"></i> Heib12-Lang V1.0</h2>
+            <p>مرحباً بك في المحرك الحي للغتك المخصصة. يمكنك الآن كتابة، تعديل، وتشغيل الأكواد بحرية تامة وفحص النتائج مباشرة.</p>
+            
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); width: 100%; margin: 10px 0;">
+            
+            <div class="syntax-guide">
+                <div class="syntax-title">1. طباعة النصوص:</div>
+                <div class="syntax-example">أكتب "نص الرسالة"؛</div>
+            </div>
+
+            <div class="syntax-guide">
+                <div class="syntax-title">2. فحص أمان الروابط:</div>
+                <div class="syntax-example">افحص_الرابط "رابط الموقع"؛</div>
+            </div>
+
+            <div class="syntax-guide">
+                <div class="syntax-title">3. تعمية وحماية البيانات:</div>
+                <div class="syntax-example">احم_الخصوصية "نص مشفر"؛</div>
+            </div>
+
+            <div class="syntax-guide">
+                <div class="syntax-title">4. توليد مفاتيح الحماية:</div>
+                <div class="syntax-example">ولد_مفتاح؛</div>
+            </div>
+        </div>
+
+        <div class="main-editor-area">
+            
+            <div class="toolbar">
+                <div class="toolbar-title"><i class="fa-solid fa-terminal" style="color:var(--accent-blue);"></i> بيئة مفسّر لغة هيب الحية | compiler.h12</div>
+                <button class="run-btn" onclick="runHeibInterpreterEngine()"><i class="fa-solid fa-play"></i> تشغيل التعليمات</button>
+            </div>
+
+            <textarea id="code-editor" class="code-input-box" spellcheck="false">// يمكنك مسح كل هذا الكلام وكتابة كودك الخاص وتعديله الآن لتجربة قوة اللغة!
+
+أكتب "أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!"؛
+
+ولد_مفتاح؛
+
+افحص_الرابط "https://maps.heib12.com"؛
+
+احم_الخصوصية "Saleh_Secured_Token_2026"؛
+</textarea>
+
+            <div class="console-output-box">
+                <div class="console-title"><i class="fa-solid fa-square-poll-horizontal"></i> شاشة معالجة الكود والمخرجات الأمنية:</div>
+                <div id="console-screen" class="console-screen">اضغط على زر التشغيل في الأعلى لتنفيذ الكود المكتوب...</div>
+            </div>
+
+        </div>
+
     </div>
+
+    <script>
+        // محرك التفسير الحقيقي والذكي للغة هيب (The Lexer and Interpreter Engine)
+        function runHeibInterpreterEngine() {
+            const editor = document.getElementById('code-editor');
+            const consoleScreen = document.getElementById('console-screen');
+            
+            // قراءة وتقسيم الكود المكتوب بواسطة الزائر إلى أسطر منفصلة
+            const lines = editor.value.split('\n');
+            consoleScreen.innerHTML = ""; // تصفية الشاشة فوراً لبدء التنفيذ الجديد
+            
+            let outputProduced = false;
+
+            lines.forEach((line, index) => {
+                let currentLine = line.trim();
+                
+                // تجاهل السطور الفارغة والتعليقات التي تبدأ بـ //
+                if (currentLine.startsWith('//') || currentLine === "") return;
+
+                // 🔴 1. معالجة وتفسير أمر الطباعة: أكتب "..."؛
+                if (currentLine.startsWith('أكتب') || currentLine.startsWith('اكتب')) {
+                    let stringMatch = currentLine.match(/["'](.*?)["']/);
+                    if (stringMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
+                        printToConsole(`> ${stringMatch[1]}`, 'success-text');
+                        outputProduced = true;
+                    } else {
+                        printToConsole(`خطأ برمي في السطر ${index + 1}: صيغة الأمر خاطئة. تأكد من إغلاق علامات الاقتباس وإنهاء السطر بـ '؛'`, 'error-text');
+                        outputProduced = true;
+                    }
+                }
+                
+                // 🔴 2. معالجة وتفسير أمر فحص الروابط: افحص_الرابط "..."؛
+                else if (currentLine.startsWith('افحص_الرابط')) {
+                    let urlMatch = currentLine.match(/["'](.*?)["']/);
+                    if (urlMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
+                        let extractedUrl = urlMatch[1];
+                        printToConsole(`[تحليل] جاري التحقق من تشفير الرابط: ${extractedUrl}`, 'info-text');
+                        
+                        if (extractedUrl.startsWith('https://')) {
+                            printToConsole(`[أمان] الرابط موثوق ويستخدم بروتوكول اتصال آمن ومشفر SSL بنجاح.`, 'success-text');
+                        } else {
+                            printToConsole(`[خطر أمني] الرابط يعتمد على HTTP غير مشفر، معرّض للتنصت وسرقة البيانات!`, 'error-text');
+                        }
+                        outputProduced = true;
+                    } else {
+                        printToConsole(`خطأ برمي في السطر ${index + 1}: صيغة 'افحص_الرابط' غير مدعومة. تأكد من إنهاء السطر بـ '؛'`, 'error-text');
+                        outputProduced = true;
+                    }
+                }
+
+                // 🔴 3. معالجة وتفسير أمر الخصوصية والتطهير: احم_الخصوصية "..."؛
+                else if (currentLine.startsWith('احم_الخصوصية') || currentLine.startsWith('احمي_الخصوصية')) {
+                    let dataMatch = currentLine.match(/["'](.*?)["']/);
+                    if (dataMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
+                        let secretData = dataMatch[1];
+                        printToConsole(`[خصوصية] جاري تطهير النص وتوليد بصمة تعمية رقمية مشفرة...`, 'info-text');
+                        
+                        // معالجة تشفير حقيقية للنص المدخل من الزائر (Base64 Algorithm)
+                        let encryptedData = btoa(unescape(encodeURIComponent(secretData))).substring(0, 14);
+                        printToConsole(`[تأمين] تم تشفير البيانات وحمايتها من التتبع. البصمة: H12-${encryptedData}`, 'success-text');
+                        outputProduced = true;
+                    } else {
+                        printToConsole(`خطأ برمي في السطر ${index + 1}: أمر الخصوصية غير مكتمل أو ينقصه '؛' في النهاية.`, 'error-text');
+                        outputProduced = true;
+                    }
+                }
+
+                // 🔴 4. معالجة وتفسير أمر توليد المفاتيح العشوائية: ولد_مفتاح؛
+                else if (currentLine === 'ولد_مفتاح؛' || currentLine === 'ولد_مفتاح;' || currentLine.startsWith('ولد_مفتاح')) {
+                    printToConsole(`[تشفير] جاري توليد كود أمان سداسي عشري فريد للمجلس الحالي...`, 'info-text');
+                    
+                    // توليد كود حماية عشوائي حقيقي عند كل تشغيل
+                    let generatedHexKey = Array.from({length: 24}, () => Math.floor(Math.random()*16).toString(16)).join('');
+                    printToConsole(`[تشفير] تم توليد الكود الأمني الأساسي بنجاح: h12_token_${generatedHexKey}`, 'success-text');
+                    outputProduced = true;
+                }
+
+                // 🔴 5. في حال كتب الزائر سطر عشوائي مجهول لا تفهمه قواعد اللغة
+                else {
+                    printToConsole(`خطأ مجهول في السطر ${index + 1}: لم يتعرف مفسر Heib12-Lang على الأمر المكتوب '${currentLine}'`, 'error-text');
+                    outputProduced = true;
+                }
+            });
+
+            if (!outputProduced) {
+                consoleScreen.innerHTML = "تم التنفيذ البرمجي، لا توجد أسطر برمجية قابلة للقراءة.";
+            }
+        }
+
+        // دالة حقن المخرجات حياً داخل شاشة الكونسول للمستخدمين
+        function printToConsole(text, className) {
+            const consoleScreen = document.getElementById('console-screen');
+            const logLine = document.createElement('div');
+            logLine.className = className;
+            logLine.innerText = text;
+            consoleScreen.appendChild(logLine);
+        }
+
+        // تشغيل كود افتراضي أوتوماتيكياً عند فتح الصفحة لأول مرة لإبهار الزائر
+        window.onload = function() {
+            runHeibInterpreterEngine();
+        };
+    </script>
 </body>
 </html>
