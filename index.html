@@ -1,322 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    
-
-<html dir="rtl" lang="ar">
-
-<head>
-
-    <meta charset="UTF-8"></meta>
-
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-
-    <title>منصة صحيح | المكتبة الشاملة</title>
-  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;700&display=swap');
-
-        
-
-        body { font-family: 'Tajawal', sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333; }
-
-        header { background: #065f46; color: white; padding: 25px; text-align: center; shadow: 0 4px 6px rgba(0,0,0,0.1); }
-
-        .search-box { margin: 20px auto; max-width: 500px; padding: 0 15px; }
-
-        #searchBar { width: 100%; padding: 12px; border-radius: 25px; border: 1px solid #ddd; outline: none; font-family: 'Tajawal'; }
-
-        
-
-        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
-
-        .tab-btn { background: #065f46; color: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-
-        .tab-btn:hover { background: #047857; }
-
-        .tab-btn.active { background: #059669; box-shadow: 0 0 10px rgba(5,150,105,0.4); }
-
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; max-width: 1000px; margin: 0 auto; padding: 20px; }
-
-        .card { background: white; padding: 20px; border-radius: 15px; border: 1px solid #e5e7eb; cursor: pointer; transition: 0.3s; text-align: center; }
-
-        .card:hover { transform: translateY(-5px); border-color: #065f46; }
-
-        .card strong { color: #065f46; display: block; font-size: 1.2em; margin-bottom: 5px; }
-
-        #display-screen { position: fixed; inset: 0; background: white; z-index: 1000; display: none; overflow-y: auto; padding: 20px; }
-
-        .close-btn { color: #dc2626; font-size: 30px; cursor: pointer; background: none; border: none; font-weight: bold; }
-
-        .quran-text { font-family: 'Amiri', serif; font-size: 24px; line-height: 2.2; text-align: center; max-width: 800px; margin: 30px auto; padding: 20px; background: #fdfdfd; border-radius: 10px; }
-
-        audio { width: 100%; max-width: 500px; margin: 20px auto; display: block; }
-
-        .hidden { display: none; }
-
-    </style>
-
-</head>
-
-<body>
-
-    <header>
-
-        <h1>منصة صحيح 📚</h1>
-
-        <p>القرآن الكريم، صحيح البخاري، وصحيح مسلم</p>
-      
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    </header>
-
-    <div class="search-box">
-
-        <input id="searchBar" onkeyup="filterContent()" placeholder="ابحث عن سورة أو حديث..." type="text" />
-
-    </div>
-
-    <div class="tabs">
-
-        <button class="tab-btn active" onclick="switchSection('quran')">القرآن الكريم</button>
-
-        <button class="tab-btn" onclick="switchSection('bukhari')">صحيح البخاري</button>
-
-        <button class="tab-btn" onclick="switchSection('muslim')">صحيح مسلم</button>
-
-    </div>
-
-    <div id="display-screen">
-
-        <div style="margin: 0 auto; max-width: 900px;">
-
-            <button class="close-btn" onclick="closeScreen()">×</button>
-
-            <h2 id="view-title" style="color: #065f46; text-align: center;"></h2>
-
-            <audio controls="" id="audioPlayer"></audio>
-
-            <div class="quran-text" id="view-text"></div>
-
-        </div>
-
-    </div>
-
-    <div class="grid-container" id="quran-grid">
-
-        <p style="grid-column: 1/-1; text-align: center;">جاري تحميل المصحف الشريف...</p>
-      
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
-<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    </div>
-
-    <div class="grid-container hidden" id="bukhari-grid">
-
-        <div class="card" onclick="fetchHadith('bukhari')" style="grid-column: 1/-1;">
-
-            <strong>صحيح البخاري</strong>
-
-            <span>اضغط لجلب حديث عشوائي</span>
-
-        </div>
-
-    </div>
-
-    <div class="grid-container hidden" id="muslim-grid">
-
-        <div class="card" onclick="fetchHadith('muslim')" style="grid-column: 1/-1;">
-
-            <strong>صحيح مسلم</strong>
-
-            <span>اضغط لجلب حديث عشوائي</span>
-
-        </div>
-
-    </div>
-
-    <script>
-
-        let allSurahs = [];
-
-        // 1. جلب وترتيب الـ 114 سورة
-
-        async function loadQuran() {
-
-            try {
-
-                const res = await fetch('https://api.alquran.cloud/v1/surah');
-
-                const data = await res.json();
-
-                allSurahs = data.data;
-
-                renderQuran(allSurahs);
-
-            } catch (e) {
-
-                document.getElementById('quran-grid').innerHTML = "فشل التحميل، يرجى التحقق من الإنترنت.";
-
-            }
-
-        }
-
-        function renderQuran(list) {
-
-            const container = document.getElementById('quran-grid');
-
-            container.innerHTML = '';
-
-            list.forEach(s => {
-
-                const card = document.createElement('div');
-
-                card.className = 'card';
-
-                card.innerHTML = `<strong>${s.number}</strong> ${s.name}`;
-
-                card.onclick = () => openSurah(s.number, s.name);
-
-                container.appendChild(card);
-
-            });
-
-        }
-
-        // 2. البحث والتصفية
-
-        function filterContent() {
-
-            const term = document.getElementById('searchBar').value.toLowerCase();
-
-            const filtered = allSurahs.filter(s => s.name.includes(term) || s.number.toString().includes(term));
-
-            renderQuran(filtered);
-
-        }
-
-        // 3. فتح السورة (صوت + نص)
-
-        async function openSurah(id, name) {
-
-            const screen = document.getElementById('display-screen');
-
-            const textBody = document.getElementById('view-text');
-
-            const player = document.getElementById('audioPlayer');
-
-            
-
-            screen.style.display = 'block';
-
-            document.getElementById('view-title').innerText = "سورة " + name;
-
-            textBody.innerText = "جاري تحميل الآيات...";
-
-            player.src = `https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/${id}.mp3`;
-
-            player.play();
-
-            const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
-
-            const data = await res.json();
-
-            textBody.innerText = data.data.ayahs.map(a => a.text + ` ﴿${a.numberInSurah}﴾`).join(' ');
-
-        }
-
-        // 4. جلب الأحاديث
-
-        async function fetchHadith(book) {
-
-            const screen = document.getElementById('display-screen');
-
-            const textBody = document.getElementById('view-text');
-
-            const player = document.getElementById('audioPlayer');
-
-            screen.style.display = 'block';
-
-            player.style.display = 'none';
-
-            document.getElementById('view-title').innerText = (book === 'bukhari' ? "صحيح البخاري" : "صحيح مسلم");
-
-            textBody.innerText = "جاري جلب الحديث...";
-
-            try {
-
-                const res = await fetch(`https://api.hadith.gading.dev/books/${book}?range=1-50`);
-
-                const data = await res.json();
-
-                const random = data.data.hadiths[Math.floor(Math.random() * data.data.hadiths.length)];
-
-                textBody.innerText = random.arab;
-
-            } catch (e) { textBody.innerText = "فشل في جلب الحديث حالياً."; }
-
-        }
-
-        // 5. التحكم بالتبويبات
-
-        function switchSection(sec) {
-
-            document.querySelectorAll('.grid-container').forEach(g => g.classList.add('hidden'));
-
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-
-            document.getElementById(sec + '-grid').classList.remove('hidden');
-
-            event.currentTarget.classList.add('active');
-
-            if(sec === 'quran') document.querySelector('.search-box').classList.remove('hidden');
-
-            else document.querySelector('.search-box').classList.add('hidden');
-
-        }
-
-        function closeScreen() {
-
-            document.getElementById('display-screen').style.display = 'none';
-
-            const player = document.getElementById('audioPlayer');
-
-            player.pause();
-
-            player.style.display = 'block';
-
-        }
-
-        window.onload = loadQuran;
-
-    </script>
-
-</body>
-
-</html>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 333 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="4465083481"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
@@ -325,286 +9,181 @@
 </amp-auto-ads>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونة صحيح - المنصة الإسلامية والتقنية الشاملة</title>
-    <!-- استدعاء خطوط أنيقة ورصينة -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>مدونة صحيح | المنصة الإسلامية ومحرك لغة Heib12</title>
+    <!-- إعلانات أدسنس -->
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
     <style>
-        :root {
-            --primary-color: #1b4332;
-            --secondary-color: #2d6a4f;
-            --accent-color: #d4af37;
-            --bg-color: #f8f9fa;
-            --text-color: #212529;
-            --card-bg: #ffffff;
-            --transition: all 0.3s ease;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.8;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            font-family: 'Amiri', serif;
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-        }
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        nav {
-            background-color: #112d22;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        nav a:hover {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        h2 {
-            font-family: 'Amiri', serif;
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-        }
-        /* الأذكار المتحركة */
-        .athkar-ticker {
-            background: #e9f5ed;
-            border-right: 5px solid var(--primary-color);
-            padding: 1rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--secondary-color);
-            text-align: center;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            animation: fadeInOut 8s infinite;
-        }
-        @keyframes fadeInOut {
-            0% { opacity: 0.4; transform: translateY(5px); }
-            50% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0.4; transform: translateY(5px); }
-        }
-        /* الأدوات والمحولات والذكاء الاصطناعي */
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .tool-card {
-            background: #fdfbf7;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .tool-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: 'Cairo', sans-serif;
-        }
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-            width: 100%;
-            margin-top: 5px;
-        }
-        button:hover {
-            background-color: var(--secondary-color);
-        }
-        .result-box {
-            margin-top: 10px;
-            padding: 10px;
-            background: #fff;
-            border: 1px dashed var(--accent-color);
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;700&display=swap');
+        body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #065f46, #1e293b); color: white; padding: 25px; text-align: center; border-bottom: 2px solid #38bdf8; }
+        header h1 { font-family: 'Amiri', serif; font-size: 2.5rem; color: #d4af37; margin-bottom: 5px; }
+        nav { background: #1e293b; display: flex; justify-content: center; gap: 10px; padding: 12px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; flex-wrap: wrap; }
+        nav a { color: #38bdf8; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: bold; background: #0f172a; transition: 0.3s; }
+        nav a:hover { background: #38bdf8; color: #0f172a; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+        .section-box { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
+        h2 { color: #38bdf8; font-family: 'Amiri', serif; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
+        textarea, input[type="text"] { width: 100%; background: #090d16; color: #38bdf8; border: 1px solid #334155; padding: 12px; font-family: 'Tajawal', sans-serif; font-size: 15px; border-radius: 6px; box-sizing: border-box; margin-bottom: 10px; }
+        textarea { height: 160px; font-family: monospace; }
+        .output { background: #090d16; color: #4ade80; padding: 15px; border-radius: 6px; font-family: monospace; margin-top: 12px; min-height: 100px; border: 1px solid #334155; white-space: pre-line; }
+        .btn { background: #22c55e; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; transition: 0.3s; }
+        .btn:hover { background: #16a34a; }
+        .article-btn { background: #d4af37; color: #0f172a; font-size: 1.1rem; margin-bottom: 15px; }
+        .article-btn:hover { background: #b49428; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-top: 15px; }
+        .card { background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155; cursor: pointer; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: #38bdf8; transform: translateY(-3px); }
+        .card strong { color: #38bdf8; display: block; font-size: 1.1em; }
+        #display-screen, #article1-screen, #article2-screen, #article3-screen { position: fixed; inset: 0; background: #0f172a; z-index: 2000; display: none; overflow-y: auto; padding: 20px; }
+        .close-btn { color: #ef4444; font-size: 30px; cursor: pointer; background: none; border: none; font-weight: bold; float: left; }
+        .quran-text, .article-content { font-family: 'Amiri', serif; font-size: 20px; line-height: 2.2; background: #1e293b; padding: 25px; border-radius: 8px; margin-top: 15px; color: #f1f5f9; text-align: justify; }
+        .interaction-box { margin-top: 20px; background: #111827; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
+        .comments-list { margin-top: 15px; background: #090d16; padding: 10px; border-radius: 6px; max-height: 150px; overflow-y: auto; font-size: 0.95rem; }
+        .comment-item { border-bottom: 1px solid #1f2937; padding: 6px 0; color: #cbd5e1; }
+        footer { background: #1e293b; text-align: center; padding: 20px; margin-top: 30px; border-top: 1px solid #334155; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>مدونة صحيح</h1>
-        <p>منظومة معرفية تدمج بين هدى الوحيين والحلول التقنية المتقدمة</p>
+        <h1>مدونة صحيح 📚</h1>
+        <p>المنصة المعرفية الشاملة: الوحي الشريف ومحرك لغة البرمجة Heib12</p>
     </header>
 
     <nav>
-        <a href="#quran">القرآن الكريم والـ MP3</a>
-        <a href="#athkar">الأذكار المتحركة</a>
-        <a href="#hadith">الأحاديث الصحيحة</a>
-        <a href="#tools">الأدوات والمحولات</a>
-        <a href="#ai">مساعد الذكاء الاصطناعي</a>
-        <a href="#articles">مواضيع دينية</a>
+        <a href="#articles-section">المقالات الإسلامية</a>
+        <a href="#compiler">مفسر Heib12</a>
+        <a href="#quran">القرآن الكريم</a>
+        <a href="#hadith">الأحاديث النبوية</a>
     </nav>
 
     <div class="container">
 
-        <!-- قسم الأذكار المتحركة -->
-        <section id="athkar">
-            <h2>حصن المسلم - أذكار الصباح والمساء المتحركة</h2>
-            <div class="athkar-ticker" id="tickerText">سُبْحَانَ اللهِ وَبِحَمْدِهِ: عَادَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.</div>
-        </section>
+        <!-- قسم المقالات مع الأزرار -->
+        <div id="articles-section" class="section-box">
+            <h2>المقالات والفتاوى الشرعية</h2>
+            <p>اختر المقال لقراءته والتفاعل معه:</p>
+            <button class="btn article-btn" onclick="openArticle('article1-screen')">📖 حكم من يسب ويشتم القدر</button>
+            <button class="btn article-btn" onclick="openArticle('article2-screen')">📖 شروط قبول الدعاء</button>
+            <button class="btn article-btn" onclick="openArticle('article3-screen')">📖 فضل الاستغفار</button>
+        </div>
 
-        <!-- قسم القرآن الكريم وتلاوات MP3 (تمت إضافة جميع القراء والسور) -->
-        <section id="quran">
-            <h2>مكتبة القرآن الكريم وتلاوات الـ MP3</h2>
-            <p>استمع لأعذب التلاوات الخاشعة (من الفاتحة إلى النصر) بنخبة من كبار القراء:</p>
-            <div style="margin-top: 1rem;" class="tool-grid">
-                <div class="tool-card" style="grid-column: 1 / -1;">
-                    <h3>اختر القارئ والسورة</h3>
-                    <select id="reciterSelect" onchange="updateAudio()">
-                        <option value="https://server12.mp3quran.net/maher/">الشيخ ماهر المعيقلي</option>
-                        <option value="https://server7.mp3quran.net/basit/">الشيخ عبد الباسط عبد الصمد</option>
-                        <option value="https://server10.mp3quran.net/ajm/">الشيخ أحمد العجمي</option>
-                        <option value="https://server8.mp3quran.net/ayyub/">الشيخ محمد أيوب</option>
-                        <option value="https://server11.mp3quran.net/sds/">الشيخ عبد الرحمن السديس</option>
-                        <option value="https://server10.mp3quran.net/minsh/">الشيخ محمد صديق المنشاوي</option>
-                        <option value="https://server14.mp3quran.net/islam/">القارئ إسلام صبحي</option>
-                        <option value="https://server8.mp3quran.net/frs_a/">الشيخ فارس عباد</option>
-                    </select>
-                    <select id="surahSelect" onchange="updateAudio()">
-                        <!-- سيتم إدراج السور هنا برمجياً لعدم تكديس الكود -->
-                    </select>
-                    <audio id="quranAudio" controls style="width:100%; margin-top:15px;">
-                        <source src="https://server12.mp3quran.net/maher/001.mp3" type="audio/mpeg">
-                        متصفحك لا يدعم مشغل الصوت
-                    </audio>
-                </div>
+        <!-- قسم مفسر لغة Heib12 للسيارات والفضاء -->
+        <div id="compiler" class="section-box">
+            <h2>> مفسر لغة البرمجة Heib12-Lang</h2>
+            <p>برمج الأنظمة المتقدمة، السيارات، والطائرات بلغتك الصرفة:</p>
+            <textarea id="codeinput">
+// اختبار نظام السيارات والفضاء
+تشغيل النظام "Heib12_Core";
+اتصل_بالوحدة("ECU_Engine_V8");
+أطلق_المركبة("Heib_Spacecraft_X1");
+اضبط_السرعة 4000;
+            </textarea>
+            <button class="btn" onclick="runHeibCode()">تنفيذ الأوامر البرمجية</button>
+            <div id="output" class="output">[جاهز] مفسر لغة هيب في انتظار الأوامر...</div>
+        </div>
+
+        <!-- قسم القرآن الكريم -->
+        <div id="quran" class="section-box">
+            <h2>مكتبة القرآن الكريم</h2>
+            <p>اختر السورة للاستماع والقراءة:</p>
+            <div class="grid-container" id="quran-grid">
+                <p style="grid-column: 1/-1; text-align: center;">جاري تحميل السور...</p>
             </div>
-        </section>
+        </div>
 
-        <!-- قسم الأحاديث الصحيحة (البخاري ومسلم) -->
-        <section id="hadith">
+        <!-- قسم الأحاديث الصحيحة -->
+        <div id="hadith" class="section-box">
             <h2>من صحيح البخاري ومسلم</h2>
-            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
-                <p style="font-family: 'Amiri', serif; font-size: 1.3rem; margin-bottom: 0.5rem;">
+            <div style="background: #0f172a; padding: 15px; border-radius: 8px; border-left: 4px solid #d4af37;">
+                <p style="font-family: 'Amiri', serif; font-size: 1.2rem;">
                     عَنْ أَميرِ المُؤْمِنِينَ أَبي حَفْصٍ عُمَرَ بْنِ الخَطَّابِ رَضيَ اللهُ عنه قال: سَمِعْتُ رَسُولَ اللهِ ﷺ يقول: 
                     <strong>«إنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى...»</strong>
                 </p>
-                <p style="font-size: 0.9rem; color: #666; text-align: left;">[رواه البخاري ومسلم]</p>
+                <p style="font-size: 0.85rem; color: #94a3b8; text-align: left; margin-top: 5px;">[رواه البخاري ومسلم]</p>
             </div>
-        </section>
+        </div>
 
-        <!-- قسم الأدوات والمحولات (عملات، صور، MP3) -->
-        <section id="tools">
-            <h2>الأدوات والخدمات الرقمية الذكية</h2>
-            <div class="tool-grid">
-                <!-- محول العملات -->
-                <div class="tool-card">
-                    <h3>💱 محول العملات الفوري</h3>
-                    <input type="number" id="amount" placeholder="المبلغ" value="1">
-                    <select id="currency">
-                        <option value="3.65">دولار إلى شيكل (تقريبي)</option>
-                        <option value="3.75">دولار إلى ريال سعودي</option>
-                    </select>
-                    <button onclick="convertCurrency()">تحويل القيمة</button>
-                    <div class="result-box" id="currencyResult">الناتج: --</div>
-                </div>
+    </div>
 
-                <!-- محول الصور (WebP/PNG) -->
-                <div class="tool-card">
-                    <h3>🖼️ محول وضاغط الصور</h3>
-                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">تحويل وضغط الصور لتسريع المدونة</p>
-                    <input type="file" id="imageInput" accept="image/*">
-                    <button onclick="processImage()">ضغط وتحويل إلى WebP</button>
-                    <div class="result-box" id="imageResult">جاهز للرفع والمعالجة</div>
-                </div>
-
-                <!-- محول ومستخرج الصوتيات MP3 -->
-                <div class="tool-card">
-                    <h3>🎵 إعدادات ملفات MP3</h3>
-                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">إدارة تدفقات الصوت والمسارات الرقمية</p>
-                    <input type="file" id="audioInput" accept="audio/*">
-                    <button onclick="processAudio()">تحسين مسار الصوت</button>
-                    <div class="result-box" id="audioResult">الملف الصوتى جاهز</div>
-                </div>
+    <!-- نافذة المقال الأول -->
+    <div id="article1-screen">
+        <button class="close-btn" onclick="closeArticle('article1-screen')">×</button>
+        <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">حكم من يسب ويشتم القدر</h2>
+        <div class="article-content">
+            هذا الكلام مناف لكمال التوحيد، وكمال الإيمان بالقدر، فإن القدر لا يلهو، والزمن لا يعبث، وإن كل ما يجري في هذه الحياة هو بتقدير الله وعلمه، والله سبحانه هو الذي يصرف الليل والنهار، وهو الذي يقدر السعادة والشقاء، حسب ما تقتضيه حكمته وقد تخفى تلك الحكمة على الناس؛ لأن علمهم محدود، وعقولهم قاصرة عن إدراك تلك الحكمة الإلهية، وكل ما في الوجود مخلوق لله، خلقه بمشيئته وقدرته، وما شاء كان وما لم يشأ لم يكن، وهو الذي يعطي ويمنع، ويخفض ويرفع، ويعز ويذل، ويغني ويفقر، ويضل ويهدي، ويسعد ويشقي، ويولي الملك من يشاء، وينزعه ممن يشاء، وقد أحسن كل شيء خلقه، وكل أفعال الخالق وأوامره ونواهيه، لها حكمة بالغة وغايات محمودة، يشكر عليها سبحانه، وإن لم يعرفها البشر لقصور إدراكهم.<br><br>
+            وقد ورد في الصحيحين وغيرهما عن النبي ﷺ أنه قال (فيما يرويه عن ربه ): يؤذيني ابن آدم يسب الدهر وأنا الدهر بيدي الأمر أقلب الليل والنهار وفي رواية: لا تسبوا الدهر فإني أنا الدهر وفي رواية: لا يقل ابن آدم: يا خيبة الدهر فإني أنا الدهر أرسل الليل والنهار فإذا شئت قبضتهما وقد كان العرب في الجاهلية ينسبون إليه ما يصيبهم من المصائب والمكاره، فيقولون: أصابتهم قوارع الدهر، وأبادهم الدهر، فإذا أضافوا إلى الدهر ما نالهم من الشدائد، سبوا فاعلها فكان مرجع سبها إلى الله عز وجل، إذ هو الفاعل في الحقيقة للأمور التي يصفونها، فنهوا عن سب الدهر وقد نقل هذا التفسير للحديث بهذا المعنى عن الشافعي، وأبي عبيد، وابن جرير، والبغوي وغيرهم.<br><br>
+            وأما معنى قوله: أقلب الليل والنهار يعني أن ما يجري فيهما من خير وشر بإرادة الله وتدبيره وبعلم منه تعالى وحكمة، لا يشاركه في ذلك غيره، ما شاء كان وما لم يشأ لم يكن، فالواجب عند ذلك حمده في الحالتين، وحسن الظن به سبحانه وبحمده، والرجوع إليه بالتوبة والإنابة، قال تعالى: وَنَبْلُوكُمْ بِالشَّرِّ وَالْخَيْرِ فِتْنَةً وَإِلَيْنَا تُرْجَعُونَ [الأنبياء:35].<br><br>
+            وقد أورد الإمام المجدد محمد بن عبدالوهاب رحمه الله، بابا في كتاب التوحيد سماه: (باب من سب الدهر فقد آذى الله) أورد فيه هذا الحديث وبين أنه يشتمل على عدة مسائل: النهي عن سب الدهر، تسميته أذى لله، التأمل في قوله: فإن الله هو الدهر، وأنه قد يكون سابا ولو لم يقصده بقلبه.<br><br>
+            وعلى هذا فإن الكاتبة -سامحها الله- أخطأت عندما نسبت القسوة إلى الدهر في عنوان قصتها؛ لأن القدر -كما سبق- لا يتصرف، وإنما الله سبحانه هو المقدر للأشياء عن حكمة بالغة، والله جل وعلا لا يوصف بالقسوة، بل هو جل وعلا رحيم بعباده، وهو أرحم بهم من الوالدة بولدها، كما ورد في الحديث الصحيح الله أرحم بعباده من الوالدة بولدها فيجب أن ننزه أقلامنا عن الوقوع في مثل هذه المزالق، امتثالا لأمر الله وأمر رسوله، وإكمالاً للتوحيد، وابتعادًا عما ينافيه أو ينافي كماله، ووسائل الإعلام -كما هو معروف- واسعة الانتشار وعظيمة التأثير على الناس، وكثرة ترديدها لمثل هذه الكلمات ينشرها بين الناس، ويجعلهم يتساهلون في استعمالها، وخاصة النشء مع ما في استعمالها من المحذور.<br><br>
+            نسأل الله أن يهدينا إلى الصراط المستقيم، ويجنبنا زلات القلم واللسان، إنه سميع مجيب وصلى الله وسلم على نبينا محمد وعلى آله وصحبه[1].
+        </div>
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount1')">👍 إعجاب (<span id="likeCount1">14</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput1" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput1', 'commentsList1')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList1">
+                <div class="comment-item"><strong>أبو عبد الله:</strong> جزاكم الله خيراً على هذا التوضيح العظيم.</div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- قسم الذكاء الاصطناعي -->
-        <section id="ai">
-            <h2>🤖 مساعد الذكاء الاصطناعي الذكي</h2>
-            <p>اطرح سؤالك الشرعي أو التقني للحصول على إجابة فورية:</p>
-            <textarea id="aiPrompt" rows="3" placeholder="اكتب استفسارك هنا..."></textarea>
-            <button onclick="askAI()">إرسال للمساعد الذكي</button>
-            <div class="result-box" id="aiResponse" style="margin-top: 15px; min-height: 50px;">الإجابة ستظهر هنا...</div>
-        </section>
-
-        <!-- مواضيع دينية -->
-        <section id="articles">
-            <h2>مواضيع دينية هادفة</h2>
-            <div style="display: grid; gap: 1rem;">
-                <div style="background: #fdfbf7; padding: 1rem; border-radius: 6px; border: 1px solid #eee;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 0.3rem;">الأثر العظيم للاستغفار في تفريج الكرب وسداد الديون</h3>
-                    <p style="font-size: 0.95rem; color: #444;">كيف يفتح الاستغفار أبواب الرزق ويسهل الأمور المادية والنفسية بناءً على النصوص الصحيحة...</p>
-                </div>
+    <!-- نافذة المقال الثاني -->
+    <div id="article2-screen">
+        <button class="close-btn" onclick="closeArticle('article2-screen')">×</button>
+        <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">شروط قبول الدعاء</h2>
+        <div class="article-content">
+            من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ، والإيمان بأن الله هو الحق، ولا يقول إلا الحق، والإخلاص لله سبحانه، والمتابعة لرسوله ﷺ مع الإيمان بأن الرسول -عليه الصلاة والسلام- بلغ الحق، وهو الصادق فيما يقول، وأن يأتي بذلك عن إيمان وثقة بالله، ورغبة فيما عنده، وأنه سبحانه مدبر الأمور ومصرف الأشياء، وأنه القادر على كل شيء ، لا عن شك ولا عن سوء ظن، بل عن حسن ظن بالله وثقة به، وأنه متى تخلف المطلوب فلعلة من العلل المذكورة أو غيرها، فالعبد عليه أن يأتي بالأسباب، والله مسبب الأسباب، وهو الحكيم العليم.<br><br>
+            وقد يحصل الدواء ولكن لا يزول الداء لأسباب أخرى جهلها العبد، والله فيها حكيم سبحانه وتعالى، وهذا يشمل الدواء الحسي والمعنوي، الحسي الذي يقوم به الأطباء من أدوية وعمليات ونحو ذلك، والمعنوي الذي يحصل بالدعاء والقراءة ونحو ذلك من الأسباب الشرعية، ومع هذا كله قد يتخلف المطلوب لأسباب كثيرة، منها الغفلة عن الله سبحانه، ومنها المعاصي، ولاسيما أكل الحرام، وقد صح عن رسول الله ﷺ أنه قال: ما من عبد يدعو الله بدعوة ليس فيها إثم ولا قطيعة رحم إلا أعطاه الله بها إحدى ثلاث: إما أن تعجل له دعوته في الدنيا، وإما أن تدخر له في الآخرة، وإما أن يصرف عنه من الشر مثل ذلك، قالوا يا رسول الله، إذا نكثر قال: الله أكثر.<br><br>
+            وبذلك يعلم المؤمن والمؤمنة أن إجابته قد تؤجل إلى الآخرة لأسباب اقتضتها حكمة الله سبحانه، وقد يصرف عنه بأسباب الدعاء شر كثير بدلا من أن يعطى طلبه، والله  هو الحكيم العليم في أفعاله وأقواله وشرعه وقدره، كما قال عز وجل: إِنَّ رَبَّكَ عليم حَكِيمٌ [يوسف: 6], والله ولي التوفيق.
+        </div>
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount2')">👍 إعجاب (<span id="likeCount2">25</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput2" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput2', 'commentsList2')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList2">
+                <div class="comment-item"><strong>فاطمة:</strong> جزاكم الله خيراً، مقال نافع جداً.</div>
             </div>
-        </section>
+        </div>
+    </div>
 
+    <!-- نافذة المقال الثالث: فضل الاستغفار -->
+    <div id="article3-screen">
+        <button class="close-btn" onclick="closeArticle('article3-screen')">×</button>
+        <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">فضل الاستغفار</h2>
+        <div class="article-content">
+            إن الاستغفار ليس مجرد كلمات ترددها الألسن، بل هو عبادة جليلة وقربة عظيمة، افتقر إليها الأنبياء قبل الأمم. وفي مدونة "صحيح"، نسلط الضوء على هذه العبادة كما فصّلها علماء الأمة، لبيان أثرها في تفريج الكروب ونيل رضا علام الغيوب.<br><br>
+            <strong>أولاً: حقيقة الاستغفار (بفهم الشيخ ابن عثيمين)</strong><br>
+            يقول العلامة محمد بن صالح بن عثيمين رحمه الله: "الاستغفار هو طلب المغفرة، والمغفرة هي ستر الذنب والتجاوز عنه". فالمسلم حين يقول "أستغفر الله"، هو يطلب من الله شيئين: الستر (فلا يفتضح أمره بين الخلق) والتجاوز (فلا يعاقبه الله على هذا الذنب). وهذا يوضح أن الاستغفار وقاية من آثار الذنوب في الدنيا والآخرة.<br><br>
+            <strong>ثانياً: فضل الاستغفار (بفهم الشيخ ابن باز)</strong><br>
+            سُئل سماحة الشيخ عبد العزيز بن باز رحمه الله عن فضل الاستغفار، فأوضح أن الله عز وجل جعل الاستغفار وسيلة للأمان من العذاب، مستشهداً بقوله تعالى: "وَمَا كَانَ اللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ". وأكد الشيخ أن المداومة على الاستغفار من أعظم أسباب انشراح الصدر، تيسير الأرزاق، وتطهير الصحائف.<br><br>
+            <strong>ثالثاً: متى يكون الاستغفار مشروعاً؟</strong><br>
+            وفقاً لما قرره الشيخان، فإن الاستغفار مشروع في كل وقت، ولكنه يتأكد في مواضع محددة: بعد الطاعات، في الأسحار، بعد الوقوع في المعصية، وفي ختام المجالس (كفارة المجلس).<br><br>
+            <strong>رابعاً: هل الاستغفار يغير الواقع المادي؟</strong><br>
+            يرى العلماء أن الله سبحانه جعل الاستغفار سبباً للمتاع الحسن في الدنيا، لقوله تعالى: "وَأَنِ اسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ يُمَتِّعْكُم مَّتَاعًا حَسَنًا". ولكن الأمانة العلمية تقتضي القول بأن النتائج بيد الله وحده، والمسلم يستغفر تعبداً وامتثالاً.<br><br>
+            <strong>خاتمة وتوجيه</strong><br>
+            إن لزوم الاستغفار هو صفة المتقين وشعار الصالحين. فليكن لنا في رسول الله ﷺ قدوة، وهو الذي كان يستغفر الله في اليوم أكثر من سبعين مرة.<br>
+            <em>كتبه فريق تحرير مدونة "صحيح" - نقلاً عن فتاوى ومؤلفات الشيخين ابن باز وابن عثيمين.</em>
+        </div>
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount3')">👍 إعجاب (<span id="likeCount3">42</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput3" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput3', 'commentsList3')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList3">
+                <div class="comment-item"><strong>صالح الهيب:</strong> جزاكم الله خيراً، جعلها الله في ميزان حسناتكم.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة قراءة السورة والصوت -->
+    <div id="display-screen">
+        <button class="close-btn" onclick="closeScreen()">×</button>
+        <h2 id="view-title" style="text-align: center; color: #38bdf8;"></h2>
+        <audio controls id="audioPlayer" style="width:100%; max-width:500px; margin: 15px auto; display:block;"></audio>
+        <div class="quran-text" id="view-text">جاري تحميل الآيات...</div>
     </div>
 
     <footer>
@@ -612,339 +191,101 @@
     </footer>
 
     <script>
-        // الأذكار المتحركة التلقائية
-        const athkarList = [
-            "سُبْحَانَ اللهِ وَبِحَمْدِهِ: عَادَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
-            "لَا إلَهَ إلاَّ اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.",
-            "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً.",
-            "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ العَلِيمُ."
-        ];
-        let index = 0;
-        setInterval(() => {
-            index = (index + 1) % athkarList.length;
-            const ticker = document.getElementById('tickerText');
-            if(ticker) ticker.innerText = athkarList[index];
-        }, 5000);
-
-        // محول العملات البسيط
-        function convertCurrency() {
-            const amount = document.getElementById('amount').value;
-            const rate = document.getElementById('currency').value;
-            const res = amount * rate;
-            document.getElementById('currencyResult').innerText = `الناتج التقريبي: ${res.toFixed(2)} وحدة`;
+        // دوال عرض وفتح المقالات
+        function openArticle(screenId) {
+            document.getElementById(screenId).style.display = 'block';
+        }
+        function closeArticle(screenId) {
+            document.getElementById(screenId).style.display = 'none';
         }
 
-        // محاكاة معالجة الصور
-        function processImage() {
-            const fileInput = document.getElementById('imageInput');
-            if(fileInput.files.length > 0) {
-                document.getElementById('imageResult').innerText = `تمت معالجة وضغط الصورة (${fileInput.files[0].name}) بنجاح لتتوافق مع معايير الويب.`;
-            } else {
-                document.getElementById('imageResult').innerText = "الرجاء اختيار صورة أولاً.";
+        // نظام الإعجابات
+        function likeArticle(countId) {
+            const countSpan = document.getElementById(countId);
+            let current = parseInt(countSpan.innerText);
+            countSpan.innerText = current + 1;
+        }
+
+        // نظام التعليقات
+        function addComment(inputId, listId) {
+            const input = document.getElementById(inputId);
+            const list = document.getElementById(listId);
+            if(input.value.trim() !== "") {
+                const item = document.createElement('div');
+                item.className = 'comment-item';
+                item.innerHTML = `<strong>زائر الكريم:</strong> ${input.value}`;
+                list.prepend(item);
+                input.value = "";
             }
         }
 
-        // محاكاة معالجة الصوت
-        function processAudio() {
-            const audioInput = document.getElementById('audioInput');
-            if(audioInput.files.length > 0) {
-                document.getElementById('audioResult').innerText = `تمت تهيئة ملف الصوت (${audioInput.files[0].name}) للمنصة.`;
-            } else {
-                document.getElementById('audioResult').innerText = "الرجاء اختيار ملف صوتي أولاً.";
-            }
-        }
-        
-        // إعداد قائمة السور للـ MP3
-        const surahs = ["الفاتحة","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود","يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون","النور","الفرقان","الشعراء","النمل","القصص","العنكبوت","الروم","لقمان","السجدة","الأحزاب","سبأ","فاطر","يس","الصافات","ص","الزمر","غافر","فصلت","الشورى","الزخرف","الدخان","الجاثية","الأحقاف","محمد","الفتح","الحجرات","ق","الذاريات","الطور","النجم","القمر","الرحمن","الواقعة","الحديد","المجادلة","الحشر","الممتحنة","الصف","الجمعة","المنافقون","التغابن","الطلاق","التحريم","الملك","القلم","الحاقة","المعارج","نوح","الجن","المزمل","المدثر","القيامة","الإنسان","المرسلات","النبأ","النازعات","عبس","التكوير","الانفطار","المطففين","الانشقاق","البروج","الطارق","الأعلى","الغاشية","الفجر","البلد","الشمس","الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة","العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر"];
-        const surahSelect = document.getElementById('surahSelect');
-        if(surahSelect) {
-            surahs.forEach((name, idx) => {
-                let num = (idx + 1).toString().padStart(3, '0');
-                surahSelect.innerHTML += `<option value="${num}">${idx + 1}. سورة ${name}</option>`;
-            });
-        }
-
-        // تشغيل التلاوة المختارة
-        function updateAudio() {
-            const reciter = document.getElementById('reciterSelect').value;
-            const surah = document.getElementById('surahSelect').value;
-            const audio = document.getElementById('quranAudio');
-            audio.src = reciter + surah + ".mp3";
-            audio.play();
-        }
-
-        // تفاعل الذكاء الاصطناعي الحقيقي والمربوط بالـ API
-        async function askAI() {
-            const prompt = document.getElementById('aiPrompt').value;
-            const responseBox = document.getElementById('aiResponse');
-            
-            if(!prompt.trim()) {
-                responseBox.innerText = "الرجاء كتابة سؤال أو استفسار أولاً.";
-                return;
-            }
-            
-            responseBox.innerText = "جاري معالجة الطلب عبر النموذج الذكي... الرجاء الانتظار.";
-            
-            // ⚠️ استبدل هذه العبارة بمفتاح API الخاص بك من جوجل 
-            const API_KEY = "YOUR_GEMINI_API_KEY_HERE"; 
-            
-            try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-                });
-                
-                const data = await response.json();
-                if(data.candidates && data.candidates.length > 0) {
-                    responseBox.innerText = data.candidates[0].content.parts[0].text;
-                } else {
-                    responseBox.innerText = "عذراً، لم أتمكن من جلب الإجابة. تأكد من أن مفتاح الـ API صحيح.";
-                }
-            } catch (error) {
-                responseBox.innerText = "فشل الاتصال. يرجى التأكد من وضع المفتاح (API Key) في الكود.";
-            }
-        }
-    </script>
-</body>
-    <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heib12-Lang | لغة البرمجة الشاملة للأنظمة والفضاء</title>
-    <!-- هنا يوضع كود إعلانات أدسنس -->
-    <style>
-        body { font-family: Tahoma, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; direction: rtl; }
-        header { text-align: center; padding: 20px; background: #1e293b; border-radius: 10px; margin-bottom: 20px; border: 1px solid #334155; }
-        nav { display: flex; justify-content: center; gap: 12px; background: #334155; padding: 15px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-        nav a { color: #38bdf8; text-decoration: none; font-weight: bold; padding: 8px 12px; background: #1e293b; border-radius: 5px; transition: 0.3s; }
-        nav a:hover { background: #475569; color: #fff; }
-        .compiler-box { background: #000; border: 2px solid #38bdf8; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
-        textarea { width: 100%; height: 250px; background: #111; color: #38bdf8; border: 1px solid #444; padding: 10px; font-family: monospace; font-size: 16px; border-radius: 5px; box-sizing: border-box; }
-        .output { background: #1e293b; color: #4ade80; padding: 15px; border-radius: 5px; font-family: monospace; margin-top: 10px; min-height: 100px; border: 1px solid #334155; }
-        .btn { background: #22c55e; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold; }
-        .btn:hover { background: #16a34a; }
-        .section-box { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #334155; }
-        h2 { color: #38bdf8; margin-top: 0; }
-        code { background: #090d16; color: #f472b6; padding: 3px 6px; border-radius: 4px; font-family: monospace; font-size: 15px; }
-        ul { line-height: 1.8; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Heib12-Lang | لغة البرمجة الشاملة المطلقة</h1>
-        <p>نظام برمجي متكامل للتحكم بسفن الفضاء، الأقمار الاصطناعية، أنظمة السيارات، التحليل المالي، وبرمجة المواقع المتقدمة</p>
-    </header>
-
-    <nav>
-        <a href="#compiler">المفسر الحي</a>
-        <a href="#space">الفضاء والأقمار</a>
-        <a href="#cameras">كاميرات المراقبة</a>
-        <a href="#finance">التحليل المالي</a>
-        <a href="#web">برمجة المواقع</a>
-        <a href="#calculators">الحوسبة الفائقة</a>
-        <a href="#cars">السيارات والدرون</a>
-    </nav>
-
-    <!-- قسم المفسر الحي -->
-    <div id="compiler" class="compiler-box">
-        <h2>> بيئة مفسر لغة هيب الحية | compiler.h12</h2>
-        <p>اكتب أوامر Heib12-Lang للتحكم في أي نظام برمجي أو مادي وقم بتشغيلها فوراً:</p>
-        <textarea id="codeinput">
-// إطلاق مركبات فضائية وتوجيه الأقمار الاصطناعية
-أطلق_المركبة("Heib_Spacecraft_X1");
-وجه_القمر_الاصطناعي("Orbit_Z_340");
-
-// التحكم بالأنظمة المالية والمواقع
-حلل_بيانات_السوق("Global_Stocks_2026");
-انشئ_موقع_آمن("https://heib12.com");
-
-// أنظمة المراقبة والذكاء الاصطناعي
-راقب_الكاميرات("Sector_4_Security");
-شغل_الذكاء_الاصطناعي("Auto_Pilot_Mode");
-        </textarea>
-        <br>
-        <button class="btn" onclick="runCode()">تنفيذ الأوامر الشاملة</button>
-        <div id="output" class="output">[جاهز] مفسر Heib12-Lang بانتظار تلقي الأوامر...</div>
-    </div>
-
-    <!-- قسم الفضاء والأقمار الاصطناعية -->
-    <div id="space" class="section-box">
-        <h2>الفضاء والأقمار الاصطناعية (Space & Satellites)</h2>
-        <p>أوامر مخصصة للهندسة الفضائية، حساب مسارات المدارات، وإطلاق المركبات خارج الغلاف الجوي.</p>
-        <ul>
-            <li>أمر <code>أطلق_المركبة()</code>: لتشغيل محركات الدفع الصاروخي وبرمجة مسار الإقلاع.</li>
-            <li>أمر <code>وجه_القمر_الاصطناعي()</code>: لضبط زوايا الألواح الشمسية وتصحيح المدار.</li>
-        </ul>
-    </div>
-
-    <!-- قسم كاميرات المراقبة -->
-    <div id="cameras" class="section-box">
-        <h2>كاميرات المراقبة والأنظمة الأمنية (Surveillance)</h2>
-        <p>التحكم المباشر في شبكات الكاميرات، التعرف على الوجوه، وتحليل الحركة الأمنية بالزمن الفعلي.</p>
-        <ul>
-            <li>أمر <code>راقب_الكاميرات()</code>: للربط المباشر مع مصفوفة الكاميرات وتفعيل مستشعرات الحركة.</li>
-        </ul>
-    </div>
-
-    <!-- قسم التحليل المالي -->
-    <div id="finance" class="section-box">
-        <h2>التحليل المالي والأسواق (Financial Analysis)</h2>
-        <p>خوارزميات متقدمة لقراءة بيانات البورصة، تحليل التشفير، وحساب احتمالات الأسواق المالية.</p>
-        <ul>
-            <li>أمر <code>حلل_بيانات_السوق()</code>: لاستخراج التقارير المالية واتخاذ قرارات التداول الآلي.</li>
-        </ul>
-    </div>
-
-    <!-- قسم برمجة المواقع -->
-    <div id="web" class="section-box">
-        <h2>برمجة المواقع وتطوير الويب (Web Development)</h2>
-        <p>بناء وهندسة مواقع الويب، ربط قواعد البيانات، وحماية السيرفرات بأسطر برمجية قليلة.</p>
-        <ul>
-            <li>أمر <code>انشئ_موقع_آمن()</code>: لبناء بنية تحتية مشفرة لموقع ويب متكامل.</li>
-        </ul>
-    </div>
-
-    <!-- قسم الحوسبة والحاسبات -->
-    <div id="calculators" class="section-box">
-        <h2>الحوسبة والعمليات المعقدة (Super Computing)</h2>
-        <p>إجراء العمليات الحسابية الكمومية، معالجة البيانات الضخمة، والتعامل مع المصفوفات المعقدة.</p>
-        <ul>
-            <li>أمر <code>معالجة_كمومية()</code>: لحل المعادلات الرياضية الفائقة التعقيد.</li>
-        </ul>
-    </div>
-
-    <!-- قسم السيارات والدرون (القديم والمحدث) -->
-    <div id="cars" class="section-box">
-        <h2>السيارات، الطائرات، والذكاء الاصطناعي</h2>
-        <p>أوامر الاتصال بوحدات التحكم (ECU)، وتفعيل النماذج العصبية للآلات.</p>
-        <ul>
-            <li>أمر <code>اتصل_بالوحدة()</code>: لربط النظام بكمبيوتر السيارة.</li>
-            <li>أمر <code>شغل_الذكاء_الاصطناعي()</code>: لتحميل النماذج العصبية المتقدمة.</li>
-        </ul>
-    </div>
-
-    <script>
-        function runCode() {
+        // تشغيل مفسر لغة Heib12
+        function runHeibCode() {
             const code = document.getElementById('codeinput').value;
             const output = document.getElementById('output');
-            output.innerHTML = "[تجميع] جاري معالجة أوامر Heib12-Lang للأنظمة الشاملة...<br><br>";
+            output.innerHTML = "[معالجة] جاري فحص وتحليل الأوامر...\n";
             
             setTimeout(() => {
-                let result = "";
+                let log = "[تقرير تنفيذ Heib12-Lang]:\n";
+                if(code.includes("تشغيل النظام")) log += " ✔ تم إقلاع نواة نظام هيب بنجاح.\n";
+                if(code.includes("اتصل_بالوحدة")) log += " ✔ [ECU] تم الاتصال بوحدة تحكم السيارة بنجاح.\n";
+                if(code.includes("أطلق_المركبة")) log += " 🚀 [فضاء] تم الإشعال والمركبة تخترق الغلاف الجوي.\n";
+                if(code.includes("اضبط_السرعة")) log += " ⚡ [محرك] تم ضبط سرعة الدوران على 4000 دورة/دقيقة.\n";
                 
-                // الفضاء والأقمار
-                if(code.includes("أطلق_المركبة")) result += "🚀 [فضاء] تم الإشعال بنجاح. المركبة تخترق الغلاف الجوي.<br>";
-                if(code.includes("وجه_القمر_الاصطناعي")) result += "🛰️ [أقمار] تم تصحيح المدار وتوجيه العدسات بنجاح.<br>";
-                
-                // المراقبة والأمن
-                if(code.includes("راقب_الكاميرات")) result += "📷 [أمن] شبكة الكاميرات متصلة. نظام التعرف على الوجوه نشط.<br>";
-                
-                // التحليل المالي
-                if(code.includes("حلل_بيانات_السوق")) result += "📊 [مالية] اكتمل التحليل: الأسواق مستقرة مع مؤشرات نمو عالية.<br>";
-                
-                // برمجة المواقع
-                if(code.includes("انشئ_موقع_آمن")) result += "🌐 [ويب] تم نشر الموقع بنجاح وتفعيل شهادات الأمان (SSL).<br>";
-                
-                // السيارات والذكاء الاصطناعي
-                if(code.includes("اتصل_بالوحدة")) result += "🚗 [ECU] تم الاتصال بوحدة تحكم المحرك واستقرار البيانات.<br>";
-                if(code.includes("شغل_الذكاء_الاصطناعي")) result += "🧠 [AI] العقل المدبر قيد العمل. القيادة الذاتية مفعلة.<br>";
-                
-                if (result === "") {
-                    result = "⚠️ [تنبيه] يرجى إدخال أوامر Heib12-Lang صالحة للتنفيذ.<br>";
-                } else {
-                    result += "<br>✅ [اكتمل] تم تنفيذ جميع التعليمات البرمجية دون أخطاء.";
+                if(log === "[تقرير تنفيذ Heib12-Lang]:\n") {
+                    log += " ℹ تم تنفيذ الأوامر العامة بنجاح دون أخطاء.";
                 }
-                
-                output.innerHTML = result;
-            }, 1000);
-        }
-    </script>
-
-</body>
-    
-</html>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heib12-Lang | محرك البرمجة المتقدم للأنظمة الذكية</title>
-    <!-- أدسنس مفعل وجاهز -->
-    <style>
-        body { font-family: Tahoma, sans-serif; background-color: #0b0f19; color: #f8fafc; margin: 0; padding: 20px; direction: rtl; line-height: 1.6; }
-        header { text-align: center; padding: 25px; background: #1e293b; border-radius: 12px; margin-bottom: 20px; border: 1px solid #334155; }
-        .compiler-box { background: #1e293b; border: 2px solid #0284c7; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        textarea { width: 100%; height: 180px; background: #090d16; color: #38bdf8; border: 1px solid #334155; padding: 12px; font-family: monospace; font-size: 16px; border-radius: 6px; box-sizing: border-box; }
-        .output { background: #090d16; color: #4ade80; padding: 15px; border-radius: 6px; font-family: monospace; margin-top: 15px; min-height: 120px; border: 1px solid #334155; white-space: pre-line; }
-        .btn { background: #0284c7; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; margin-top: 12px; font-weight: bold; }
-        .btn:hover { background: #0369a1; }
-        h2 { color: #38bdf8; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Heib12-Lang | محرك النواة المتقدم</h1>
-        <p>البيئة الهندسية التفاعلية لتنفيذ لغة برمجة الأنظمة الذكية والتحكم الآلي</p>
-    </header>
-
-    <!-- بيئة مفسر اللغة المطور -->
-    <div class="compiler-box">
-        <h2>> محرك المعالجة والتنفيذ الفوري (Heib12 Parser v2.0)</h2>
-        <p>اكتب أوامر لغة Heib12 الخاصة بالسيارات والطائرات لمعالجتها وتنفيذها:</p>
-        <textarea id="codeinput">
-// نظام تشغيل واختبار وحدة هيب
-تشغيل النظام "Heib12_Core_v2";
-اتصل_بالوحدة("ECU_Engine_V8");
-اضبط_السرعة 4000;
-فحص_الاستقرار؛
-        </textarea>
-        <br>
-        <button class="btn" onclick="runAdvancedHeib()">تشغيل ومعالجة الأوامر</button>
-        <div id="output" class="output">[جاهز] محرك Heib12 في انتظار تلقي الأوامر البرمجية...</div>
-    </div>
-
-    <script>
-        function runAdvancedHeib() {
-            const code = document.getElementById('codeinput').value;
-            const output = document.getElementById('output');
-            output.innerHTML = "[معالجة] جاري تحليل البنية اللغوية وتنفيذ الأوامر على الأجهزة...\n";
-            
-            setTimeout(() => {
-                let log = "[تقرير التنفيذ البرمجي لـ Heib12]:\n";
-                let lines = code.split('\n');
-                let speedDetected = false;
-
-                lines.forEach(line => {
-                    if(line.includes("تشغيل النظام")) {
-                        log += " ✔ تم الإقلاع الناجح لنواة اللغة واستقرار الذاكرة.\n";
-                    }
-                    if(line.includes("اتصل_بالوحدة")) {
-                        log += " ✔ [ECU] تم الاتصال بوحدة التحكم الإلكترونية للمركبة بنجاح.\n";
-                    }
-                    if(line.includes("اضبط_السرعة")) {
-                        let match = line.match(/\d+/);
-                        let val = match ? match[0] : "3000";
-                        log += ` ⚡ [محرك] تم ضبط سرعة الدوران على القيمة: ${val} دورة/دقيقة (استجابة فورية).\n`;
-                        speedDetected = true;
-                    }
-                    if(line.includes("فحص_الاستقرار")) {
-                        log += " 🛡 [حماية] كافة المستشعرات تعمل بكفاءة والأداء مستقر 100%.\n";
-                    }
-                });
-
-                if(!speedDetected && code.trim() !== "") {
-                    log += " ℹ تم تنفيذ الأوامر العامة بنجاح دون أخطاء برمجية.";
-                }
-
                 output.innerHTML = log;
-            }, 600);
+            }, 500);
         }
-    </script>
 
+        // جلب سور القرآن الكريم
+        let allSurahs = [];
+        async function loadQuran() {
+            try {
+                const res = await fetch('https://api.alquran.cloud/v1/surah');
+                const data = await res.json();
+                allSurahs = data.data;
+                const container = document.getElementById('quran-grid');
+                container.innerHTML = '';
+                allSurahs.forEach(s => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `<strong>${s.number}</strong> ${s.name}`;
+                    card.onclick = () => openSurah(s.number, s.name);
+                    container.appendChild(card);
+                });
+            } catch (e) {
+                document.getElementById('quran-grid').innerHTML = "فشل التحميل، تحقق من اتصال الإنترنت.";
+            }
+        }
+
+        async function openSurah(id, name) {
+            const screen = document.getElementById('display-screen');
+            const textBody = document.getElementById('view-text');
+            const player = document.getElementById('audioPlayer');
+            
+            screen.style.display = 'block';
+            document.getElementById('view-title').innerText = "سورة " + name;
+            textBody.innerText = "جاري تحميل الآيات...";
+            player.src = `https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/${id}.mp3`;
+            player.play();
+
+            try {
+                const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
+                const data = await res.json();
+                textBody.innerText = data.data.ayahs.map(a => a.text + ` ﴿${a.numberInSurah}﴾`).join(' ');
+            } catch (e) {
+                textBody.innerText = "فشل تحميل نص الآيات.";
+            }
+        }
+
+        function closeScreen() {
+            document.getElementById('display-screen').style.display = 'none';
+            document.getElementById('audioPlayer').pause();
+        }
+
+        window.onload = loadQuran;
+    </script>
 </body>
 </html>
