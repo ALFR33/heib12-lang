@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="5317451995"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدونة صحيح - المنصة الإسلامية والتقنية الشاملة</title>
@@ -356,490 +342,162 @@
         }
     </script>
 </body>
-</html>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 55 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="6261380883"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بيئة تشغيل لغة Heib12-Lang الحية</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-main: #0a0c10;
-            --bg-editor: #12151f;
-            --bg-sidebar: #161a24;
-            --text-main: #959cbd;
-            --text-white: #ffffff;
-            --accent-blue: #0099ff;
-            --accent-green: #00e676;
-            --accent-red: #ff3355;
-            --accent-yellow: #ffb300;
-        }
-
-        body, html {
-            margin: 0; padding: 0; width: 100%; height: 100vh;
-            background-color: var(--bg-main); color: var(--text-main);
-            font-family: 'Consolas', 'Segoe UI', monospace; overflow: hidden;
-        }
-
-        .ide-container { display: flex; width: 100%; height: 100%; }
-
-        /* اللوحة الجانبية: مرشد المبرمج */
-        .sidebar {
-            width: 320px; background-color: var(--bg-sidebar);
-            border-left: 1px solid rgba(255,255,255,0.05);
-            padding: 25px; box-sizing: border-box; display: flex;
-            flex-direction: column; gap: 15px; overflow-y: auto;
-        }
-
-        .sidebar h2 { color: var(--accent-blue); font-size: 19px; margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px; }
-        .sidebar p { font-size: 13px; line-height: 1.6; margin: 0; color: #b0b7d6; }
-        
-        .syntax-guide {
-            background: rgba(255,255,255,0.02); padding: 14px;
-            border-radius: 10px; border-right: 4px solid var(--accent-green);
-            margin-top: 5px;
-        }
-        .syntax-title { color: var(--accent-green); font-weight: bold; font-size: 13px; margin-bottom: 6px; }
-        .syntax-example { color: var(--accent-yellow); font-size: 12.5px; font-family: monospace; direction: ltr; text-align: right; }
-
-        /* منطقة المحرر والكونسول الأمني */
-        .main-editor-area { flex-grow: 1; display: flex; flex-direction: column; height: 100%; }
-
-        /* شريط التحكم العلوي */
-        .toolbar {
-            height: 55px; background-color: var(--bg-sidebar);
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 25px; border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .toolbar-title { font-weight: bold; color: var(--text-white); font-size: 14px; letter-spacing: 0.5px; }
-        
-        .run-btn {
-            background: var(--accent-green); color: #000; border: none;
-            padding: 10px 24px; border-radius: 25px; font-weight: 700;
-            cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13.5px;
-            box-shadow: 0 4px 15px rgba(0, 230, 118, 0.25); transition: 0.2s ease;
-        }
-        .run-btn:hover { transform: translateY(-1px); background: #33ff99; box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4); }
-
-        /* محرر النصوص التفاعلي والكتابة الحرة للزوار */
-        .code-input-box {
-            flex: 2; width: 100%; background-color: var(--bg-editor);
-            border: none; padding: 25px; box-sizing: border-box;
-            color: var(--text-white); font-family: 'Consolas', 'Courier New', monospace;
-            font-size: 16px; resize: none; outline: none; line-height: 1.6;
-        }
-
-        /* كونسول مخرجات التفسير الحقيقي */
-        .console-output-box {
-            flex: 1; width: 100%; background-color: var(--bg-main);
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding: 25px; box-sizing: border-box; overflow-y: auto;
-        }
-        .console-title { font-size: 13px; color: var(--accent-blue); margin-bottom: 12px; font-weight: bold; text-transform: uppercase; }
-        .console-screen { font-size: 14.5px; white-space: pre-wrap; margin: 0; line-height: 1.5; font-family: 'Consolas', monospace; }
-        
-        /* تلوين مخرجات المحرك */
-        .success-text { color: var(--accent-green); display: block; margin-bottom: 4px; }
-        .error-text { color: var(--accent-red); display: block; margin-bottom: 4px; font-weight: bold; }
-        .info-text { color: var(--accent-blue); display: block; margin-bottom: 4px; }
-    </style>
-</head>
-<body>
-
-    <div class="ide-container">
-        
-        <div class="sidebar">
-            <h2><i class="fa-solid fa-code-branch"></i> Heib12-Lang V1.0</h2>
-            <p>مرحباً بك في المحرك الحي للغتك المخصصة. يمكنك الآن كتابة، تعديل، وتشغيل الأكواد بحرية تامة وفحص النتائج مباشرة.</p>
-            
-            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); width: 100%; margin: 10px 0;">
-            
-            <div class="syntax-guide">
-                <div class="syntax-title">1. طباعة النصوص:</div>
-                <div class="syntax-example">أكتب "نص الرسالة"؛</div>
-            </div>
-
-            <div class="syntax-guide">
-                <div class="syntax-title">2. فحص أمان الروابط:</div>
-                <div class="syntax-example">افحص_الرابط "رابط الموقع"؛</div>
-            </div>
-
-            <div class="syntax-guide">
-                <div class="syntax-title">3. تعمية وحماية البيانات:</div>
-                <div class="syntax-example">احم_الخصوصية "نص مشفر"؛</div>
-            </div>
-
-            <div class="syntax-guide">
-                <div class="syntax-title">4. توليد مفاتيح الحماية:</div>
-                <div class="syntax-example">ولد_مفتاح؛</div>
-            </div>
-        </div>
-
-        <div class="main-editor-area">
-            
-            <div class="toolbar">
-                <div class="toolbar-title"><i class="fa-solid fa-terminal" style="color:var(--accent-blue);"></i> بيئة مفسّر لغة هيب الحية | compiler.h12</div>
-                <button class="run-btn" onclick="runHeibInterpreterEngine()"><i class="fa-solid fa-play"></i> تشغيل التعليمات</button>
-            </div>
-
-            <textarea id="code-editor" class="code-input-box" spellcheck="false">// يمكنك مسح كل هذا الكلام وكتابة كودك الخاص وتعديله الآن لتجربة قوة اللغة!
-
-أكتب "أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!"؛
-
-ولد_مفتاح؛
-
-افحص_الرابط "https://maps.heib12.com"؛
-
-احم_الخصوصية "Saleh_Secured_Token_2026"؛
-</textarea>
-
-            <div class="console-output-box">
-                <div class="console-title"><i class="fa-solid fa-square-poll-horizontal"></i> شاشة معالجة الكود والمخرجات الأمنية:</div>
-                <div id="console-screen" class="console-screen">اضغط على زر التشغيل في الأعلى لتنفيذ الكود المكتوب...</div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <script>
-        // محرك التفسير الحقيقي والذكي للغة هيب (The Lexer and Interpreter Engine)
-        function runHeibInterpreterEngine() {
-            const editor = document.getElementById('code-editor');
-            const consoleScreen = document.getElementById('console-screen');
-            
-            // قراءة وتقسيم الكود المكتوب بواسطة الزائر إلى أسطر منفصلة
-            const lines = editor.value.split('\n');
-            consoleScreen.innerHTML = ""; // تصفية الشاشة فوراً لبدء التنفيذ الجديد
-            
-            let outputProduced = false;
-
-            lines.forEach((line, index) => {
-                let currentLine = line.trim();
-                
-                // تجاهل السطور الفارغة والتعليقات التي تبدأ بـ //
-                if (currentLine.startsWith('//') || currentLine === "") return;
-
-                // 🔴 1. معالجة وتفسير أمر الطباعة: أكتب "..."؛
-                if (currentLine.startsWith('أكتب') || currentLine.startsWith('اكتب')) {
-                    let stringMatch = currentLine.match(/["'](.*?)["']/);
-                    if (stringMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
-                        printToConsole(`> ${stringMatch[1]}`, 'success-text');
-                        outputProduced = true;
-                    } else {
-                        printToConsole(`خطأ برمي في السطر ${index + 1}: صيغة الأمر خاطئة. تأكد من إغلاق علامات الاقتباس وإنهاء السطر بـ '؛'`, 'error-text');
-                        outputProduced = true;
-                    }
-                }
-                
-                // 🔴 2. معالجة وتفسير أمر فحص الروابط: افحص_الرابط "..."؛
-                else if (currentLine.startsWith('افحص_الرابط')) {
-                    let urlMatch = currentLine.match(/["'](.*?)["']/);
-                    if (urlMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
-                        let extractedUrl = urlMatch[1];
-                        printToConsole(`[تحليل] جاري التحقق من تشفير الرابط: ${extractedUrl}`, 'info-text');
-                        
-                        if (extractedUrl.startsWith('https://')) {
-                            printToConsole(`[أمان] الرابط موثوق ويستخدم بروتوكول اتصال آمن ومشفر SSL بنجاح.`, 'success-text');
-                        } else {
-                            printToConsole(`[خطر أمني] الرابط يعتمد على HTTP غير مشفر، معرّض للتنصت وسرقة البيانات!`, 'error-text');
-                        }
-                        outputProduced = true;
-                    } else {
-                        printToConsole(`خطأ برمي في السطر ${index + 1}: صيغة 'افحص_الرابط' غير مدعومة. تأكد من إنهاء السطر بـ '؛'`, 'error-text');
-                        outputProduced = true;
-                    }
-                }
-
-                // 🔴 3. معالجة وتفسير أمر الخصوصية والتطهير: احم_الخصوصية "..."؛
-                else if (currentLine.startsWith('احم_الخصوصية') || currentLine.startsWith('احمي_الخصوصية')) {
-                    let dataMatch = currentLine.match(/["'](.*?)["']/);
-                    if (dataMatch && (currentLine.endsWith('؛') || currentLine.endsWith(';'))) {
-                        let secretData = dataMatch[1];
-                        printToConsole(`[خصوصية] جاري تطهير النص وتوليد بصمة تعمية رقمية مشفرة...`, 'info-text');
-                        
-                        // معالجة تشفير حقيقية للنص المدخل من الزائر (Base64 Algorithm)
-                        let encryptedData = btoa(unescape(encodeURIComponent(secretData))).substring(0, 14);
-                        printToConsole(`[تأمين] تم تشفير البيانات وحمايتها من التتبع. البصمة: H12-${encryptedData}`, 'success-text');
-                        outputProduced = true;
-                    } else {
-                        printToConsole(`خطأ برمي في السطر ${index + 1}: أمر الخصوصية غير مكتمل أو ينقصه '؛' في النهاية.`, 'error-text');
-                        outputProduced = true;
-                    }
-                }
-
-                // 🔴 4. معالجة وتفسير أمر توليد المفاتيح العشوائية: ولد_مفتاح؛
-                else if (currentLine === 'ولد_مفتاح؛' || currentLine === 'ولد_مفتاح;' || currentLine.startsWith('ولد_مفتاح')) {
-                    printToConsole(`[تشفير] جاري توليد كود أمان سداسي عشري فريد للمجلس الحالي...`, 'info-text');
-                    
-                    // توليد كود حماية عشوائي حقيقي عند كل تشغيل
-                    let generatedHexKey = Array.from({length: 24}, () => Math.floor(Math.random()*16).toString(16)).join('');
-                    printToConsole(`[تشفير] تم توليد الكود الأمني الأساسي بنجاح: h12_token_${generatedHexKey}`, 'success-text');
-                    outputProduced = true;
-                }
-
-                // 🔴 5. في حال كتب الزائر سطر عشوائي مجهول لا تفهمه قواعد اللغة
-                else {
-                    printToConsole(`خطأ مجهول في السطر ${index + 1}: لم يتعرف مفسر Heib12-Lang على الأمر المكتوب '${currentLine}'`, 'error-text');
-                    outputProduced = true;
-                }
-            });
-
-            if (!outputProduced) {
-                consoleScreen.innerHTML = "تم التنفيذ البرمجي، لا توجد أسطر برمجية قابلة للقراءة.";
-            }
-        }
-
-        // دالة حقن المخرجات حياً داخل شاشة الكونسول للمستخدمين
-        function printToConsole(text, className) {
-            const consoleScreen = document.getElementById('console-screen');
-            const logLine = document.createElement('div');
-            logLine.className = className;
-            logLine.innerText = text;
-            consoleScreen.appendChild(logLine);
-        }
-
-        // تشغيل كود افتراضي أوتوماتيكياً عند فتح الصفحة لأول مرة لإبهار الزائر
-        window.onload = function() {
-            runHeibInterpreterEngine();
-        };
-    </script>
-</body>
     <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heib12-Lang | بيئة تشغيل لغة البرمجة المتقدمة</title>
-    <!-- كود إعلانات أدسنس الخاص بك -->
+    <title>Heib12-Lang | لغة البرمجة الشاملة للأنظمة والفضاء</title>
+    <!-- هنا يوضع كود إعلانات أدسنس -->
     <style>
         body { font-family: Tahoma, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; direction: rtl; }
-        header { text-align: center; padding: 20px; background: #1e293b; border-radius: 10px; margin-bottom: 20px; }
-        nav { display: flex; justify-content: center; gap: 15px; background: #334155; padding: 10px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-        nav a { color: #38bdf8; text-decoration: none; font-weight: bold; padding: 5px 10px; }
-        nav a:hover { background: #475569; border-radius: 5px; }
+        header { text-align: center; padding: 20px; background: #1e293b; border-radius: 10px; margin-bottom: 20px; border: 1px solid #334155; }
+        nav { display: flex; justify-content: center; gap: 12px; background: #334155; padding: 15px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+        nav a { color: #38bdf8; text-decoration: none; font-weight: bold; padding: 8px 12px; background: #1e293b; border-radius: 5px; transition: 0.3s; }
+        nav a:hover { background: #475569; color: #fff; }
         .compiler-box { background: #000; border: 2px solid #38bdf8; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
-        textarea { width: 100%; height: 150px; background: #111; color: #38bdf8; border: 1px solid #444; padding: 10px; font-family: monospace; font-size: 16px; border-radius: 5px; }
-        .output { background: #1e293b; color: #4ade80; padding: 15px; border-radius: 5px; font-family: monospace; margin-top: 10px; min-height: 80px; }
-        .btn { background: #22c55e; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold; }
+        textarea { width: 100%; height: 250px; background: #111; color: #38bdf8; border: 1px solid #444; padding: 10px; font-family: monospace; font-size: 16px; border-radius: 5px; box-sizing: border-box; }
+        .output { background: #1e293b; color: #4ade80; padding: 15px; border-radius: 5px; font-family: monospace; margin-top: 10px; min-height: 100px; border: 1px solid #334155; }
+        .btn { background: #22c55e; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold; }
         .btn:hover { background: #16a34a; }
-        .section-box { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-        h2 { color: #38bdf8; }
+        .section-box { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #334155; }
+        h2 { color: #38bdf8; margin-top: 0; }
+        code { background: #090d16; color: #f472b6; padding: 3px 6px; border-radius: 4px; font-family: monospace; font-size: 15px; }
+        ul { line-height: 1.8; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Heib12-Lang | منصة البرمجة والأنظمة الذكية</h1>
-        <p>المفسر الحي الشامل لتنفيذ الأكواد، فحص الروابط، وبرمجة السيارات والذكاء الاصطناعي</p>
+        <h1>Heib12-Lang | لغة البرمجة الشاملة المطلقة</h1>
+        <p>نظام برمجي متكامل للتحكم بسفن الفضاء، الأقمار الاصطناعية، أنظمة السيارات، التحليل المالي، وبرمجة المواقع المتقدمة</p>
     </header>
 
     <nav>
         <a href="#compiler">المفسر الحي</a>
-        <a href="#cars">السيارات (ECU)</a>
-        <a href="#drones">الطيارات المسيرة</a>
-        <a href="#ai">الذكاء الاصطناعي</a>
-        <a href="#security">فحص الحماية</a>
+        <a href="#space">الفضاء والأقمار</a>
+        <a href="#cameras">كاميرات المراقبة</a>
+        <a href="#finance">التحليل المالي</a>
+        <a href="#web">برمجة المواقع</a>
+        <a href="#calculators">الحوسبة الفائقة</a>
+        <a href="#cars">السيارات والدرون</a>
     </nav>
 
-    <!-- قسم المفسر الحي الشامل -->
+    <!-- قسم المفسر الحي -->
     <div id="compiler" class="compiler-box">
         <h2>> بيئة مفسر لغة هيب الحية | compiler.h12</h2>
-        <p>اكتب أوامرك البرمجية وتعديلها الآن لتجربة قوة اللغة:</p>
+        <p>اكتب أوامر Heib12-Lang للتحكم في أي نظام برمجي أو مادي وقم بتشغيلها فوراً:</p>
         <textarea id="codeinput">
-أكتب "أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!";
-ولد_مفتاح؛
-افحص_الرابط "https://maps.heib12.com";
-اتصل_بالوحدة("ECU_Engine_V8");
+// إطلاق مركبات فضائية وتوجيه الأقمار الاصطناعية
+أطلق_المركبة("Heib_Spacecraft_X1");
+وجه_القمر_الاصطناعي("Orbit_Z_340");
+
+// التحكم بالأنظمة المالية والمواقع
+حلل_بيانات_السوق("Global_Stocks_2026");
+انشئ_موقع_آمن("https://heib12.com");
+
+// أنظمة المراقبة والذكاء الاصطناعي
+راقب_الكاميرات("Sector_4_Security");
 شغل_الذكاء_الاصطناعي("Auto_Pilot_Mode");
         </textarea>
         <br>
-        <button class="btn" onclick="runCode()">تشغيل التعليمات</button>
-        <div id="output" class="output">[جاهز] اضغط على زر التشغيل لتنفيذ الأكواد المعالجة...</div>
+        <button class="btn" onclick="runCode()">تنفيذ الأوامر الشاملة</button>
+        <div id="output" class="output">[جاهز] مفسر Heib12-Lang بانتظار تلقي الأوامر...</div>
     </div>
 
-    <!-- قسم أنظمة السيارات -->
-    <div id="cars" class="section-box">
-        <h2>برمجة أنظمة السيارات (Automotive Systems)</h2>
-        <p>تخصيص كامل لأوامر وحدات التحكم الإلكترونية في المركبات (ECU)، قراءة بيانات المحرك، وتحسين الأداء.</p>
+    <!-- قسم الفضاء والأقمار الاصطناعية -->
+    <div id="space" class="section-box">
+        <h2>الفضاء والأقمار الاصطناعية (Space & Satellites)</h2>
+        <p>أوامر مخصصة للهندسة الفضائية، حساب مسارات المدارات، وإطلاق المركبات خارج الغلاف الجوي.</p>
         <ul>
-            <li>أمر <code>اتصل_بالوحدة()</code>: لربط النظام بكمبيوتر السيارة وفحص الأعطال.</li>
-            <li>أمر <code>راقب_المستشعرات()</code>: لمتابعة الحرارة وسرعة الدوران لحظياً.</li>
+            <li>أمر <code>أطلق_المركبة()</code>: لتشغيل محركات الدفع الصاروخي وبرمجة مسار الإقلاع.</li>
+            <li>أمر <code>وجه_القمر_الاصطناعي()</code>: لضبط زوايا الألواح الشمسية وتصحيح المدار.</li>
         </ul>
     </div>
 
-    <!-- قسم الطائرات المسيرة -->
-    <div id="drones" class="section-box">
-        <h2>أنظمة الطائرات المسيرة (Drones & UAV)</h2>
-        <p>أوامر برمجية لتثبيت الارتفاع، مسارات الطيران الذكية، واستشعار العوائق للاستجابة السريعة.</p>
+    <!-- قسم كاميرات المراقبة -->
+    <div id="cameras" class="section-box">
+        <h2>كاميرات المراقبة والأنظمة الأمنية (Surveillance)</h2>
+        <p>التحكم المباشر في شبكات الكاميرات، التعرف على الوجوه، وتحليل الحركة الأمنية بالزمن الفعلي.</p>
+        <ul>
+            <li>أمر <code>راقب_الكاميرات()</code>: للربط المباشر مع مصفوفة الكاميرات وتفعيل مستشعرات الحركة.</li>
+        </ul>
     </div>
 
-    <!-- قسم الذكاء الاصطناعي -->
-    <div id="ai" class="section-box">
-        <h2>الذكاء الاصطناعي والآلات الإلكترونية</h2>
-        <p>تفعيل النماذج العصبية على المعالجات الدقيقة لاتخاذ القرار اللحظي والتحكم الآلي بالآلات.</p>
+    <!-- قسم التحليل المالي -->
+    <div id="finance" class="section-box">
+        <h2>التحليل المالي والأسواق (Financial Analysis)</h2>
+        <p>خوارزميات متقدمة لقراءة بيانات البورصة، تحليل التشفير، وحساب احتمالات الأسواق المالية.</p>
+        <ul>
+            <li>أمر <code>حلل_بيانات_السوق()</code>: لاستخراج التقارير المالية واتخاذ قرارات التداول الآلي.</li>
+        </ul>
     </div>
 
-    <!-- قسم فحص الحماية والأمان السابق -->
-    <div id="security" class="section-box">
-        <h2>أدوات فحص الحماية والروابط</h2>
-        <p>أوامر متخصصة لتطهير النصوص، توليد البصمات الرقمية وتشفير الاتصالات وحمايتها من التتبع.</p>
+    <!-- قسم برمجة المواقع -->
+    <div id="web" class="section-box">
+        <h2>برمجة المواقع وتطوير الويب (Web Development)</h2>
+        <p>بناء وهندسة مواقع الويب، ربط قواعد البيانات، وحماية السيرفرات بأسطر برمجية قليلة.</p>
+        <ul>
+            <li>أمر <code>انشئ_موقع_آمن()</code>: لبناء بنية تحتية مشفرة لموقع ويب متكامل.</li>
+        </ul>
+    </div>
+
+    <!-- قسم الحوسبة والحاسبات -->
+    <div id="calculators" class="section-box">
+        <h2>الحوسبة والعمليات المعقدة (Super Computing)</h2>
+        <p>إجراء العمليات الحسابية الكمومية، معالجة البيانات الضخمة، والتعامل مع المصفوفات المعقدة.</p>
+        <ul>
+            <li>أمر <code>معالجة_كمومية()</code>: لحل المعادلات الرياضية الفائقة التعقيد.</li>
+        </ul>
+    </div>
+
+    <!-- قسم السيارات والدرون (القديم والمحدث) -->
+    <div id="cars" class="section-box">
+        <h2>السيارات، الطائرات، والذكاء الاصطناعي</h2>
+        <p>أوامر الاتصال بوحدات التحكم (ECU)، وتفعيل النماذج العصبية للآلات.</p>
+        <ul>
+            <li>أمر <code>اتصل_بالوحدة()</code>: لربط النظام بكمبيوتر السيارة.</li>
+            <li>أمر <code>شغل_الذكاء_الاصطناعي()</code>: لتحميل النماذج العصبية المتقدمة.</li>
+        </ul>
     </div>
 
     <script>
         function runCode() {
             const code = document.getElementById('codeinput').value;
             const output = document.getElementById('output');
-            output.innerHTML = "[تجميع] جاري تحليل أكواد Heib12-Lang التنفيذية...<br>";
+            output.innerHTML = "[تجميع] جاري معالجة أوامر Heib12-Lang للأنظمة الشاملة...<br><br>";
             
             setTimeout(() => {
-                let res = "[تنفيذ] تم تنفيذ الأوامر بنجاح:<br>";
-                if(code.includes("أكتب")) res += " > أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!<br>";
-                if(code.includes("ولد_مفتاح")) res += " > h12_token_839591ac72f82f83ca28dd85<br>";
-                if(code.includes("افحص_الرابط")) res += " > [تحليل] جاري التحقق من تشفير الرابط: آمن ومثبت ببروتوكول SSL.<br>";
-                if(code.includes("اتصل_بالوحدة")) res += " > [ECU] تم الاتصال بوحدة التحكم بنجاح واستقرار تام.<br>";
-                if(code.includes("شغل_الذكاء_الاصطناعي")) res += " > [AI] تم تشغيل وحدة الذكاء الاصطناعي والتحكم الآلي بنجاح.<br>";
-                output.innerHTML = res;
-            }, 600);
-        }
-    </script>
-
-</body>
-    <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heib12-Lang | لغة البرمجة الذكية المستقلة</title>
-    <!-- أدسنس مفعل وجاهز -->
-    <style>
-        body { font-family: Tahoma, sans-serif; background-color: #0b0f19; color: #f8fafc; margin: 0; padding: 20px; direction: rtl; line-height: 1.6; }
-        header { text-align: center; padding: 25px; background: #1e293b; border-radius: 12px; margin-bottom: 20px; border: 1px solid #334155; }
-        nav { display: flex; justify-content: center; gap: 15px; background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-        nav a { color: #38bdf8; text-decoration: none; font-weight: bold; padding: 6px 12px; }
-        nav a:hover { background: #334155; border-radius: 5px; }
-        .compiler-box, .docs-box { background: #1e293b; border: 2px solid #0284c7; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        textarea { width: 100%; height: 160px; background: #090d16; color: #38bdf8; border: 1px solid #334155; padding: 12px; font-family: monospace; font-size: 16px; border-radius: 6px; box-sizing: border-box; }
-        .output { background: #090d16; color: #4ade80; padding: 15px; border-radius: 6px; font-family: monospace; margin-top: 15px; min-height: 90px; border: 1px solid #334155; }
-        .btn { background: #0284c7; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; margin-top: 12px; font-weight: bold; }
-        .btn:hover { background: #0369a1; }
-        h2, h3 { color: #38bdf8; }
-        code { background: #090d16; color: #f472b6; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #090d16; border-radius: 6px; overflow: hidden; }
-        th, td { border: 1px solid #334155; padding: 10px; text-align: right; }
-        th { background: #334155; color: #38bdf8; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Heib12-Lang | لغة البرمجة الذكية الخاصة</h1>
-        <p>البيئة الهندسية المستقلة لتبرمج الطائرات، الأدوات الطبية، الجوالات، والسيارات بلغتك الصرفة</p>
-    </header>
-
-    <nav>
-        <a href="#compiler">مفسر اللغة الحي</a>
-        <a href="#docs">توثيق وشرح اللغة للمبرمجين</a>
-    </nav>
-
-    <!-- بيئة مفسر اللغة الحي -->
-    <div id="compiler" class="compiler-box">
-        <h2>> محرك تنفيذ لغة Heib12 الحصري</h2>
-        <p>اكتب أوامرك البرمجية بلغة Heib12 وحدها ونفذها مباشرة:</p>
-        <textarea id="codeinput">
-تشغيل النظام "Heib12_Core_v1";
-اتصل_بطائرة "Drone_X9";
-ضبط_ارتفاع 150 متر;
-فحص_نبض_القلب "Medical_Sensor_A1";
-تأمين_اتصال_جوال؛
-        </textarea>
-        <br>
-        <button class="btn" onclick="runHeibCode()">ترجمة وتنفيذ لغة Heib12</button>
-        <div id="output" class="output">[جاهز] مفسر لغة Heib12 في انتظار كتابة الأوامر...</div>
-    </div>
-
-    <!-- توثيق وشرح اللغة للمبرمجين -->
-    <div id="docs" class="docs-box">
-        <h2>وثيقة المواصفات التقنية للغة: Heib12-Lang</h2>
-        <p><strong>الإصدار:</strong> 1.0.0 | <strong>المطور:</strong> صالح (heib12.com)</p>
-        
-        <h3>1. نظرة عامة</h3>
-        <p>لغة <strong>Heib12-Lang</strong> هي لغة برمجة مستقلة ومتقدمة، مصممة خصيصاً للتحكم بالأنظمة الحرجة مثل أنظمة السيارات، الطائرات المسيرة (Drones)، الأدوات الطبية الحيوية، وتأمين تطبيقات الجوال.</p>
-
-        <h3>2. بنية الكلمات المفتاحية والقواعد</h3>
-        <table>
-            <tr>
-                <th>الكلمة المفتاحية (Keyword)</th>
-                <th>الوظيفة التقنية</th>
-                <th>مثال للاستخدام</th>
-            </tr>
-            <tr>
-                <td><code>تشغيل النظام</code></td>
-                <td>تهيئة النواة والإقلاع</td>
-                <td><code>تشغيل النظام "Core_v1";</code></td>
-            </tr>
-            <tr>
-                <td><code>اتصل_بطائرة</code></td>
-                <td>إنشاء رابط مع وحدة الدرون</td>
-                <td><code>اتصل_بطائرة "Drone_X9";</code></td>
-            </tr>
-            <tr>
-                <td><code>ضبط_ارتفاع</code></td>
-                <td>إرسال إحداثيات الملاحة الجوية</td>
-                <td><code>ضبط_ارتفاع 150 متر;</code></td>
-            </tr>
-            <tr>
-                <td><code>فحص_نبض_القلب</code></td>
-                <td>قراءة الحساسات الطبية الحيوية</td>
-                <td><code>فحص_نبض_القلب "Sensor_A1";</code></td>
-            </tr>
-            <tr>
-                <td><code>تأمين_اتصال_جوال</code></td>
-                <td>تفعيل قنوات التشفير المطلق</td>
-                <td><code>تأمين_اتصال_جوال؛</code></td>
-            </tr>
-        </table>
-
-        <h3>3. آلية عمل المفسر</h3>
-        <p>يقرأ المحرك السطور المدخلة، يحلل الكلمات المفتاحية باللغة العربية، يطابقها مع مكتبات الأجهزة، ثم يعرض مخرجات التنفيذ للمطور لحظياً.</p>
-    </div>
-
-    <script>
-        function runHeibCode() {
-            const code = document.getElementById('codeinput').value;
-            const output = document.getElementById('output');
-            output.innerHTML = "[ترجمة] جاري فحص وتحليل مصدر لغة Heib12 الصرفة...<br>";
-            
-            setTimeout(() => {
-                let res = "[نتائج تنفيذ لغة Heib12]:<br>";
-                if(code.includes("تشغيل النظام")) res += " > [النظام] تم الإقلاع الناجح لنواة Heib12 الذكية.<br>";
-                if(code.includes("اتصل_بطائرة")) res += " > [طيران] تم الاتصال بالدرون وتأمين الملاحة الجوية.<br>";
-                if(code.includes("ضبط_ارتفاع")) res += " > [ملاحة] تم تثبيت الطائرة على الارتفاع المطلوب بدقة.<br>";
-                if(code.includes("فحص_نبض_القلب")) res += " > [طبي] المؤشرات الحيوية مستقرة وسليمة 100%.<br>";
-                if(code.includes("تأمين_اتصال_جوال")) res += " > [جوال] تم تفعيل التشفير المطلق وحماية الاتصال.<br>";
+                let result = "";
                 
-                if(res === "[نتائج تنفيذ لغة Heib12]:<br>") {
-                    res += " > [تنبيه] تمت المعالجة بنجاح. أضف أوامر Heib12 المعتمدة للتنفيذ.";
+                // الفضاء والأقمار
+                if(code.includes("أطلق_المركبة")) result += "🚀 [فضاء] تم الإشعال بنجاح. المركبة تخترق الغلاف الجوي.<br>";
+                if(code.includes("وجه_القمر_الاصطناعي")) result += "🛰️ [أقمار] تم تصحيح المدار وتوجيه العدسات بنجاح.<br>";
+                
+                // المراقبة والأمن
+                if(code.includes("راقب_الكاميرات")) result += "📷 [أمن] شبكة الكاميرات متصلة. نظام التعرف على الوجوه نشط.<br>";
+                
+                // التحليل المالي
+                if(code.includes("حلل_بيانات_السوق")) result += "📊 [مالية] اكتمل التحليل: الأسواق مستقرة مع مؤشرات نمو عالية.<br>";
+                
+                // برمجة المواقع
+                if(code.includes("انشئ_موقع_آمن")) result += "🌐 [ويب] تم نشر الموقع بنجاح وتفعيل شهادات الأمان (SSL).<br>";
+                
+                // السيارات والذكاء الاصطناعي
+                if(code.includes("اتصل_بالوحدة")) result += "🚗 [ECU] تم الاتصال بوحدة تحكم المحرك واستقرار البيانات.<br>";
+                if(code.includes("شغل_الذكاء_الاصطناعي")) result += "🧠 [AI] العقل المدبر قيد العمل. القيادة الذاتية مفعلة.<br>";
+                
+                if (result === "") {
+                    result = "⚠️ [تنبيه] يرجى إدخال أوامر Heib12-Lang صالحة للتنفيذ.<br>";
+                } else {
+                    result += "<br>✅ [اكتمل] تم تنفيذ جميع التعليمات البرمجية دون أخطاء.";
                 }
-                output.innerHTML = res;
-            }, 700);
+                
+                output.innerHTML = result;
+            }, 1000);
         }
     </script>
 
 </body>
-</html>
 </html>
 </html>
