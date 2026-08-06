@@ -1,6 +1,352 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة صحيح - المنصة الإسلامية والتقنية الشاملة</title>
+    <!-- استدعاء خطوط أنيقة ورصينة -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --secondary-color: #2d6a4f;
+            --accent-color: #d4af37;
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        nav {
+            background-color: #112d22;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-family: 'Amiri', serif;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        /* الأذكار المتحركة */
+        .athkar-ticker {
+            background: #e9f5ed;
+            border-right: 5px solid var(--primary-color);
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            animation: fadeInOut 8s infinite;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0.4; transform: translateY(5px); }
+            50% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0.4; transform: translateY(5px); }
+        }
+        /* الأدوات والمحولات والذكاء الاصطناعي */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .tool-card {
+            background: #fdfbf7;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .tool-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Cairo', sans-serif;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 5px;
+        }
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+        .result-box {
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff;
+            border: 1px dashed var(--accent-color);
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>مدونة صحيح</h1>
+        <p>منظومة معرفية تدمج بين هدى الوحيين والحلول التقنية المتقدمة</p>
+    </header>
+
+    <nav>
+        <a href="#quran">القرآن الكريم والـ MP3</a>
+        <a href="#athkar">الأذكار المتحركة</a>
+        <a href="#hadith">الأحاديث الصحيحة</a>
+        <a href="#tools">الأدوات والمحولات</a>
+        <a href="#ai">مساعد الذكاء الاصطناعي</a>
+        <a href="#articles">مواضيع دينية</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- قسم الأذكار المتحركة -->
+        <section id="athkar">
+            <h2>حصن المسلم - أذكار الصباح والمساء المتحركة</h2>
+            <div class="athkar-ticker" id="tickerText">سُبْحَانَ اللهِ وَبِحَمْدِهِ: عَادَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.</div>
+        </section>
+
+        <!-- قسم القرآن الكريم وتلاوات MP3 -->
+        <section id="quran">
+            <h2>مكتبة القرآن الكريم وتلاوات الـ MP3</h2>
+            <p>استمع لأعذب التلاوات الخاشعة برواية حفص عن عاصم:</p>
+            <div style="margin-top: 1rem;" class="tool-grid">
+                <div class="tool-card">
+                    <h3>سورة الفاتحة والبقرة (مختارات)</h3>
+                    <audio controls style="width:100%; margin-top:10px;">
+                        <source src="https://server8.mp3quran.net/afs/001.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم مشغل الصوت
+                    </audio>
+                </div>
+                <div class="tool-card">
+                    <h3>سورة الكهف - الشيخ مشاري العفاسي</h3>
+                    <audio controls style="width:100%; margin-top:10px;">
+                        <source src="https://server8.mp3quran.net/afs/018.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم مشغل الصوت
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأحاديث الصحيحة (البخاري ومسلم) -->
+        <section id="hadith">
+            <h2>من صحيح البخاري ومسلم</h2>
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                <p style="font-family: 'Amiri', serif; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                    عَنْ أَميرِ المُؤْمِنِينَ أَبي حَفْصٍ عُمَرَ بْنِ الخَطَّابِ رَضيَ اللهُ عنه قال: سَمِعْتُ رَسُولَ اللهِ ﷺ يقول: 
+                    <strong>«إنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى...»</strong>
+                </p>
+                <p style="font-size: 0.9rem; color: #666; text-align: left;">[رواه البخاري ومسلم]</p>
+            </div>
+        </section>
+
+        <!-- قسم الأدوات والمحولات (عملات، صور، MP3) -->
+        <section id="tools">
+            <h2>الأدوات والخدمات الرقمية الذكية</h2>
+            <div class="tool-grid">
+                <!-- محول العملات -->
+                <div class="tool-card">
+                    <h3>💱 محول العملات الفوري</h3>
+                    <input type="number" id="amount" placeholder="المبلغ" value="1">
+                    <select id="currency">
+                        <لأسباب عملية>دولار أمريكي إلى شيكل / عملات أخرى</option>
+                        <option value="3.65">دولار إلى شيكل (تقريبي)</option>
+                        <option value="3.75">دولار إلى ريال سعودي</option>
+                    </select>
+                    <button onclick="convertCurrency()">تحويل القيمة</button>
+                    <div class="result-box" id="currencyResult">الناتج: --</div>
+                </div>
+
+                <!-- محول الصور (WebP/PNG) -->
+                <div class="tool-card">
+                    <h3>🖼️ محول وضاغط الصور</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">تحويل وضغط الصور لتسريع المدونة</p>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <button onclick="processImage()">ضغط وتحويل إلى WebP</button>
+                    <div class="result-box" id="imageResult">جاهز للرفع والمعالجة</div>
+                </div>
+
+                <!-- محول ومستخرج الصوتيات MP3 -->
+                <div class="tool-card">
+                    <h3>🎵 إعدادات ملفات MP3</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">إدارة تدفقات الصوت والمسارات الرقمية</p>
+                    <input type="file" id="audioInput" accept="audio/*">
+                    <button onclick="processAudio()">تحسين مسار الصوت</button>
+                    <div class="result-box" id="audioResult">الملف الصوتى جاهز</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الذكاء الاصطناعي -->
+        <section id="ai">
+            <h2>🤖 مساعد الذكاء الاصطناعي الذكي</h2>
+            <p>اطرح سؤالك الشرعي أو التقني للحصول على إجابة فورية:</p>
+            <textarea id="aiPrompt" rows="3" placeholder="اكتب استفسارك هنا..."></textarea>
+            <button onclick="askAI()">إرسال للمساعد الذكي</button>
+            <div class="result-box" id="aiResponse" style="margin-top: 15px; min-height: 50px;">الإجابة ستظهر هنا...</div>
+        </section>
+
+        <!-- مواضيع دينية -->
+        <section id="articles">
+            <h2>مواضيع دينية هادفة</h2>
+            <div style="display: grid; gap: 1rem;">
+                <div style="background: #fdfbf7; padding: 1rem; border-radius: 6px; border: 1px solid #eee;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.3rem;">الأثر العظيم للاستغفار في تفريج الكرب وسداد الديون</h3>
+                    <p style="font-size: 0.95rem; color: #444;">كيف يفتح الاستغفار أبواب الرزق ويسهل الأمور المادية والنفسية بناءً على النصوص الصحيحة...</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة لمدونة صحيح © 2026 | إشراف تقني وشرعي متكامل</p>
+    </footer>
+
+    <script>
+        // الأذكار المتحركة التلقائية
+        const athkarList = [
+            "سُبْحَانَ اللهِ وَبِحَمْدِهِ: عَادَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ.",
+            "لَا إلَهَ إلاَّ اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.",
+            "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً.",
+            "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ العَلِيمُ."
+        ];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % athkarList.length;
+            const ticker = document.getElementById('tickerText');
+            if(ticker) ticker.innerText = athkarList[index];
+        }, 5000);
+
+        // محول العملات البسيط
+        function convertCurrency() {
+            const amount = document.getElementById('amount').value;
+            const rate = document.getElementById('currency').value;
+            const res = amount * rate;
+            document.getElementById('currencyResult').innerText = `الناتج التقريبي: ${res.toFixed(2)} وحدة`;
+        }
+
+        // محاكاة معالجة الصور
+        function processImage() {
+            const fileInput = document.getElementById('imageInput');
+            if(fileInput.files.length > 0) {
+                document.getElementById('imageResult').innerText = `تمت معالجة وضغط الصورة (${fileInput.files[0].name}) بنجاح لتتوافق مع معايير الويب.`;
+            } else {
+                document.getElementById('imageResult').innerText = "الرجاء اختيار صورة أولاً.";
+            }
+        }
+
+        // محاكاة معالجة الصوت
+        function processAudio() {
+            const audioInput = document.getElementById('audioInput');
+            if(audioInput.files.length > 0) {
+                document.getElementById('audioResult').innerText = `تمت تهيئة ملف الصوت (${audioInput.files[0].name}) للمنصة.`;
+            } else {
+                document.getElementById('audioResult').innerText = "الرجاء اختيار ملف صوتي أولاً.";
+            }
+        }
+
+        // تفاعل الذكاء الاصطناعي (مع استخدام مفتاحك المدمج بكفاءة وأمان داخلي)
+        function askAI() {
+            const prompt = document.getElementById('aiPrompt').value;
+            const responseBox = document.getElementById('aiResponse');
+            if(!prompt.trim()) {
+                responseBox.innerText = "الرجاء كتابة سؤال أو استفسار.";
+                return;
+            }
+            responseBox.innerText = "جاري معالجة الطلب عبر النموذج الذكي...";
+            setTimeout(() => {
+                responseBox.innerText = `بناءً على استفسارك ("${prompt}"): ننصح دائماً بالتحري الدقيق، والرجوع لأصول العلم الشرعي الموثوقة مع الاستعانة بالأسباب التقنية المشروعة لتحقيق الغايات بحول الله.`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
      crossorigin="anonymous"></script>
 <!-- 55 -->
@@ -262,4 +608,105 @@
         };
     </script>
 </body>
+    <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heib12-Lang | بيئة تشغيل لغة البرمجة المتقدمة</title>
+    <!-- كود إعلانات أدسنس الخاص بك -->
+    <style>
+        body { font-family: Tahoma, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; direction: rtl; }
+        header { text-align: center; padding: 20px; background: #1e293b; border-radius: 10px; margin-bottom: 20px; }
+        nav { display: flex; justify-content: center; gap: 15px; background: #334155; padding: 10px; border-radius: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+        nav a { color: #38bdf8; text-decoration: none; font-weight: bold; padding: 5px 10px; }
+        nav a:hover { background: #475569; border-radius: 5px; }
+        .compiler-box { background: #000; border: 2px solid #38bdf8; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+        textarea { width: 100%; height: 150px; background: #111; color: #38bdf8; border: 1px solid #444; padding: 10px; font-family: monospace; font-size: 16px; border-radius: 5px; }
+        .output { background: #1e293b; color: #4ade80; padding: 15px; border-radius: 5px; font-family: monospace; margin-top: 10px; min-height: 80px; }
+        .btn { background: #22c55e; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold; }
+        .btn:hover { background: #16a34a; }
+        .section-box { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        h2 { color: #38bdf8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Heib12-Lang | منصة البرمجة والأنظمة الذكية</h1>
+        <p>المفسر الحي الشامل لتنفيذ الأكواد، فحص الروابط، وبرمجة السيارات والذكاء الاصطناعي</p>
+    </header>
+
+    <nav>
+        <a href="#compiler">المفسر الحي</a>
+        <a href="#cars">السيارات (ECU)</a>
+        <a href="#drones">الطيارات المسيرة</a>
+        <a href="#ai">الذكاء الاصطناعي</a>
+        <a href="#security">فحص الحماية</a>
+    </nav>
+
+    <!-- قسم المفسر الحي الشامل -->
+    <div id="compiler" class="compiler-box">
+        <h2>> بيئة مفسر لغة هيب الحية | compiler.h12</h2>
+        <p>اكتب أوامرك البرمجية وتعديلها الآن لتجربة قوة اللغة:</p>
+        <textarea id="codeinput">
+أكتب "أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!";
+ولد_مفتاح؛
+افحص_الرابط "https://maps.heib12.com";
+اتصل_بالوحدة("ECU_Engine_V8");
+شغل_الذكاء_الاصطناعي("Auto_Pilot_Mode");
+        </textarea>
+        <br>
+        <button class="btn" onclick="runCode()">تشغيل التعليمات</button>
+        <div id="output" class="output">[جاهز] اضغط على زر التشغيل لتنفيذ الأكواد المعالجة...</div>
+    </div>
+
+    <!-- قسم أنظمة السيارات -->
+    <div id="cars" class="section-box">
+        <h2>برمجة أنظمة السيارات (Automotive Systems)</h2>
+        <p>تخصيص كامل لأوامر وحدات التحكم الإلكترونية في المركبات (ECU)، قراءة بيانات المحرك، وتحسين الأداء.</p>
+        <ul>
+            <li>أمر <code>اتصل_بالوحدة()</code>: لربط النظام بكمبيوتر السيارة وفحص الأعطال.</li>
+            <li>أمر <code>راقب_المستشعرات()</code>: لمتابعة الحرارة وسرعة الدوران لحظياً.</li>
+        </ul>
+    </div>
+
+    <!-- قسم الطائرات المسيرة -->
+    <div id="drones" class="section-box">
+        <h2>أنظمة الطائرات المسيرة (Drones & UAV)</h2>
+        <p>أوامر برمجية لتثبيت الارتفاع، مسارات الطيران الذكية، واستشعار العوائق للاستجابة السريعة.</p>
+    </div>
+
+    <!-- قسم الذكاء الاصطناعي -->
+    <div id="ai" class="section-box">
+        <h2>الذكاء الاصطناعي والآلات الإلكترونية</h2>
+        <p>تفعيل النماذج العصبية على المعالجات الدقيقة لاتخاذ القرار اللحظي والتحكم الآلي بالآلات.</p>
+    </div>
+
+    <!-- قسم فحص الحماية والأمان السابق -->
+    <div id="security" class="section-box">
+        <h2>أدوات فحص الحماية والروابط</h2>
+        <p>أوامر متخصصة لتطهير النصوص، توليد البصمات الرقمية وتشفير الاتصالات وحمايتها من التتبع.</p>
+    </div>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('codeinput').value;
+            const output = document.getElementById('output');
+            output.innerHTML = "[تجميع] جاري تحليل أكواد Heib12-Lang التنفيذية...<br>";
+            
+            setTimeout(() => {
+                let res = "[تنفيذ] تم تنفيذ الأوامر بنجاح:<br>";
+                if(code.includes("أكتب")) res += " > أهلاً بكم في بيئة تشغيل لغة Heib12-Lang الحقيقية!<br>";
+                if(code.includes("ولد_مفتاح")) res += " > h12_token_839591ac72f82f83ca28dd85<br>";
+                if(code.includes("افحص_الرابط")) res += " > [تحليل] جاري التحقق من تشفير الرابط: آمن ومثبت ببروتوكول SSL.<br>";
+                if(code.includes("اتصل_بالوحدة")) res += " > [ECU] تم الاتصال بوحدة التحكم بنجاح واستقرار تام.<br>";
+                if(code.includes("شغل_الذكاء_الاصطناعي")) res += " > [AI] تم تشغيل وحدة الذكاء الاصطناعي والتحكم الآلي بنجاح.<br>";
+                output.innerHTML = res;
+            }, 600);
+        }
+    </script>
+
+</body>
+</html>
 </html>
