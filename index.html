@@ -1,6 +1,310 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    
+
+<html dir="rtl" lang="ar">
+
+<head>
+
+    <meta charset="UTF-8"></meta>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+
+    <title>منصة صحيح | المكتبة الشاملة</title>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;700&display=swap');
+
+        
+
+        body { font-family: 'Tajawal', sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333; }
+
+        header { background: #065f46; color: white; padding: 25px; text-align: center; shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        .search-box { margin: 20px auto; max-width: 500px; padding: 0 15px; }
+
+        #searchBar { width: 100%; padding: 12px; border-radius: 25px; border: 1px solid #ddd; outline: none; font-family: 'Tajawal'; }
+
+        
+
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+
+        .tab-btn { background: #065f46; color: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+
+        .tab-btn:hover { background: #047857; }
+
+        .tab-btn.active { background: #059669; box-shadow: 0 0 10px rgba(5,150,105,0.4); }
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        .card { background: white; padding: 20px; border-radius: 15px; border: 1px solid #e5e7eb; cursor: pointer; transition: 0.3s; text-align: center; }
+
+        .card:hover { transform: translateY(-5px); border-color: #065f46; }
+
+        .card strong { color: #065f46; display: block; font-size: 1.2em; margin-bottom: 5px; }
+
+        #display-screen { position: fixed; inset: 0; background: white; z-index: 1000; display: none; overflow-y: auto; padding: 20px; }
+
+        .close-btn { color: #dc2626; font-size: 30px; cursor: pointer; background: none; border: none; font-weight: bold; }
+
+        .quran-text { font-family: 'Amiri', serif; font-size: 24px; line-height: 2.2; text-align: center; max-width: 800px; margin: 30px auto; padding: 20px; background: #fdfdfd; border-radius: 10px; }
+
+        audio { width: 100%; max-width: 500px; margin: 20px auto; display: block; }
+
+        .hidden { display: none; }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>منصة صحيح 📚</h1>
+
+        <p>القرآن الكريم، صحيح البخاري، وصحيح مسلم</p>
+      
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </header>
+
+    <div class="search-box">
+
+        <input id="searchBar" onkeyup="filterContent()" placeholder="ابحث عن سورة أو حديث..." type="text" />
+
+    </div>
+
+    <div class="tabs">
+
+        <button class="tab-btn active" onclick="switchSection('quran')">القرآن الكريم</button>
+
+        <button class="tab-btn" onclick="switchSection('bukhari')">صحيح البخاري</button>
+
+        <button class="tab-btn" onclick="switchSection('muslim')">صحيح مسلم</button>
+
+    </div>
+
+    <div id="display-screen">
+
+        <div style="margin: 0 auto; max-width: 900px;">
+
+            <button class="close-btn" onclick="closeScreen()">×</button>
+
+            <h2 id="view-title" style="color: #065f46; text-align: center;"></h2>
+
+            <audio controls="" id="audioPlayer"></audio>
+
+            <div class="quran-text" id="view-text"></div>
+
+        </div>
+
+    </div>
+
+    <div class="grid-container" id="quran-grid">
+
+        <p style="grid-column: 1/-1; text-align: center;">جاري تحميل المصحف الشريف...</p>
+      
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2244311957196913" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="5379580764" style="display: block; text-align: center;"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+
+    <div class="grid-container hidden" id="bukhari-grid">
+
+        <div class="card" onclick="fetchHadith('bukhari')" style="grid-column: 1/-1;">
+
+            <strong>صحيح البخاري</strong>
+
+            <span>اضغط لجلب حديث عشوائي</span>
+
+        </div>
+
+    </div>
+
+    <div class="grid-container hidden" id="muslim-grid">
+
+        <div class="card" onclick="fetchHadith('muslim')" style="grid-column: 1/-1;">
+
+            <strong>صحيح مسلم</strong>
+
+            <span>اضغط لجلب حديث عشوائي</span>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let allSurahs = [];
+
+        // 1. جلب وترتيب الـ 114 سورة
+
+        async function loadQuran() {
+
+            try {
+
+                const res = await fetch('https://api.alquran.cloud/v1/surah');
+
+                const data = await res.json();
+
+                allSurahs = data.data;
+
+                renderQuran(allSurahs);
+
+            } catch (e) {
+
+                document.getElementById('quran-grid').innerHTML = "فشل التحميل، يرجى التحقق من الإنترنت.";
+
+            }
+
+        }
+
+        function renderQuran(list) {
+
+            const container = document.getElementById('quran-grid');
+
+            container.innerHTML = '';
+
+            list.forEach(s => {
+
+                const card = document.createElement('div');
+
+                card.className = 'card';
+
+                card.innerHTML = `<strong>${s.number}</strong> ${s.name}`;
+
+                card.onclick = () => openSurah(s.number, s.name);
+
+                container.appendChild(card);
+
+            });
+
+        }
+
+        // 2. البحث والتصفية
+
+        function filterContent() {
+
+            const term = document.getElementById('searchBar').value.toLowerCase();
+
+            const filtered = allSurahs.filter(s => s.name.includes(term) || s.number.toString().includes(term));
+
+            renderQuran(filtered);
+
+        }
+
+        // 3. فتح السورة (صوت + نص)
+
+        async function openSurah(id, name) {
+
+            const screen = document.getElementById('display-screen');
+
+            const textBody = document.getElementById('view-text');
+
+            const player = document.getElementById('audioPlayer');
+
+            
+
+            screen.style.display = 'block';
+
+            document.getElementById('view-title').innerText = "سورة " + name;
+
+            textBody.innerText = "جاري تحميل الآيات...";
+
+            player.src = `https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/${id}.mp3`;
+
+            player.play();
+
+            const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
+
+            const data = await res.json();
+
+            textBody.innerText = data.data.ayahs.map(a => a.text + ` ﴿${a.numberInSurah}﴾`).join(' ');
+
+        }
+
+        // 4. جلب الأحاديث
+
+        async function fetchHadith(book) {
+
+            const screen = document.getElementById('display-screen');
+
+            const textBody = document.getElementById('view-text');
+
+            const player = document.getElementById('audioPlayer');
+
+            screen.style.display = 'block';
+
+            player.style.display = 'none';
+
+            document.getElementById('view-title').innerText = (book === 'bukhari' ? "صحيح البخاري" : "صحيح مسلم");
+
+            textBody.innerText = "جاري جلب الحديث...";
+
+            try {
+
+                const res = await fetch(`https://api.hadith.gading.dev/books/${book}?range=1-50`);
+
+                const data = await res.json();
+
+                const random = data.data.hadiths[Math.floor(Math.random() * data.data.hadiths.length)];
+
+                textBody.innerText = random.arab;
+
+            } catch (e) { textBody.innerText = "فشل في جلب الحديث حالياً."; }
+
+        }
+
+        // 5. التحكم بالتبويبات
+
+        function switchSection(sec) {
+
+            document.querySelectorAll('.grid-container').forEach(g => g.classList.add('hidden'));
+
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+            document.getElementById(sec + '-grid').classList.remove('hidden');
+
+            event.currentTarget.classList.add('active');
+
+            if(sec === 'quran') document.querySelector('.search-box').classList.remove('hidden');
+
+            else document.querySelector('.search-box').classList.add('hidden');
+
+        }
+
+        function closeScreen() {
+
+            document.getElementById('display-screen').style.display = 'none';
+
+            const player = document.getElementById('audioPlayer');
+
+            player.pause();
+
+            player.style.display = 'block';
+
+        }
+
+        window.onload = loadQuran;
+
+    </script>
+
+</body>
+
+</html>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
      crossorigin="anonymous"></script>
 <!-- 333 -->
