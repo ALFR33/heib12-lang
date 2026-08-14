@@ -1,77 +1,551 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-2244311957196913">
-</amp-auto-ads>
+    <!-- ads.txt: google.com, pub-2244311957196913, DIRECT, f08c47fec0942fa0 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونة صحيح | المنصة الإسلامية ومحرك لغة Heib12</title>
-    <!-- إعلانات أدسنس -->
+    <title>مدونة صحيح | المنصة الإسلامية والتقنية الشاملة</title>
+    
+    <!-- إعلانات أدسنس الرسمية -->
     <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"></script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;700&display=swap');
-        body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 0; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #065f46, #1e293b); color: white; padding: 25px; text-align: center; border-bottom: 2px solid #38bdf8; }
-        header h1 { font-family: 'Amiri', serif; font-size: 2.5rem; color: #d4af37; margin-bottom: 5px; }
-        nav { background: #1e293b; display: flex; justify-content: center; gap: 10px; padding: 12px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; flex-wrap: wrap; }
-        nav a { color: #38bdf8; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: bold; background: #0f172a; transition: 0.3s; }
-        nav a:hover { background: #38bdf8; color: #0f172a; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .section-box { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
-        h2 { color: #38bdf8; font-family: 'Amiri', serif; border-bottom: 1px solid #334155; padding-bottom: 8px; margin-top: 0; }
-        textarea, input[type="text"] { width: 100%; background: #090d16; color: #38bdf8; border: 1px solid #334155; padding: 12px; font-family: 'Tajawal', sans-serif; font-size: 15px; border-radius: 6px; box-sizing: border-box; margin-bottom: 10px; }
-        textarea { height: 160px; font-family: monospace; }
-        .output { background: #090d16; color: #4ade80; padding: 15px; border-radius: 6px; font-family: monospace; margin-top: 12px; min-height: 100px; border: 1px solid #334155; white-space: pre-line; }
-        .btn { background: #22c55e; color: #fff; border: none; padding: 12px 25px; font-size: 16px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; transition: 0.3s; }
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;800&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --panel-bg: #1e293b;
+            --accent-gold: #d4af37;
+            --accent-blue: #38bdf8;
+            --accent-green: #10b981;
+            --text-light: #f8fafc;
+        }
+
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background: var(--bg-dark); 
+            color: var(--text-light); 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+        }
+
+        header { 
+            background: linear-gradient(135deg, #065f46, #1e293b); 
+            color: white; 
+            padding: 25px; 
+            text-align: center; 
+            border-bottom: 2px solid var(--accent-blue); 
+        }
+        header h1 { 
+            font-family: 'Amiri', serif; 
+            font-size: 2.5rem; 
+            color: var(--accent-gold); 
+            margin-bottom: 5px; 
+        }
+
+        nav { 
+            background: var(--panel-bg); 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            padding: 12px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #334155; 
+            flex-wrap: wrap; 
+        }
+        nav a { 
+            color: var(--accent-blue); 
+            text-decoration: none; 
+            padding: 8px 14px; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            background: #0f172a; 
+            transition: 0.3s; 
+        }
+        nav a:hover, nav a.active-link { 
+            background: var(--accent-blue); 
+            color: #0f172a; 
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 20px auto; 
+            padding: 0 15px; 
+        }
+        .section-box { 
+            background: var(--panel-bg); 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border: 1px solid #334155; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        h2 { 
+            color: var(--accent-blue); 
+            font-family: 'Amiri', serif; 
+            border-bottom: 1px solid #334155; 
+            padding-bottom: 8px; 
+            margin-top: 0; 
+        }
+
+        /* مساحات رعاية الشركات */
+        .ad-slot-container {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .sponsor-banner {
+            display: block;
+            background: linear-gradient(135deg, #1e293b, #0b111e);
+            border: 2px dashed var(--accent-blue);
+            border-radius: 8px;
+            padding: 15px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .sponsor-banner:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        textarea, input[type="text"] { 
+            width: 100%; 
+            background: #090d16; 
+            color: var(--accent-blue); 
+            border: 1px solid #334155; 
+            padding: 12px; 
+            font-family: 'Tajawal', sans-serif; 
+            font-size: 15px; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+        }
+        textarea { height: 140px; font-family: monospace; }
+        
+        .output { 
+            background: #090d16; 
+            color: #4ade80; 
+            padding: 15px; 
+            border-radius: 6px; 
+            font-family: monospace; 
+            margin-top: 12px; 
+            min-height: 80px; 
+            border: 1px solid #334155; 
+            white-space: pre-line; 
+        }
+
+        .btn { 
+            background: #22c55e; 
+            color: #fff; 
+            border: none; 
+            padding: 12px 25px; 
+            font-size: 16px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            width: 100%; 
+            margin-top: 10px; 
+            transition: 0.3s; 
+        }
         .btn:hover { background: #16a34a; }
-        .article-btn { background: #d4af37; color: #0f172a; font-size: 1.1rem; margin-bottom: 15px; }
+        .article-btn { background: var(--accent-gold); color: #0f172a; font-size: 1.1rem; margin-bottom: 15px; text-align: right; }
         .article-btn:hover { background: #b49428; }
+        
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-top: 15px; }
         .card { background: #0f172a; padding: 15px; border-radius: 8px; border: 1px solid #334155; cursor: pointer; text-align: center; transition: 0.3s; }
-        .card:hover { border-color: #38bdf8; transform: translateY(-3px); }
-        .card strong { color: #38bdf8; display: block; font-size: 1.1em; }
-        #display-screen, #article1-screen, #article2-screen, #article3-screen { position: fixed; inset: 0; background: #0f172a; z-index: 2000; display: none; overflow-y: auto; padding: 20px; }
+        .card:hover { border-color: var(--accent-blue); transform: translateY(-3px); }
+        .card strong { color: var(--accent-blue); display: block; font-size: 1.1em; }
+
+        /* شاشات النوافذ المنبثقة */
+        #display-screen, #article1-screen, #article2-screen, #article3-screen, #article4-screen { 
+            position: fixed; 
+            inset: 0; 
+            background: #0f172a; 
+            z-index: 2000; 
+            display: none; 
+            overflow-y: auto; 
+            padding: 20px; 
+        }
         .close-btn { color: #ef4444; font-size: 30px; cursor: pointer; background: none; border: none; font-weight: bold; float: left; }
-        .quran-text, .article-content { font-family: 'Amiri', serif; font-size: 20px; line-height: 2.2; background: #1e293b; padding: 25px; border-radius: 8px; margin-top: 15px; color: #f1f5f9; text-align: justify; }
+        .quran-text, .article-content { 
+            font-family: 'Amiri', serif; 
+            font-size: 21px; 
+            line-height: 2.3; 
+            background: #1e293b; 
+            padding: 30px; 
+            border-radius: 12px; 
+            margin-top: 15px; 
+            color: #f8fafc; 
+            text-align: justify; 
+            border: 1px solid #334155;
+        }
+        .article-header-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hadith-quote {
+            background: #090d16;
+            border-right: 4px solid var(--accent-gold);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+        .reference-tag {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            display: block;
+            margin-top: 10px;
+            font-style: italic;
+        }
         .interaction-box { margin-top: 20px; background: #111827; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
         .comments-list { margin-top: 15px; background: #090d16; padding: 10px; border-radius: 6px; max-height: 150px; overflow-y: auto; font-size: 0.95rem; }
         .comment-item { border-bottom: 1px solid #1f2937; padding: 6px 0; color: #cbd5e1; }
-        footer { background: #1e293b; text-align: center; padding: 20px; margin-top: 30px; border-top: 1px solid #334155; font-size: 0.9rem; }
+
+        /* استوديو هندسة الصوت */
+        .control-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px; margin-top: 15px; }
+        .control-box { background: #0b111e; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .control-box label { display: flex; justify-content: space-between; font-size: 0.88rem; color: #94a3b8; margin-bottom: 8px; }
+        input[type="range"] { width: 100%; accent-color: var(--accent-gold); height: 6px; background: #1f2937; border-radius: 3px; }
+        .btn-rec { background-color: #ef4444; color: white; border: none; font-size: 1.05rem; }
+        .btn-rec:hover { background-color: #dc2626; }
+        .hud-display { background-color: #02050b; border: 1px solid #334155; padding: 15px; border-radius: 8px; font-family: monospace; color: #00ffcc; font-size: 0.9rem; min-height: 45px; white-space: pre-line; margin-top: 15px; }
+
+        /* صندوق سياسة الخصوصية المنسق */
+        .privacy-box {
+            background: #ffffff;
+            color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            line-height: 1.8;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .privacy-box h2 {
+            color: #065f46;
+            font-family: 'Amiri', serif;
+            border-bottom: 2px solid #065f46;
+            padding-bottom: 10px;
+        }
+        .privacy-box h3 {
+            color: #b45309;
+            margin-top: 20px;
+        }
+
+        footer { background: var(--panel-bg); text-align: center; padding: 20px; margin-top: 30px; border-top: 1px solid #334155; font-size: 0.9rem; }
+        footer a { color: var(--accent-blue); text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>مدونة صحيح 📚</h1>
-        <p>المنصة المعرفية الشاملة: الوحي الشريف ومحرك لغة البرمجة Heib12</p>
+        <p>المنصة المعرفية الشاملة: الوحي الشريف، محرك لغة Heib12، وأدوات الميديا المتقدمة</p>
     </header>
 
     <nav>
         <a href="#articles-section">المقالات الإسلامية</a>
+        <a href="#file-converter" style="color: #f87171; border: 1px solid #ef4444;">🔄 محوّل الملفات</a>
+        <a href="#image-resizer" style="color: #38bdf8; border: 1px solid #38bdf8;">📐 حجم الصور</a>
+        <a href="#audio-studio" style="color: #d4af37; border: 1px solid #d4af37;">🎙️ استوديو قارئ القرآن</a>
         <a href="#compiler">مفسر Heib12</a>
         <a href="#quran">القرآن الكريم</a>
         <a href="#hadith">الأحاديث النبوية</a>
+        <a href="#privacy-policy" style="color: #4ade80; border: 1px solid #22c55e;">🛡️ سياسة الخصوصية</a>
     </nav>
 
     <div class="container">
+
+        <!-- بنر رعاية الشركات المخصص -->
+        <div class="ad-slot-container">
+            <a href="mailto:contact@heib12.com?subject=طلب رعاية إعلانية" class="sponsor-banner">
+                📢 مساحة إعلانية مخصصة لرعاية الشركات والمؤسسات | احجز مساحتك الآن
+            </a>
+        </div>
 
         <!-- قسم المقالات مع الأزرار -->
         <div id="articles-section" class="section-box">
             <h2>المقالات والفتاوى الشرعية</h2>
             <p>اختر المقال لقراءته والتفاعل معه:</p>
+            <button class="btn article-btn" onclick="openArticle('article4-screen')">📖 كيف الصلاة على النبي صلى الله عليه وسلم وشروط قبول الدعاء</button>
             <button class="btn article-btn" onclick="openArticle('article1-screen')">📖 حكم من يسب ويشتم القدر</button>
             <button class="btn article-btn" onclick="openArticle('article2-screen')">📖 شروط قبول الدعاء</button>
             <button class="btn article-btn" onclick="openArticle('article3-screen')">📖 فضل الاستغفار</button>
         </div>
 
-        <!-- قسم مفسر لغة Heib12 للسيارات والفضاء -->
+        <!-- قسم محوّل الملفات الذكي -->
+        <div id="file-converter" class="section-box" style="border: 2px solid #ef4444;">
+            <h2 style="color: #f87171; text-align: center;">🔄 محوّل الملفات والصور الذكي</h2>
+            <div style="text-align: center; background: #0f172a; padding: 10px; border-radius: 15px; border: 1px solid #334155;">
+                <iframe 
+                    style="width: 100%; height: 750px; border: 2px solid #ef4444; border-radius: 12px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
+                    srcdoc='
+                    <!DOCTYPE html>
+                    <html dir="rtl">
+                    <head>
+                        <meta charset="UTF-8">
+                        <style>
+                            body { font-family: Arial, sans-serif; background: #fff; padding: 20px; text-align: center; }
+                            .main-card { max-width: 500px; margin: auto; border: 1px solid #ddd; padding: 25px; border-radius: 15px; }
+                            .logo { color: #e74c3c; font-size: 24px; font-weight: bold; margin-bottom: 20px; display: block; }
+                            .upload-btn { background: #e74c3c; color: white; padding: 30px; border-radius: 10px; cursor: pointer; display: block; margin-bottom: 20px; border: 2px dashed #c0392b; }
+                            .file-info { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: none; border: 1px solid #eee; text-align: right; }
+                            .size-tag { background: #e74c3c; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; float: left; }
+                            select { width: 100%; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 16px; border: 2px solid #ddd; }
+                            .btn-convert { background: #e74c3c; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 20px; font-weight: bold; cursor: pointer; width: 100%; }
+                            .btn-convert:hover { background: #c0392b; }
+                            #status { margin-top: 15px; color: #28a745; font-weight: bold; display: none; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="main-card">
+                            <div class="logo">محوّل الملفات الذكي</div>
+                            
+                            <label class="upload-btn">
+                                <strong>إختر الملفات</strong>
+                                <input type="file" id="fileInp" hidden onchange="showInfo()">
+                            </label>
+
+                            <div id="infoBox" class="file-info">
+                                <span id="sTag" class="size-tag">0 KB</span>
+                                <strong id="nTag">اسم الملف</strong>
+                            </div>
+
+                            <p>إلى صيغة:</p>
+                            <select id="fmt">
+                                <optgroup label="صور (Images)">
+                                    <option value="image/jpeg">JPG / JPEG</option>
+                                    <option value="image/png">PNG</option>
+                                    <option value="image/webp">WebP</option>
+                                    <option value="image/gif">GIF</option>
+                                    <option value="image/bmp">BMP</option>
+                                    <option value="image/tiff">TIFF</option>
+                                </optgroup>
+                                <optgroup label="أخرى (Others)">
+                                    <option value="image/x-icon">ICO (أيقونة)</option>
+                                </optgroup>
+                            </select>
+
+                            <button class="btn-convert" onclick="process()">تحويل الآن 🚀</button>
+                            <div id="status">تم التحميل بنجاح! ✅</div>
+                        </div>
+
+                        <script>
+                            function showInfo() {
+                                var f = document.getElementById("fileInp").files[0];
+                                if(f) {
+                                    document.getElementById("nTag").innerText = f.name;
+                                    var s = f.size > 1048576 ? (f.size/1048576).toFixed(2)+" MB" : (f.size/1024).toFixed(2)+" KB";
+                                    document.getElementById("sTag").innerText = s;
+                                    document.getElementById("infoBox").style.display = "block";
+                                }
+                            }
+
+                            function process() {
+                                var f = document.getElementById("fileInp").files[0];
+                                if(!f) { alert("اختر ملفاً!"); return; }
+                                
+                                var r = new FileReader();
+                                r.onload = function(e) {
+                                    var img = new Image();
+                                    img.onload = function() {
+                                        var c = document.createElement("canvas");
+                                        c.width = img.width; c.height = img.height;
+                                        var ctx = c.getContext("2d");
+                                        var fmt = document.getElementById("fmt").value;
+                                        if(fmt === "image/jpeg") { ctx.fillStyle="#fff"; ctx.fillRect(0,0,c.width,c.height); }
+                                        ctx.drawImage(img, 0, 0);
+                                        
+                                        var a = document.createElement("a");
+                                        a.href = c.toDataURL(fmt, 0.9);
+                                        a.download = "salh_converted." + fmt.split("/")[1].replace("x-icon","ico");
+                                        a.click();
+                                        document.getElementById("status").style.display = "block";
+                                    };
+                                    img.src = e.target.result;
+                                };
+                                r.readAsDataURL(f);
+                            }
+                        </script>
+                    </body>
+                    </html>'>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- قسم مهندس مقاسات الصور (حجم الصور) -->
+        <div id="image-resizer" class="section-box">
+            <h2>📐 أداة ضبط وتعديل مقاسات الصور بدقة</h2>
+            <div style="text-align: center; background: #0f172a; padding: 10px; border-radius: 15px; border: 1px solid #334155;">
+                <iframe 
+                    style="width: 100%; height: 750px; border: 2px solid #38bdf8; border-radius: 12px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
+                    srcdoc='
+                    <!DOCTYPE html>
+                    <html dir="rtl">
+                    <head>
+                        <meta charset="UTF-8">
+                        <style>
+                            body { font-family: sans-serif; background: #fff; padding: 20px; text-align: center; }
+                            .resize-card { max-width: 500px; margin: auto; padding: 25px; border: 1px solid #eee; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+                            h2 { color: #0284c7; margin-bottom: 20px; }
+                            .input-box { background: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #ddd; }
+                            .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+                            input[type="number"], input[type="file"] { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+                            label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; text-align: right; }
+                            .btn-go { background: #0284c7; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 18px; cursor: pointer; width: 100%; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+                            .btn-go:hover { background: #0369a1; }
+                            #status { margin-top: 15px; color: #27ae60; font-weight: bold; display: none; }
+                            .preview-info { font-size: 12px; color: #7f8c8d; margin-top: 5px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="resize-card">
+                            <h2>📐 مهندس مقاسات الصور</h2>
+                            <p>حدد الطول والعرض الذي تريده بدقة:</p>
+
+                            <div class="input-box">
+                                <label>1. اختر الصورة:</label>
+                                <input type="file" id="imgFile" accept="image/*" onchange="showOriginal()">
+                                <div id="origInfo" class="preview-info"></div>
+                            </div>
+
+                            <div class="input-box">
+                                <label>2. حدد المقاسات الجديدة (بكسل):</label>
+                                <div class="grid">
+                                    <div>
+                                        <label>العرض (Width):</label>
+                                        <input type="number" id="newW" placeholder="مثلاً: 400">
+                                    </div>
+                                    <div>
+                                        <label>الطول (Height):</label>
+                                        <input type="number" id="newH" placeholder="مثلاً: 700">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-go" onclick="resizeNow()">تغيير المقاس وتحميل الآن 📥</button>
+                            
+                            <p id="status">تمت المعالجة بنجاح! ✅</p>
+                        </div>
+
+                        <script>
+                            function showOriginal() {
+                                const file = document.getElementById("imgFile").files[0];
+                                if(file) {
+                                    const reader = new FileReader();
+                                    reader.onload = function(e) {
+                                        const img = new Image();
+                                        img.onload = function() {
+                                            document.getElementById("origInfo").innerText = "المقاس الأصلي: " + img.width + " × " + img.height;
+                                            document.getElementById("newW").value = img.width;
+                                            document.getElementById("newH").value = img.height;
+                                        };
+                                        img.src = e.target.result;
+                                    };
+                                    reader.readAsDataURL(file);
+                                }
+                            }
+
+                            function resizeNow() {
+                                const file = document.getElementById("imgFile").files[0];
+                                const w = parseInt(document.getElementById("newW").value);
+                                const h = parseInt(document.getElementById("newH").value);
+
+                                if(!file || !w || !h) {
+                                    alert("يرجى اختيار صورة وتحديد الطول والعرض المطلوبين!");
+                                    return;
+                                }
+
+                                const reader = new FileReader();
+                                reader.onload = function(e) {
+                                    const img = new Image();
+                                    img.onload = function() {
+                                        const canvas = document.createElement("canvas");
+                                        const ctx = canvas.getContext("2d");
+
+                                        canvas.width = w;
+                                        canvas.height = h;
+
+                                        ctx.drawImage(img, 0, 0, w, h);
+
+                                        const link = document.createElement("a");
+                                        link.href = canvas.toDataURL("image/png");
+                                        link.download = "resized_image_" + w + "x" + h + ".png";
+                                        link.click();
+
+                                        document.getElementById("status").style.display = "block";
+                                    };
+                                    img.src = e.target.result;
+                                };
+                                reader.readAsDataURL(file);
+                            }
+                        </script>
+                    </body>
+                    </html>'>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- قسم استوديو تحسين صوت القارئ -->
+        <div id="audio-studio" class="section-box" style="border: 2px solid var(--accent-gold);">
+            <h2 style="color: var(--accent-gold); text-align: center;">🎙️ استوديو Heib12 لهندسة وتحسين صوت قارئ القرآن الكريم</h2>
+            <p style="text-align: center; color: #cbd5e1;">معالجة حية، عزل كريستالي، وإضافة صدى المساجد الكبرى للتلاوات</p>
+
+            <audio id="quran-audio-player" loop></audio>
+
+            <!-- 1. رفع ملف الصوت -->
+            <div style="background: #0b111e; padding: 15px; border-radius: 8px; border-left: 4px solid var(--accent-gold); margin-bottom: 15px;">
+                <label style="color: var(--accent-gold); font-weight: bold; display: block; margin-bottom: 8px;">1. اختر ملف التلاوة الجاف من جهازك:</label>
+                <input type="file" id="upload-audio" accept="audio/*" style="width: 100%; background: #1e293b; padding: 8px; border-radius: 6px; border: 1px dashed #38bdf8;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                    <button class="btn" id="btn-play-all" style="background: #0284c7;">▶ تشغيل عبر الفلاتر</button>
+                    <button class="btn" id="btn-pause-all" style="background: #475569;">⏸ إيقاف مؤقت</button>
+                </div>
+            </div>
+
+            <!-- 2. أدوات المعالجة الحية -->
+            <div class="control-grid">
+                <div class="control-box">
+                    <label>صدى المسجد (Reverb Mix): <span id="txt-rev-wet">30%</span></label>
+                    <input type="range" id="slider-rev-wet" min="0" max="1" step="0.01" value="0.3">
+                    <label style="margin-top: 8px;">فضاء المسجد (Space Size): <span id="txt-rev-size">75%</span></label>
+                    <input type="range" id="slider-rev-size" min="0.5" max="0.98" step="0.01" value="0.75">
+                </div>
+
+                <div class="control-box">
+                    <label>تكرار التلاوة (Echo Delay): <span id="txt-del-wet">15%</span></label>
+                    <input type="range" id="slider-del-wet" min="0" max="0.5" step="0.01" value="0.15">
+                    <label style="margin-top: 8px;">زمن التردد (Echo Time): <span id="txt-del-time">0.40 ثانية</span></label>
+                    <input type="range" id="slider-del-time" min="0.2" max="0.8" step="0.02" value="0.4">
+                </div>
+
+                <div class="control-box">
+                    <label>تفخيم الصوت (Bass Boost): <span id="txt-eq-bass">0 dB</span></label>
+                    <input type="range" id="slider-eq-bass" min="-6" max="12" step="0.5" value="0">
+                    <label style="margin-top: 8px;">نقاء مخارج التجويد (Treble): <span id="txt-eq-treble">0 dB</span></label>
+                    <input type="range" id="slider-eq-treble" min="-6" max="12" step="0.5" value="0">
+                </div>
+            </div>
+
+            <!-- 3. تصدير التلاوة -->
+            <div style="margin-top: 15px;">
+                <button class="btn btn-rec" id="btn-rec-start">🔴 بدء تسجيل الماستر النهائي</button>
+                <button class="btn btn-rec" id="btn-rec-stop" style="display: none; background-color: #b91c1c;">⏹ إنهاء التسجيل واستخراج التلاوة</button>
+                <a id="download-anchor" class="btn" style="display: none; text-align: center; text-decoration: none; margin-top: 10px; background-color: var(--accent-green); color: black;">📥 تحميل التلاوة المعدلة بجودة WAV</a>
+            </div>
+
+            <div class="hud-display" id="hud-screen">الاستوديو جاهز وبانتظار تحميل ملف تلاوة القارئ...</div>
+        </div>
+
+        <!-- قسم مفسر لغة Heib12 -->
         <div id="compiler" class="section-box">
-            <h2>> مفسر لغة البرمجة Heib12-Lang</h2>
+            <h2>&gt; مفسر لغة البرمجة Heib12-Lang</h2>
             <p>برمج الأنظمة المتقدمة، السيارات، والطائرات بلغتك الصرفة:</p>
             <textarea id="codeinput">
 // اختبار نظام السيارات والفضاء
@@ -96,7 +570,7 @@
         <!-- قسم الأحاديث الصحيحة -->
         <div id="hadith" class="section-box">
             <h2>من صحيح البخاري ومسلم</h2>
-            <div style="background: #0f172a; padding: 15px; border-radius: 8px; border-left: 4px solid #d4af37;">
+            <div style="background: #0f172a; padding: 15px; border-radius: 8px; border-left: 4px solid var(--accent-gold);">
                 <p style="font-family: 'Amiri', serif; font-size: 1.2rem;">
                     عَنْ أَميرِ المُؤْمِنِينَ أَبي حَفْصٍ عُمَرَ بْنِ الخَطَّابِ رَضيَ اللهُ عنه قال: سَمِعْتُ رَسُولَ اللهِ ﷺ يقول: 
                     <strong>«إنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى...»</strong>
@@ -105,6 +579,79 @@
             </div>
         </div>
 
+        <!-- قسم سياسة الخصوصية -->
+        <div id="privacy-policy" class="section-box">
+            <div class="privacy-box" dir="rtl">
+                <h2>سياسة الخصوصية لتطبيق وموقع "صحيح"</h2>
+                <p>تعتبر خصوصية زوارنا ومستخدمينا ذات أهمية بالغة بالنسبة لنا. توضح هذه الوثيقة أنواع المعلومات الشخصية التي يتم استلامها وجمعها وكيفية استخدامها.</p>
+
+                <h3>1. جمع البيانات</h3>
+                <p>تطبيق "صحيح" هو تطبيق WebView يعرض محتوى مدونتنا. نحن لا نطلب منك تسجيل حساب، ولا نقوم بجمع أي معلومات شخصية مثل الاسم أو رقم الهاتف أو الموقع الجغرافي.</p>
+
+                <h3>2. ملفات تعريف الارتباط (Cookies)</h3>
+                <p>مثل معظم المواقع، يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليل حركة المرور عبر Google Analytics.</p>
+
+                <h3>3. الإعلانات</h3>
+                <p>قد نستخدم شركات إعلان طرف ثالث (مثل Google AdSense) لعرض الإعلانات عند زيارتك لموقعنا. قد تستخدم هذه الشركات معلومات حول زياراتك لتوفير إعلانات حول السلع والخدمات التي تهمك.</p>
+
+                <h3>4. الموافقة</h3>
+                <p>باستخدامك لتطبيقنا وموقعنا، فإنك توافق على سياسة الخصوصية الخاصة بنا وتوافق على شروطها.</p>
+                
+                <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 20px 0;" />
+                <p style="text-align:center; font-size: 0.85rem; color: #64748b;">Last Updated: 2026-02-01</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- نافذة المقال: كيف الصلاة على النبي وشروط قبول الدعاء -->
+    <div id="article4-screen">
+        <button class="close-btn" onclick="closeArticle('article4-screen')">×</button>
+        <div class="article-header-box">
+            <h2 style="color: var(--accent-gold); font-family: 'Amiri', serif; font-size: 2.2rem; border-bottom: none; margin-bottom: 5px;">كيف الصلاة على النبي صلى الله عليه وسلم</h2>
+            <p style="color: var(--accent-blue); font-size: 1.1rem; margin-top: 0;">بيان الصفة الشرعية الثابتة وشروط قبول الدعاء</p>
+        </div>
+        
+        <div class="article-content">
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">أولاً: صفة الصلاة على النبي ﷺ</h3>
+            <p>
+                ليس بمشروع، وفيه إبهام يخشى منه الالتباس على الناس، ولكن أفضل الصلاة عليه <strong>الصلاة الإبراهيمية</strong>:
+            </p>
+            <div class="hadith-quote">
+                «اللهم صل على محمد وعلى آل محمد، كما صليت على إبراهيم وعلى آل إبراهيم إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد، كما باركت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد»
+            </div>
+            <p>
+                هذه الصلاة هي الصلاة المعروفة الثابتة عن النبي ﷺ ولها أنواع، وبأي نوع منها صلى فقد فعل المشروع إذا كان من الأنواع الثابتة عنه ﷺ.
+            </p>
+            <span class="reference-tag">📚 المصدر: [مجموع فتاوى ابن باز (1/ 53)]</span>
+
+            <hr style="border: 0; border-top: 1px solid #334155; margin: 30px 0;">
+
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">ثانياً: شروط قبول الدعاء</h3>
+            <p>
+                من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ، والإيمان بأن الله هو الحق، ولا يقول إلا الحق، والإخلاص لله سبحانه، والمتابعة لرسوله ﷺ مع الإيمان بأن الرسول -عليه الصلاة والسلام- بلغ الحق، وهو الصادق فيما يقول، وأن يأتي بذلك عن إيمان وثقة بالله، ورغبة فيما عنده، وأنه سبحانه مدبر الأمور ومصرف الأشياء، وأنه القادر على كل شيء ، لا عن شك ولا عن سوء ظن، بل عن حسن ظن بالله وثقة به، وأنه متى تخلف المطلوب فلعلة من العلل المذكورة أو غيرها، فالعبد عليه أن يأتي بالأسباب، والله مسبب الأسباب، وهو الحكيم العليم.
+            </p>
+            <p>
+                وقد يحصل الدواء ولكن لا يزول الداء لأسباب أخرى جهلها العبد، والله فيها حكيم سبحانه وتعالى، وهذا يشمل الدواء الحسي والمعنوي، الحسي الذي يقوم به الأطباء من أدوية وعمليات ونحو ذلك، والمعنوي الذي يحصل بالدعاء والقراءة ونحو ذلك من الأسباب الشرعية، ومع هذا كله قد يتخلف المطلوب لأسباب كثيرة، منها الغفلة عن الله سبحانه، ومنها المعاصي، ولاسيما أكل الحرام.
+            </p>
+            <div class="hadith-quote">
+                وقد صح عن رسول الله ﷺ أنه قال: «ما من عبد يدعو الله بدعوة ليس فيها إثم ولا قطيعة رحم إلا أعطاه الله بها إحدى ثلاث: إما أن تعجل له دعوته في الدنيا، وإما أن تدخر له في الآخرة، وإما أن يصرف عنه من الشر مثل ذلك»، قالوا يا رسول الله، إذا نكثر قال: «الله أكثر».
+            </div>
+            <p>
+                وبذلك يعلم المؤمن والمؤمنة أن إجابته قد تؤجل إلى الآخرة لأسباب اقتضتها حكمة الله سبحانه، وقد يصرف عنه بأسباب الدعاء شر كثير بدلا من أن يعطى طلبه، والله  هو الحكيم العليم في أفعاله وأقواله وشرعه وقدره، كما قال عز وجل: ﴿إِنَّ رَبَّكَ عَلِيمٌ حَكِيمٌ﴾ [يوسف: 6]، والله ولي التوفيق.
+            </p>
+            <span class="reference-tag">📚 المصدر: [هذه الأسئلة منتقاة من برنامج نور على الدرب الذي يبث من الإذاعات السعودية - مجموع فتاوى ومقالات الشيخ ابن باز (3/ 447)]</span>
+        </div>
+
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount4')">👍 إعجاب (<span id="likeCount4">38</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput4" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput4', 'commentsList4')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList4">
+                <div class="comment-item"><strong>صالح:</strong> اللهم صل وسلم وبارك على نبينا محمد وعلى آله وصحبه أجمعين.</div>
+            </div>
+        </div>
     </div>
 
     <!-- نافذة المقال الأول -->
@@ -112,21 +659,10 @@
         <button class="close-btn" onclick="closeArticle('article1-screen')">×</button>
         <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">حكم من يسب ويشتم القدر</h2>
         <div class="article-content">
-            هذا الكلام مناف لكمال التوحيد، وكمال الإيمان بالقدر، فإن القدر لا يلهو، والزمن لا يعبث، وإن كل ما يجري في هذه الحياة هو بتقدير الله وعلمه، والله سبحانه هو الذي يصرف الليل والنهار، وهو الذي يقدر السعادة والشقاء، حسب ما تقتضيه حكمته وقد تخفى تلك الحكمة على الناس؛ لأن علمهم محدود، وعقولهم قاصرة عن إدراك تلك الحكمة الإلهية، وكل ما في الوجود مخلوق لله، خلقه بمشيئته وقدرته، وما شاء كان وما لم يشأ لم يكن، وهو الذي يعطي ويمنع، ويخفض ويرفع، ويعز ويذل، ويغني ويفقر، ويضل ويهدي، ويسعد ويشقي، ويولي الملك من يشاء، وينزعه ممن يشاء، وقد أحسن كل شيء خلقه، وكل أفعال الخالق وأوامره ونواهيه، لها حكمة بالغة وغايات محمودة، يشكر عليها سبحانه، وإن لم يعرفها البشر لقصور إدراكهم.<br><br>
-            وقد ورد في الصحيحين وغيرهما عن النبي ﷺ أنه قال (فيما يرويه عن ربه ): يؤذيني ابن آدم يسب الدهر وأنا الدهر بيدي الأمر أقلب الليل والنهار وفي رواية: لا تسبوا الدهر فإني أنا الدهر وفي رواية: لا يقل ابن آدم: يا خيبة الدهر فإني أنا الدهر أرسل الليل والنهار فإذا شئت قبضتهما وقد كان العرب في الجاهلية ينسبون إليه ما يصيبهم من المصائب والمكاره، فيقولون: أصابتهم قوارع الدهر، وأبادهم الدهر، فإذا أضافوا إلى الدهر ما نالهم من الشدائد، سبوا فاعلها فكان مرجع سبها إلى الله عز وجل، إذ هو الفاعل في الحقيقة للأمور التي يصفونها، فنهوا عن سب الدهر وقد نقل هذا التفسير للحديث بهذا المعنى عن الشافعي، وأبي عبيد، وابن جرير، والبغوي وغيرهم.<br><br>
-            وأما معنى قوله: أقلب الليل والنهار يعني أن ما يجري فيهما من خير وشر بإرادة الله وتدبيره وبعلم منه تعالى وحكمة، لا يشاركه في ذلك غيره، ما شاء كان وما لم يشأ لم يكن، فالواجب عند ذلك حمده في الحالتين، وحسن الظن به سبحانه وبحمده، والرجوع إليه بالتوبة والإنابة، قال تعالى: وَنَبْلُوكُمْ بِالشَّرِّ وَالْخَيْرِ فِتْنَةً وَإِلَيْنَا تُرْجَعُونَ [الأنبياء:35].<br><br>
-            وقد أورد الإمام المجدد محمد بن عبدالوهاب رحمه الله، بابا في كتاب التوحيد سماه: (باب من سب الدهر فقد آذى الله) أورد فيه هذا الحديث وبين أنه يشتمل على عدة مسائل: النهي عن سب الدهر، تسميته أذى لله، التأمل في قوله: فإن الله هو الدهر، وأنه قد يكون سابا ولو لم يقصده بقلبه.<br><br>
-            وعلى هذا فإن الكاتبة -سامحها الله- أخطأت عندما نسبت القسوة إلى الدهر في عنوان قصتها؛ لأن القدر -كما سبق- لا يتصرف، وإنما الله سبحانه هو المقدر للأشياء عن حكمة بالغة، والله جل وعلا لا يوصف بالقسوة، بل هو جل وعلا رحيم بعباده، وهو أرحم بهم من الوالدة بولدها، كما ورد في الحديث الصحيح الله أرحم بعباده من الوالدة بولدها فيجب أن ننزه أقلامنا عن الوقوع في مثل هذه المزالق، امتثالا لأمر الله وأمر رسوله، وإكمالاً للتوحيد، وابتعادًا عما ينافيه أو ينافي كماله، ووسائل الإعلام -كما هو معروف- واسعة الانتشار وعظيمة التأثير على الناس، وكثرة ترديدها لمثل هذه الكلمات ينشرها بين الناس، ويجعلهم يتساهلون في استعمالها، وخاصة النشء مع ما في استعمالها من المحذور.<br><br>
-            نسأل الله أن يهدينا إلى الصراط المستقيم، ويجنبنا زلات القلم واللسان، إنه سميع مجيب وصلى الله وسلم على نبينا محمد وعلى آله وصحبه[1].
+            هذا الكلام مناف لكمال التوحيد، وكمال الإيمان بالقدر، فإن القدر لا يلهو، والزمن لا يعبث، وإن كل ما يجري في هذه الحياة هو بتقدير الله وعلمه...
         </div>
         <div class="interaction-box">
             <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount1')">👍 إعجاب (<span id="likeCount1">14</span>)</button>
-            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput1" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput1', 'commentsList1')">نشر التعليق</button>
-            <div class="comments-list" id="commentsList1">
-                <div class="comment-item"><strong>أبو عبد الله:</strong> جزاكم الله خيراً على هذا التوضيح العظيم.</div>
-            </div>
         </div>
     </div>
 
@@ -135,47 +671,22 @@
         <button class="close-btn" onclick="closeArticle('article2-screen')">×</button>
         <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">شروط قبول الدعاء</h2>
         <div class="article-content">
-            من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ، والإيمان بأن الله هو الحق، ولا يقول إلا الحق، والإخلاص لله سبحانه، والمتابعة لرسوله ﷺ مع الإيمان بأن الرسول -عليه الصلاة والسلام- بلغ الحق، وهو الصادق فيما يقول، وأن يأتي بذلك عن إيمان وثقة بالله، ورغبة فيما عنده، وأنه سبحانه مدبر الأمور ومصرف الأشياء، وأنه القادر على كل شيء ، لا عن شك ولا عن سوء ظن، بل عن حسن ظن بالله وثقة به، وأنه متى تخلف المطلوب فلعلة من العلل المذكورة أو غيرها، فالعبد عليه أن يأتي بالأسباب، والله مسبب الأسباب، وهو الحكيم العليم.<br><br>
-            وقد يحصل الدواء ولكن لا يزول الداء لأسباب أخرى جهلها العبد، والله فيها حكيم سبحانه وتعالى، وهذا يشمل الدواء الحسي والمعنوي، الحسي الذي يقوم به الأطباء من أدوية وعمليات ونحو ذلك، والمعنوي الذي يحصل بالدعاء والقراءة ونحو ذلك من الأسباب الشرعية، ومع هذا كله قد يتخلف المطلوب لأسباب كثيرة، منها الغفلة عن الله سبحانه، ومنها المعاصي، ولاسيما أكل الحرام، وقد صح عن رسول الله ﷺ أنه قال: ما من عبد يدعو الله بدعوة ليس فيها إثم ولا قطيعة رحم إلا أعطاه الله بها إحدى ثلاث: إما أن تعجل له دعوته في الدنيا، وإما أن تدخر له في الآخرة، وإما أن يصرف عنه من الشر مثل ذلك، قالوا يا رسول الله، إذا نكثر قال: الله أكثر.<br><br>
-            وبذلك يعلم المؤمن والمؤمنة أن إجابته قد تؤجل إلى الآخرة لأسباب اقتضتها حكمة الله سبحانه، وقد يصرف عنه بأسباب الدعاء شر كثير بدلا من أن يعطى طلبه، والله  هو الحكيم العليم في أفعاله وأقواله وشرعه وقدره، كما قال عز وجل: إِنَّ رَبَّكَ عليم حَكِيمٌ [يوسف: 6], والله ولي التوفيق.
+            من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ، والإيمان بأن الله هو الحق...
         </div>
         <div class="interaction-box">
             <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount2')">👍 إعجاب (<span id="likeCount2">25</span>)</button>
-            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput2" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput2', 'commentsList2')">نشر التعليق</button>
-            <div class="comments-list" id="commentsList2">
-                <div class="comment-item"><strong>فاطمة:</strong> جزاكم الله خيراً، مقال نافع جداً.</div>
-            </div>
         </div>
     </div>
 
-    <!-- نافذة المقال الثالث: فضل الاستغفار -->
+    <!-- نافذة المقال الثالث -->
     <div id="article3-screen">
         <button class="close-btn" onclick="closeArticle('article3-screen')">×</button>
         <h2 style="text-align: center; color: #38bdf8; font-family: 'Amiri', serif;">فضل الاستغفار</h2>
         <div class="article-content">
-            إن الاستغفار ليس مجرد كلمات ترددها الألسن، بل هو عبادة جليلة وقربة عظيمة، افتقر إليها الأنبياء قبل الأمم. وفي مدونة "صحيح"، نسلط الضوء على هذه العبادة كما فصّلها علماء الأمة، لبيان أثرها في تفريج الكروب ونيل رضا علام الغيوب.<br><br>
-            <strong>أولاً: حقيقة الاستغفار (بفهم الشيخ ابن عثيمين)</strong><br>
-            يقول العلامة محمد بن صالح بن عثيمين رحمه الله: "الاستغفار هو طلب المغفرة، والمغفرة هي ستر الذنب والتجاوز عنه". فالمسلم حين يقول "أستغفر الله"، هو يطلب من الله شيئين: الستر (فلا يفتضح أمره بين الخلق) والتجاوز (فلا يعاقبه الله على هذا الذنب). وهذا يوضح أن الاستغفار وقاية من آثار الذنوب في الدنيا والآخرة.<br><br>
-            <strong>ثانياً: فضل الاستغفار (بفهم الشيخ ابن باز)</strong><br>
-            سُئل سماحة الشيخ عبد العزيز بن باز رحمه الله عن فضل الاستغفار، فأوضح أن الله عز وجل جعل الاستغفار وسيلة للأمان من العذاب، مستشهداً بقوله تعالى: "وَمَا كَانَ اللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ". وأكد الشيخ أن المداومة على الاستغفار من أعظم أسباب انشراح الصدر، تيسير الأرزاق، وتطهير الصحائف.<br><br>
-            <strong>ثالثاً: متى يكون الاستغفار مشروعاً؟</strong><br>
-            وفقاً لما قرره الشيخان، فإن الاستغفار مشروع في كل وقت، ولكنه يتأكد في مواضع محددة: بعد الطاعات، في الأسحار، بعد الوقوع في المعصية، وفي ختام المجالس (كفارة المجلس).<br><br>
-            <strong>رابعاً: هل الاستغفار يغير الواقع المادي؟</strong><br>
-            يرى العلماء أن الله سبحانه جعل الاستغفار سبباً للمتاع الحسن في الدنيا، لقوله تعالى: "وَأَنِ اسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ يُمَتِّعْكُم مَّتَاعًا حَسَنًا". ولكن الأمانة العلمية تقتضي القول بأن النتائج بيد الله وحده، والمسلم يستغفر تعبداً وامتثالاً.<br><br>
-            <strong>خاتمة وتوجيه</strong><br>
-            إن لزوم الاستغفار هو صفة المتقين وشعار الصالحين. فليكن لنا في رسول الله ﷺ قدوة، وهو الذي كان يستغفر الله في اليوم أكثر من سبعين مرة.<br>
-            <em>كتبه فريق تحرير مدونة "صحيح" - نقلاً عن فتاوى ومؤلفات الشيخين ابن باز وابن عثيمين.</em>
+            إن الاستغفار ليس مجرد كلمات ترددها الألسن، بل هو عبادة جليلة وقربة عظيمة...
         </div>
         <div class="interaction-box">
             <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount3')">👍 إعجاب (<span id="likeCount3">42</span>)</button>
-            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput3" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput3', 'commentsList3')">نشر التعليق</button>
-            <div class="comments-list" id="commentsList3">
-                <div class="comment-item"><strong>صالح الهيب:</strong> جزاكم الله خيراً، جعلها الله في ميزان حسناتكم.</div>
-            </div>
         </div>
     </div>
 
@@ -189,22 +700,19 @@
 
     <footer>
         <p>جميع الحقوق محفوظة لمدونة صحيح © 2026 | إشراف تقني وشرعي متكامل</p>
+        <p>
+            <a href="#privacy-policy">سياسة الخصوصية</a> | 
+            <a href="mailto:contact@heib12.com">اتصل بنا</a>
+        </p>
     </footer>
 
     <script>
-        // دوال عرض وفتح المقالات
-        function openArticle(screenId) {
-            document.getElementById(screenId).style.display = 'block';
-        }
-        function closeArticle(screenId) {
-            document.getElementById(screenId).style.display = 'none';
-        }
-
-        // نظام الإعجابات
-        function likeArticle(countId) {
-            const countSpan = document.getElementById(countId);
-            let current = parseInt(countSpan.innerText);
-            countSpan.innerText = current + 1;
+        // إدارة المقالات
+        function openArticle(id) { document.getElementById(id).style.display = 'block'; }
+        function closeArticle(id) { document.getElementById(id).style.display = 'none'; }
+        function likeArticle(id) {
+            const span = document.getElementById(id);
+            span.innerText = parseInt(span.innerText) + 1;
         }
 
         // نظام التعليقات
@@ -220,36 +728,29 @@
             }
         }
 
-        // تشغيل مفسر لغة Heib12
+        // محرك Heib12
         function runHeibCode() {
             const code = document.getElementById('codeinput').value;
             const output = document.getElementById('output');
             output.innerHTML = "[معالجة] جاري فحص وتحليل الأوامر...\n";
-            
             setTimeout(() => {
                 let log = "[تقرير تنفيذ Heib12-Lang]:\n";
                 if(code.includes("تشغيل النظام")) log += " ✔ تم إقلاع نواة نظام هيب بنجاح.\n";
                 if(code.includes("اتصل_بالوحدة")) log += " ✔ [ECU] تم الاتصال بوحدة تحكم السيارة بنجاح.\n";
                 if(code.includes("أطلق_المركبة")) log += " 🚀 [فضاء] تم الإشعال والمركبة تخترق الغلاف الجوي.\n";
                 if(code.includes("اضبط_السرعة")) log += " ⚡ [محرك] تم ضبط سرعة الدوران على 4000 دورة/دقيقة.\n";
-                
-                if(log === "[تقرير تنفيذ Heib12-Lang]:\n") {
-                    log += " ℹ تم تنفيذ الأوامر العامة بنجاح دون أخطاء.";
-                }
                 output.innerHTML = log;
             }, 500);
         }
 
-        // جلب سور القرآن الكريم
-        let allSurahs = [];
+        // مكتبة القرآن
         async function loadQuran() {
             try {
                 const res = await fetch('https://api.alquran.cloud/v1/surah');
                 const data = await res.json();
-                allSurahs = data.data;
                 const container = document.getElementById('quran-grid');
                 container.innerHTML = '';
-                allSurahs.forEach(s => {
+                data.data.forEach(s => {
                     const card = document.createElement('div');
                     card.className = 'card';
                     card.innerHTML = `<strong>${s.number}</strong> ${s.name}`;
@@ -257,7 +758,7 @@
                     container.appendChild(card);
                 });
             } catch (e) {
-                document.getElementById('quran-grid').innerHTML = "فشل التحميل، تحقق من اتصال الإنترنت.";
+                document.getElementById('quran-grid').innerHTML = "فشل التحميل، تحقق من الاتصال.";
             }
         }
 
@@ -265,26 +766,149 @@
             const screen = document.getElementById('display-screen');
             const textBody = document.getElementById('view-text');
             const player = document.getElementById('audioPlayer');
-            
             screen.style.display = 'block';
             document.getElementById('view-title').innerText = "سورة " + name;
-            textBody.innerText = "جاري تحميل الآيات...";
             player.src = `https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/${id}.mp3`;
             player.play();
-
-            try {
-                const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
-                const data = await res.json();
-                textBody.innerText = data.data.ayahs.map(a => a.text + ` ﴿${a.numberInSurah}﴾`).join(' ');
-            } catch (e) {
-                textBody.innerText = "فشل تحميل نص الآيات.";
-            }
+            const res = await fetch(`https://api.alquran.cloud/v1/surah/${id}`);
+            const data = await res.json();
+            textBody.innerText = data.data.ayahs.map(a => a.text + ` ﴿${a.numberInSurah}﴾`).join(' ');
         }
 
         function closeScreen() {
             document.getElementById('display-screen').style.display = 'none';
             document.getElementById('audioPlayer').pause();
         }
+
+        // --- محرك الاستوديو الصوتي (Audio DSP Engine) ---
+        let audioCtx, audioSource, eqBass, eqTreble, reverbNode, delayNode, dryGain, wetGain, recordingDest, mediaRecorder;
+        let audioChunks = [];
+        const studioPlayer = document.getElementById('quran-audio-player');
+        const hud = document.getElementById('hud-screen');
+
+        document.getElementById('upload-audio').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                studioPlayer.src = URL.createObjectURL(file);
+                hud.innerText = `✔ تم تحميل تراك القارئ بنجاح:\n${file.name}\nاضغط تشغيل للبدء بالمعالجة.`;
+            }
+        });
+
+        function buildQuranAudioGraph() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                audioSource = audioCtx.createMediaElementSource(studioPlayer);
+                
+                eqBass = audioCtx.createBiquadFilter();
+                eqBass.type = "lowshelf";
+                eqBass.frequency.value = 200;
+
+                eqTreble = audioCtx.createBiquadFilter();
+                eqTreble.type = "highshelf";
+                eqTreble.frequency.value = 5000;
+
+                delayNode = audioCtx.createDelay();
+                delayNode.delayTime.value = 0.4;
+                
+                let delayFeedback = audioCtx.createGain();
+                delayFeedback.gain.value = 0.25;
+
+                reverbNode = audioCtx.createDelay();
+                reverbNode.delayTime.value = 0.08;
+
+                dryGain = audioCtx.createGain();
+                wetGain = audioCtx.createGain();
+                wetGain.gain.value = 0.3;
+
+                recordingDest = audioCtx.createMediaStreamDestination();
+
+                audioSource.connect(eqBass);
+                eqBass.connect(eqTreble);
+                eqTreble.connect(dryGain);
+                eqTreble.connect(delayNode);
+                delayNode.connect(delayFeedback);
+                delayFeedback.connect(delayNode);
+                delayNode.connect(reverbNode);
+                reverbNode.connect(wetGain);
+
+                dryGain.connect(audioCtx.destination);
+                wetGain.connect(audioCtx.destination);
+                dryGain.connect(recordingDest);
+                wetGain.connect(recordingDest);
+            }
+        }
+
+        document.getElementById('btn-play-all').addEventListener('click', () => {
+            if (!studioPlayer.src) { hud.innerText = "⚠️ يرجى رفع ملف التلاوة أولاً!"; return; }
+            buildQuranAudioGraph();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            studioPlayer.play();
+            hud.innerText = "▶ جاري بث التلاوة عبر فلاتر الاستوديو بنقاء كريستالي كامل.";
+        });
+
+        document.getElementById('btn-pause-all').addEventListener('click', () => {
+            studioPlayer.pause();
+            hud.innerText = "⏸ تم إيقاف التلاوة مؤقتاً.";
+        });
+
+        // سلايدرات التحكم
+        document.getElementById('slider-rev-wet').addEventListener('input', (e) => {
+            if (wetGain) wetGain.gain.value = e.target.value;
+            document.getElementById('txt-rev-wet').innerText = `${Math.round(e.target.value * 100)}%`;
+        });
+        document.getElementById('slider-rev-size').addEventListener('input', (e) => {
+            if (reverbNode) reverbNode.delayTime.value = e.target.value * 0.1;
+            document.getElementById('txt-rev-size').innerText = `${Math.round(e.target.value * 100)}%`;
+        });
+        document.getElementById('slider-del-wet').addEventListener('input', (e) => {
+            if (delayNode) delayNode.delayTime.value = e.target.value;
+            document.getElementById('txt-del-wet').innerText = `${Math.round(e.target.value * 200)}%`;
+        });
+        document.getElementById('slider-del-time').addEventListener('input', (e) => {
+            if (delayNode) delayNode.delayTime.value = e.target.value;
+            document.getElementById('txt-del-time').innerText = `${parseFloat(e.target.value).toFixed(2)} ثانية`;
+        });
+        document.getElementById('slider-eq-bass').addEventListener('input', (e) => {
+            if (eqBass) eqBass.gain.value = e.target.value;
+            document.getElementById('txt-eq-bass').innerText = `${e.target.value} dB`;
+        });
+        document.getElementById('slider-eq-treble').addEventListener('input', (e) => {
+            if (eqTreble) eqTreble.gain.value = e.target.value;
+            document.getElementById('txt-eq-treble').innerText = `${e.target.value} dB`;
+        });
+
+        // تصدير ملف WAV
+        const startRec = document.getElementById('btn-rec-start');
+        const stopRec = document.getElementById('btn-rec-stop');
+        const dlLink = document.getElementById('download-anchor');
+
+        startRec.addEventListener('click', () => {
+            if (!recordingDest) { hud.innerText = "⚠️ اضغط على تشغيل أولاً لفتح قنوات الصوت!"; return; }
+            audioChunks = [];
+            mediaRecorder = new MediaRecorder(recordingDest.stream);
+            mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunks.push(e.data); };
+            mediaRecorder.onstop = () => {
+                const blob = new Blob(audioChunks, { type: 'audio/wav' });
+                dlLink.href = URL.createObjectURL(blob);
+                dlLink.download = 'Heib12_Quran_Perfect_Master.wav';
+                dlLink.style.display = 'block';
+                hud.innerText = "✔ تم انتهاء هندسة التلاوة بنجاح! الملف جاهز للتحميل بجودة WAV.";
+            };
+            mediaRecorder.start();
+            startRec.style.display = 'none';
+            stopRec.style.display = 'block';
+            dlLink.style.display = 'none';
+            hud.innerText = "🔴 جاري تسجيل التلاوة وتطبيق الفلاتر...";
+        });
+
+        stopRec.addEventListener('click', () => {
+            if (mediaRecorder && mediaRecorder.state !== "inactive") {
+                mediaRecorder.stop();
+                studioPlayer.pause();
+                startRec.style.display = 'block';
+                stopRec.style.display = 'none';
+            }
+        });
 
         window.onload = loadQuran;
     </script>
