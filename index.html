@@ -1,4 +1,4 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <!-- ads.txt: google.com, pub-2244311957196913, DIRECT, f08c47fec0942fa0 -->
@@ -184,25 +184,25 @@
             text-align: justify; 
             border: 1px solid #334155; 
         }
-        .article-header-box {
-            text-align: center;
-            margin-bottom: 20px;
+        .article-header-box { 
+            text-align: center; 
+            margin-bottom: 20px; 
         }
-        .hadith-quote {
-            background: #090d16;
-            border-right: 4px solid var(--accent-gold);
-            padding: 15px 20px;
-            border-radius: 6px;
-            margin: 15px 0;
-            color: #38bdf8;
-            font-weight: bold;
+        .hadith-quote { 
+            background: #090d16; 
+            border-right: 4px solid var(--accent-gold); 
+            padding: 15px 20px; 
+            border-radius: 6px; 
+            margin: 15px 0; 
+            color: #38bdf8; 
+            font-weight: bold; 
         }
-        .reference-tag {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            display: block;
-            margin-top: 10px;
-            font-style: italic;
+        .reference-tag { 
+            color: #94a3b8; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-top: 10px; 
+            font-style: italic; 
         }
         .interaction-box { margin-top: 20px; background: #111827; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
         .comments-list { margin-top: 15px; background: #090d16; padding: 10px; border-radius: 6px; max-height: 150px; overflow-y: auto; font-size: 0.95rem; }
@@ -218,23 +218,23 @@
         .hud-display { background-color: #02050b; border: 1px solid #334155; padding: 15px; border-radius: 8px; font-family: monospace; color: #00ffcc; font-size: 0.9rem; min-height: 45px; white-space: pre-line; margin-top: 15px; }
 
         /* صندوق سياسة الخصوصية المنسق */
-        .privacy-box {
-            background: #ffffff;
-            color: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            line-height: 1.8;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        .privacy-box { 
+            background: #ffffff; 
+            color: #1e293b; 
+            padding: 30px; 
+            border-radius: 12px; 
+            line-height: 1.8; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3); 
         }
-        .privacy-box h2 {
-            color: #065f46;
-            font-family: 'Amiri', serif;
-            border-bottom: 2px solid #065f46;
-            padding-bottom: 10px;
+        .privacy-box h2 { 
+            color: #065f46; 
+            font-family: 'Amiri', serif; 
+            border-bottom: 2px solid #065f46; 
+            padding-bottom: 10px; 
         }
-        .privacy-box h3 {
-            color: #b45309;
-            margin-top: 20px;
+        .privacy-box h3 { 
+            color: #b45309; 
+            margin-top: 20px; 
         }
 
         footer { background: var(--panel-bg); text-align: center; padding: 20px; margin-top: 30px; border-top: 1px solid #334155; font-size: 0.9rem; }
@@ -262,14 +262,14 @@
 
     <div class="container">
 
-        <!-- بنر رعاية الشركات المخصص -->
+        <!-- بنر رعاية الشركات -->
         <div class="ad-slot-container">
             <a href="mailto:contact@heib12.com?subject=طلب رعاية إعلانية" class="sponsor-banner">
                 📢 مساحة إعلانية مخصصة لرعاية الشركات والمؤسسات | احجز مساحتك الآن
             </a>
         </div>
 
-        <!-- قسم المقالات مع الأزرار -->
+        <!-- قسم المقالات -->
         <div id="articles-section" class="section-box">
             <h2>المقالات والفتاوى الشرعية</h2>
             <p>اختر المقال لقراءته والتفاعل معه:</p>
@@ -283,7 +283,7 @@
             <button class="btn article-btn" onclick="openArticle('article3-screen')">📖 فضل الاستغفار</button>
         </div>
 
-        <!-- قسم محوّل الملفات الذكي -->
+        <!-- قسم محوّل الملفات -->
         <div id="file-converter" class="section-box" style="border: 2px solid #ef4444;">
             <h2 style="color: #f87171; text-align: center;">🔄 محوّل الملفات والصور الذكي</h2>
             <div style="text-align: center; background: #0f172a; padding: 10px; border-radius: 15px; border: 1px solid #334155;">
@@ -310,17 +310,14 @@
                     <body>
                         <div class="main-card">
                             <div class="logo">محوّل الملفات الذكي</div>
-                            
                             <label class="upload-btn">
                                 <strong>إختر الملفات</strong>
                                 <input type="file" id="fileInp" hidden onchange="showInfo()">
                             </label>
-
                             <div id="infoBox" class="file-info">
                                 <span id="sTag" class="size-tag">0 KB</span>
                                 <strong id="nTag">اسم الملف</strong>
                             </div>
-
                             <p>إلى صيغة:</p>
                             <select id="fmt">
                                 <optgroup label="صور (Images)">
@@ -335,11 +332,9 @@
                                     <option value="image/x-icon">ICO (أيقونة)</option>
                                 </optgroup>
                             </select>
-
                             <button class="btn-convert" onclick="process()">تحويل الآن 🚀</button>
                             <div id="status">تم التحميل بنجاح! ✅</div>
                         </div>
-
                         <script>
                             function showInfo() {
                                 var f = document.getElementById("fileInp").files[0];
@@ -350,11 +345,9 @@
                                     document.getElementById("infoBox").style.display = "block";
                                 }
                             }
-
                             function process() {
                                 var f = document.getElementById("fileInp").files[0];
                                 if(!f) { alert("اختر ملفاً!"); return; }
-                                
                                 var r = new FileReader();
                                 r.onload = function(e) {
                                     var img = new Image();
@@ -365,7 +358,6 @@
                                         var fmt = document.getElementById("fmt").value;
                                         if(fmt === "image/jpeg") { ctx.fillStyle="#fff"; ctx.fillRect(0,0,c.width,c.height); }
                                         ctx.drawImage(img, 0, 0);
-                                        
                                         var a = document.createElement("a");
                                         a.href = c.toDataURL(fmt, 0.9);
                                         a.download = "salh_converted." + fmt.split("/")[1].replace("x-icon","ico");
@@ -383,7 +375,7 @@
             </div>
         </div>
 
-        <!-- قسم مهندس مقاسات الصور (حجم الصور) -->
+        <!-- قسم مهندس مقاسات الصور -->
         <div id="image-resizer" class="section-box">
             <h2>📐 أداة ضبط وتعديل مقاسات الصور بدقة</h2>
             <div style="text-align: center; background: #0f172a; padding: 10px; border-radius: 15px; border: 1px solid #334155;">
@@ -412,13 +404,11 @@
                         <div class="resize-card">
                             <h2>📐 مهندس مقاسات الصور</h2>
                             <p>حدد الطول والعرض الذي تريده بدقة:</p>
-
                             <div class="input-box">
                                 <label>1. اختر الصورة:</label>
                                 <input type="file" id="imgFile" accept="image/*" onchange="showOriginal()">
                                 <div id="origInfo" class="preview-info"></div>
                             </div>
-
                             <div class="input-box">
                                 <label>2. حدد المقاسات الجديدة (بكسل):</label>
                                 <div class="grid">
@@ -432,12 +422,9 @@
                                     </div>
                                 </div>
                             </div>
-
                             <button class="btn-go" onclick="resizeNow()">تغيير المقاس وتحميل الآن 📥</button>
-                            
                             <p id="status">تمت المعالجة بنجاح! ✅</p>
                         </div>
-
                         <script>
                             function showOriginal() {
                                 const file = document.getElementById("imgFile").files[0];
@@ -455,34 +442,27 @@
                                     reader.readAsDataURL(file);
                                 }
                             }
-
                             function resizeNow() {
                                 const file = document.getElementById("imgFile").files[0];
                                 const w = parseInt(document.getElementById("newW").value);
                                 const h = parseInt(document.getElementById("newH").value);
-
                                 if(!file || !w || !h) {
                                     alert("يرجى اختيار صورة وتحديد الطول والعرض المطلوبين!");
                                     return;
                                 }
-
                                 const reader = new FileReader();
                                 reader.onload = function(e) {
                                     const img = new Image();
                                     img.onload = function() {
                                         const canvas = document.createElement("canvas");
                                         const ctx = canvas.getContext("2d");
-
                                         canvas.width = w;
                                         canvas.height = h;
-
                                         ctx.drawImage(img, 0, 0, w, h);
-
                                         const link = document.createElement("a");
                                         link.href = canvas.toDataURL("image/png");
                                         link.download = "resized_image_" + w + "x" + h + ".png";
                                         link.click();
-
                                         document.getElementById("status").style.display = "block";
                                     };
                                     img.src = e.target.result;
@@ -709,12 +689,13 @@
         </div>
 
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount8')">👍 إعجاب (<span id="likeCount8">89</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount8')">👍 إعجاب (<span id="likeCount8">0</span>)</button>
             <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput8" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput8', 'commentsList8')">نشر التعليق</button>
+            <input type="text" id="commentAuthor8" placeholder="الاسم الكريم...">
+            <input type="text" id="commentInput8" placeholder="اكتب تعليقك هنا...">
+            <button class="btn" onclick="addComment('commentAuthor8', 'commentInput8', 'commentsList8')">نشر التعليق</button>
             <div class="comments-list" id="commentsList8">
-                <div class="comment-item"><strong>عمر الهاشمي:</strong> ما شاء الله، تفصيل رائع وشامل لطرق الحفظ وخاصة تقسيم الأنماط والحصون الخمسة. بارك الله فيكم.</div>
+                <!-- تعليقات الزوار تظهر هنا -->
             </div>
         </div>
     </div>
@@ -761,12 +742,13 @@
         </div>
 
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount7')">👍 إعجاب (<span id="likeCount7">47</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount7')">👍 إعجاب (<span id="likeCount7">0</span>)</button>
             <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput7" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput7', 'commentsList7')">نشر التعليق</button>
+            <input type="text" id="commentAuthor7" placeholder="الاسم الكريم...">
+            <input type="text" id="commentInput7" placeholder="اكتب تعليقك هنا...">
+            <button class="btn" onclick="addComment('commentAuthor7', 'commentInput7', 'commentsList7')">نشر التعليق</button>
             <div class="comments-list" id="commentsList7">
-                <div class="comment-item"><strong>أبو بكر:</strong> جزاكم الله خيراً ونفع بكم، تأصيل شرعي متين في باب التوسل وصحبة الصالحين.</div>
+                <!-- تعليقات الزوار تظهر هنا -->
             </div>
         </div>
     </div>
@@ -811,12 +793,13 @@
         </div>
 
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount6')">👍 إعجاب (<span id="likeCount6">61</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount6')">👍 إعجاب (<span id="likeCount6">0</span>)</button>
             <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput6" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput6', 'commentsList6')">نشر التعليق</button>
+            <input type="text" id="commentAuthor6" placeholder="الاسم الكريم...">
+            <input type="text" id="commentInput6" placeholder="اكتب تعليقك هنا...">
+            <button class="btn" onclick="addComment('commentAuthor6', 'commentInput6', 'commentsList6')">نشر التعليق</button>
             <div class="comments-list" id="commentsList6">
-                <div class="comment-item"><strong>عبد الرحمن:</strong> توضيح مهم جداً يزيل الشبهات في مسألة الانحناء وتقبيل اليد. جزاكم الله خيراً.</div>
+                <!-- تعليقات الزوار تظهر هنا -->
             </div>
         </div>
     </div>
@@ -869,12 +852,13 @@
         </div>
 
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount5')">👍 إعجاب (<span id="likeCount5">54</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount5')">👍 إعجاب (<span id="likeCount5">0</span>)</button>
             <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput5" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput5', 'commentsList5')">نشر التعليق</button>
+            <input type="text" id="commentAuthor5" placeholder="الاسم الكريم...">
+            <input type="text" id="commentInput5" placeholder="اكتب تعليقك هنا...">
+            <button class="btn" onclick="addComment('commentAuthor5', 'commentInput5', 'commentsList5')">نشر التعليق</button>
             <div class="comments-list" id="commentsList5">
-                <div class="comment-item"><strong>أبو حمزة:</strong> جزاكم الله خيراً، بيان واضح ومحكم لعقيدة السلف الصالح.</div>
+                <!-- تعليقات الزوار تظهر هنا -->
             </div>
         </div>
     </div>
@@ -919,12 +903,13 @@
         </div>
 
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount4')">👍 إعجاب (<span id="likeCount4">38</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount4')">👍 إعجاب (<span id="likeCount4">0</span>)</button>
             <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
-            <input type="text" id="commentInput4" placeholder="اكتب تعليقك باسمك...">
-            <button class="btn" onclick="addComment('commentInput4', 'commentsList4')">نشر التعليق</button>
+            <input type="text" id="commentAuthor4" placeholder="الاسم الكريم...">
+            <input type="text" id="commentInput4" placeholder="اكتب تعليقك هنا...">
+            <button class="btn" onclick="addComment('commentAuthor4', 'commentInput4', 'commentsList4')">نشر التعليق</button>
             <div class="comments-list" id="commentsList4">
-                <div class="comment-item"><strong>صالح:</strong> اللهم صل وسلم وبارك على نبينا محمد وعلى آله وصحبه أجمعين.</div>
+                <!-- تعليقات الزوار تظهر هنا -->
             </div>
         </div>
     </div>
@@ -937,7 +922,7 @@
             هذا الكلام مناف لكمال التوحيد، وكمال الإيمان بالقدر، فإن القدر لا يلهو، والزمن لا يعبث، وإن كل ما يجري في هذه الحياة هو بتقدير الله وعلمه...
         </div>
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount1')">👍 إعجاب (<span id="likeCount1">14</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount1')">👍 إعجاب (<span id="likeCount1">0</span>)</button>
         </div>
     </div>
 
@@ -949,7 +934,7 @@
             من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ، والإيمان بأن الله هو الحق...
         </div>
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount2')">👍 إعجاب (<span id="likeCount2">25</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount2')">👍 إعجاب (<span id="likeCount2">0</span>)</button>
         </div>
     </div>
 
@@ -961,7 +946,7 @@
             إن الاستغفار ليس مجرد كلمات ترددها الألسن، بل هو عبادة جليلة وقربة عظيمة...
         </div>
         <div class="interaction-box">
-            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount3')">👍 إعجاب (<span id="likeCount3">42</span>)</button>
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount3')">👍 إعجاب (<span id="likeCount3">0</span>)</button>
         </div>
     </div>
 
@@ -990,16 +975,22 @@
             span.innerText = parseInt(span.innerText) + 1;
         }
 
-        // نظام التعليقات
-        function addComment(inputId, listId) {
-            const input = document.getElementById(inputId);
+        // نظام تفاعل الزوار الحقيقيين
+        function addComment(authorId, inputId, listId) {
+            const authorInput = document.getElementById(authorId);
+            const contentInput = document.getElementById(inputId);
             const list = document.getElementById(listId);
-            if(input.value.trim() !== "") {
+
+            const author = authorInput.value.trim() !== "" ? authorInput.value.trim() : "زائر";
+            const text = contentInput.value.trim();
+
+            if(text !== "") {
                 const item = document.createElement('div');
                 item.className = 'comment-item';
-                item.innerHTML = `<strong>زائر الكريم:</strong> ${input.value}`;
+                item.innerHTML = `<strong>${author}:</strong> ${text}`;
                 list.prepend(item);
-                input.value = "";
+                contentInput.value = "";
+                authorInput.value = "";
             }
         }
 
