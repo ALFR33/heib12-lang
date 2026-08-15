@@ -162,7 +162,7 @@
         .card strong { color: var(--accent-blue); display: block; font-size: 1.1em; }
 
         /* شاشات النوافذ المنبثقة */
-        #display-screen, #article1-screen, #article2-screen, #article3-screen, #article4-screen { 
+        #display-screen, #article1-screen, #article2-screen, #article3-screen, #article4-screen, #article5-screen, #article6-screen, #article7-screen { 
             position: fixed; 
             inset: 0; 
             background: #0f172a; 
@@ -182,7 +182,7 @@
             margin-top: 15px; 
             color: #f8fafc; 
             text-align: justify; 
-            border: 1px solid #334155;
+            border: 1px solid #334155; 
         }
         .article-header-box {
             text-align: center;
@@ -273,6 +273,9 @@
         <div id="articles-section" class="section-box">
             <h2>المقالات والفتاوى الشرعية</h2>
             <p>اختر المقال لقراءته والتفاعل معه:</p>
+            <button class="btn article-btn" onclick="openArticle('article7-screen')">📖 حكم التوسل وحكم معاشرة الفسّاق</button>
+            <button class="btn article-btn" onclick="openArticle('article6-screen')">📖 حكم تقبيل يد الرجل الصالح والانحناء له</button>
+            <button class="btn article-btn" onclick="openArticle('article5-screen')">📖 حكم التأويل في الصفات</button>
             <button class="btn article-btn" onclick="openArticle('article4-screen')">📖 كيف الصلاة على النبي صلى الله عليه وسلم وشروط قبول الدعاء</button>
             <button class="btn article-btn" onclick="openArticle('article1-screen')">📖 حكم من يسب ويشتم القدر</button>
             <button class="btn article-btn" onclick="openArticle('article2-screen')">📖 شروط قبول الدعاء</button>
@@ -604,7 +607,167 @@
 
     </div>
 
-    <!-- نافذة المقال: كيف الصلاة على النبي وشروط قبول الدعاء -->
+    <!-- نافذة المقال الجديد: حكم التوسل وحكم معاشرة الفسّاق -->
+    <div id="article7-screen">
+        <button class="close-btn" onclick="closeArticle('article7-screen')">×</button>
+        <div class="article-header-box">
+            <h2 style="color: var(--accent-gold); font-family: 'Amiri', serif; font-size: 2.2rem; border-bottom: none; margin-bottom: 5px;">حكم التوسل وحكم معاشرة الفسّاق</h2>
+            <p style="color: var(--accent-blue); font-size: 1.1rem; margin-top: 0;">بيان التوسل المشروع والممنوع وضوابط مخالطة العصاة والفساق</p>
+        </div>
+        
+        <div class="article-content">
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">أولاً: التوسل المشروع والتوسل الممنوع</h3>
+            <p>
+                هذا من البدع التي لم يشرعها الله عند جمهور أهل العلم، وإنما المشروع التوسل إلى الله  بأسمائه وصفاته، وتوحيده، ومحبته، والإيمان به، وبالأعمال الصالحات، كما قال سبحانه: ﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَى فَادْعُوهُ بِهَا﴾ [الأعراف:180] ولم يقل سبحانه: فادعوه بجاه محمد، أو بجاه الأنبياء أو بجاه الأولياء، أو بحق بيته العتيق، أو نحو ذلك، وإنما قال سبحانه: ﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَى فَادْعُوهُ بِهَا﴾ أي بأسمائه هو وصفاته.
+            </p>
+            
+            <p>
+                ويدعى أيضًا بتوحيده كما جاءت الأحاديث بذلك، ومنها الحديث:
+            </p>
+            <div class="hadith-quote">
+                «اللهم إني أسألك بأني أشهد أنك أنت الله لا إله إلا أنت الأحد الصمد الذي لم يلد ولم يولد ولم يكن له كفوًا أحد»
+            </div>
+
+            <p>
+                ومن ذلك حديث أهل الغار الذين انطبقت عليهم صخرة لما أووا إلى الغار في ليل فيه مطر، فقد انطبقت عليهم صخرة، وسدت عليهم فم الغار، ولم يستطيعوا الخروج، فقالوا فيما بينهم: لا ينجينا من هذا إلا أن نتوسل إلى الله بأعمالنا الخالصة، فتوسلوا إلى الله؛ فتوسل أحدهم إلى الله ببره لوالديه، والثاني توسل بعفته عن الزنى، والثالث توسل بأدائه للأمانة، ففرج الله عنهم.
+            </p>
+
+            <div class="hadith-quote">
+                فعلم بذلك مما ذكرنا أن العبد إذا توسل إلى الله بأسمائه أو بتوحيده، أو بإيمانه به ومحبته له، أو بالإيمان بنبيه ﷺ ومحبته له، أو بأداء ما افترض الله عليه من طاعته، أو بترك ما حرم عليه، فهو توسل مشروع وصاحبه حري بالإجابة.
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #334155; margin: 30px 0;">
+
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">ثانياً: حكم معاشرة ومجالسة الفسّاق</h3>
+            <p>
+                وأما معاشرة الفساق ومجالستهم فلا تجوز؛ لأنهم يجرون إلى فسقهم وضلالهم، لكن إذا خالطهم للدعوة إلى الله وإنكار ما هم عليه من الباطل، وتوجيههم للخير، وأمرهم بالمعروف ونهيهم عن المنكر، فهذا لا بأس به؛ لأن المسلم مأمور بذلك.
+            </p>
+            <p style="color: #ef4444; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 6px; border-right: 3px solid #ef4444;">
+                أما من يتخذهم أصحابًا وخلانًا يجالسهم ويأكل معهم ويأنس بهم، فذلك لا يجوز.
+            </p>
+            <span class="reference-tag">📚 المصدر: [مجموع فتاوى ومقالات سماحة الشيخ عبد العزيز بن باز رحمه الله]</span>
+        </div>
+
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount7')">👍 إعجاب (<span id="likeCount7">47</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput7" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput7', 'commentsList7')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList7">
+                <div class="comment-item"><strong>أبو بكر:</strong> جزاكم الله خيراً ونفع بكم، تأصيل شرعي متين في باب التوسل وصحبة الصالحين.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة المقال السادس: حكم تقبيل يد الرجل الصالح والانحناء له -->
+    <div id="article6-screen">
+        <button class="close-btn" onclick="closeArticle('article6-screen')">×</button>
+        <div class="article-header-box">
+            <h2 style="color: var(--accent-gold); font-family: 'Amiri', serif; font-size: 2.2rem; border-bottom: none; margin-bottom: 5px;">حكم تقبيل يد الرجل الصالح والانحناء له</h2>
+            <p style="color: var(--accent-blue); font-size: 1.1rem; margin-top: 0;">بيان الأحكام والضوابط الشرعية في تقبيل اليد وحرمة الانحناء والركوع لغير الله</p>
+        </div>
+        
+        <div class="article-content">
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">أولاً: حكم تقبيل اليد</h3>
+            <p>
+                أما تقبيل اليد فذهب جمع من أهل العلم إلى كراهته، ولا سيما إذا كان عادةً، أما إذا فعل بعض الأحيان عند بعض اللقاءات فلا حرج في ذلك مع الرجل الصالح، مع الأمير الصالح، مع الوالد، أو شبه ذلك لا حرج في ذلك، لكن اعتياده يكره، وبعض أهل العلم حرم ذلك إذا كان معتاداً دائماً عند اللقاء، أما فعله بعض الأحيان فلا حرج في ذلك.
+            </p>
+            
+            <p style="color: #ef4444; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 6px; border-right: 3px solid #ef4444;">
+                أما السجود على اليد كونه يسجد على اليد يضع جبهته على اليد فهذا السجود محرم، ويسميه بعض أهل العلم السجدة الصغرى، هذا لا يجوز، كونه يضع جبهته على يد إنسان سجوداً عليها لا يجوز قطيعةً.
+            </p>
+
+            <p>
+                لكن تقبيلها بفمه إذا كان غير معتاد إنما نادر أو قليل فلا بأس؛ لأنه ورد عن النبي صلى الله عليه وسلم أنه قبّل بعض الصحابة يده وقدمه، وفعله بعض الصحابة فالأمر في هذا سهل إذا كان قليلاً، أما اعتياده دائماً فيكره أو يحرم.
+            </p>
+
+            <hr style="border: 0; border-top: 1px solid #334155; margin: 30px 0;">
+
+            <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">ثانياً: حكم الانحناء عند السلام واللقاء</h3>
+            <p>
+                وأما الانحناء فهو لا يجوز، كونه ينحني كالراكع هذا لا يجوز لأن الركوع عبادة ولا يجوز أن ينحني، أما إذا كان انحناؤه ما هو من أجل التعظيم، انحنى له لأنه قصير والمسلِّم طويل فانحنى له حتى يصافحه، لا لأجل التعظيم بل لأجل أن المسلَّم عليه قصير، أو مقعد، أو جالس فلا بأس بهذا. أما أنه ينحني لتعظيمه فهذا لا يجوز، ويخشى أن يكون من الشرك إذا قصد تعظيمه بذلك.
+            </p>
+
+            <div class="hadith-quote">
+                وقد روي عن النبي ﷺ أنه سئل قيل: يا رسول الله! ألقى الرجل فهل أنحني له؟ قال: «لا»، قال: فهل ألتزمه وأقبله؟ قال: «لا»، قال: فهل آخذ بيده وأصافحه؟ قال: «نعم». وإن كان في سنده ضعف.. الحديث ضعيف الإسناد، لكن ينبغي العمل به؛ لأن الشواهد الكثيرة تشهد له في المعنى، والأدلة كذلك تدل على أن الانحناء والركوع للناس لا يجوز.
+            </div>
+
+            <p>
+                <strong>فالحاصل:</strong> أنه لا يجوز الانحناء أبداً لأي شخص لا للملك ولا لغير الملوك، ولكن إذا كان الانحناء لا لأجل التعظيم بل لأجل أن المسلَّم عليه قصير، أو مقعد، أو جالس، فانحنى ليسلم عليه؛ فلا بأس بذلك.
+            </p>
+            <span class="reference-tag">📚 المصدر: [فتاوى نور على الدرب - لسماحة الشيخ عبد العزيز بن باز رحمه الله]</span>
+        </div>
+
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount6')">👍 إعجاب (<span id="likeCount6">61</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput6" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput6', 'commentsList6')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList6">
+                <div class="comment-item"><strong>عبد الرحمن:</strong> توضيح مهم جداً يزيل الشبهات في مسألة الانحناء وتقبيل اليد. جزاكم الله خيراً.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة المقال الخامس: حكم التأويل في الصفات -->
+    <div id="article5-screen">
+        <button class="close-btn" onclick="closeArticle('article5-screen')">×</button>
+        <div class="article-header-box">
+            <h2 style="color: var(--accent-gold); font-family: 'Amiri', serif; font-size: 2.2rem; border-bottom: none; margin-bottom: 5px;">حكم التأويل في الصفات</h2>
+            <p style="color: var(--accent-blue); font-size: 1.1rem; margin-top: 0;">بيان منهج أهل السنة والجماعة في إثبات أسماء الله وصفاته</p>
+        </div>
+        
+        <div class="article-content">
+            <p>
+                التأويل في الصفات منكر لا يجوز، بل يجب إمرار الصفات كما جاءت على ظاهرها اللائق بالله جل وعلا، بغير تحريف ولا تعطيل، ولا تكييف ولا تمثيل، فالله جل جلاله أخبرنا عن صفاته وعن أسمائه، وقال: ﴿لَيْسَ كَمِثْلِهِ شَيْءٌ وَهُوَ السَّمِيعُ الْبَصِيرُ﴾ [الشورى:11] فعلينا أن نمرها كما جاءت، وهكذا قال أهل السنة والجماعة: <em>أمروها كما جاءت بلا كيف</em>، أي أمروها كما جاءت بغير تحريف لها ولا تأويل ولا تكييف، بل يقر بها كما جاءت على ظاهرها وعلى الوجه الذي يليق بالله جل وعلا، ومن دون تكييف ولا تمثيل.
+            </p>
+            
+            <div class="hadith-quote">
+                فيقال في قوله تعالى: ﴿الرَّحْمَنُ عَلَى الْعَرْشِ اسْتَوَى﴾ [طه:5] وأمثالها من الآيات: إنه استواء يليق بجلال الله وعظمته، لا يشبه استواء المخلوقين، ومعناه عند أهل الحق: العلو والارتفاع.
+            </div>
+
+            <p>
+                وهكذا يقال في العين، والسمع والبصر واليد والقدم، وغير ذلك من الصفات الثابتة لله جل وعلا، والواردة في النصوص الشرعية، وكلها صفات تليق بالله سبحانه، لا يشابهه فيها الخلق جل وعلا، وعلى هذا سار أهل العلم من أصحاب النبي ﷺ ومن بعدهم من أئمة السنة، كالأوزاعي والثوري ومالك وأبي حنيفة وأحمد وإسحاق وغيرهم من أئمة المسلمين -رحمهم الله جميعا.
+            </p>
+
+            <p>
+                ومن ذلك قوله تعالى في قصة نوح: ﴿وَحَمَلْنَاهُ عَلَى ذَاتِ أَلْوَاحٍ وَدُسُرٍ * تَجْرِي بِأَعْيُنِنَا﴾ [القمر:13-14]، وقوله سبحانه في قصة موسى: ﴿وَلِتُصْنَعَ عَلَى عَيْنِي﴾ [طه:39] فسرها أهل السنة بأن المراد بقوله سبحانه: ﴿تَجْرِي بِأَعْيُنِنَا﴾ أي أنه سبحانه سيرها برعايته جل وعلا حتى استوت على الجودي.
+            </p>
+
+            <p>
+                هكذا قوله في قصة موسى: ﴿وَلِتُصْنَعَ عَلَى عَيْنِي﴾ أي على رعايته سبحانه وتوفيقه للقائمين على تربيته عليه الصلاة والسلام.
+            </p>
+
+            <p>
+                وهكذا قوله سبحانه للنبي ﷺ: ﴿وَاصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا﴾ [الطور:48] أي أنك تحت كلاءتنا وعنايتنا وحفظنا. وليس هذا كله من التأويل، بل ذلك من التفسير المعروف في لغة العرب وأساليبها.
+            </p>
+
+            <div class="hadith-quote">
+                ومن ذلك الحديث القدسي، وهو قول الله سبحانه: «من تقرب إلي شبرا تقربت إليه ذراعا، ومن تقرب إلي ذراعا تقربت إليه باعا، ومن أتاني يمشي أتيته هرولة» يمر كما جاء عن الله سبحانه وتعالى، من غير تحريف ولا تكييف ولا تمثيل، بل على الوجه الذي أراده الله سبحانه وتعالى، وهكذا نزوله سبحانه في آخر الليل.
+            </div>
+
+            <p>
+                هكذا السمع والبصر، والغضب والرضا، والضحك والفرح، وغير ذلك من الصفات الثابتة، كلها تمر كما جاءت على الوجه الذي يليق بالله من غير تكييف ولا تحريف ولا تعطيل ولا تمثيل، عملا بقوله سبحانه: ﴿لَيْسَ كَمِثْلِهِ شَيْءٌ وَهُوَ السَّمِيعُ الْبَصِيرُ﴾ [الشورى:11] وما جاء في معناها من الآيات.
+            </p>
+
+            <p style="color: #ef4444; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 6px; border-right: 3px solid #ef4444;">
+                أما التأويل للصفات وصرفها عن ظاهرها، فهو مذهب أهل البدع من الجهمية والمعتزلة ومن سار في ركابهم، وهو مذهب باطل أنكره أهل السنة والجماعة وتبرءوا منه، وحذروا من أهله. والله ولي التوفيق.
+            </p>
+            <span class="reference-tag">📚 المصدر: [مجموع فتاوى ومقالات الشيخ ابن باز رحمه الله]</span>
+        </div>
+
+        <div class="interaction-box">
+            <button class="btn" style="width: auto; background: #0284c7;" onclick="likeArticle('likeCount5')">👍 إعجاب (<span id="likeCount5">54</span>)</button>
+            <h3 style="color: #38bdf8; margin-top: 15px;">التعليقات</h3>
+            <input type="text" id="commentInput5" placeholder="اكتب تعليقك باسمك...">
+            <button class="btn" onclick="addComment('commentInput5', 'commentsList5')">نشر التعليق</button>
+            <div class="comments-list" id="commentsList5">
+                <div class="comment-item"><strong>أبو حمزة:</strong> جزاكم الله خيراً، بيان واضح ومحكم لعقيدة السلف الصالح.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة المقال الرابع: كيف الصلاة على النبي وشروط قبول الدعاء -->
     <div id="article4-screen">
         <button class="close-btn" onclick="closeArticle('article4-screen')">×</button>
         <div class="article-header-box">
