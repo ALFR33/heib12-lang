@@ -34,320 +34,241 @@
 </head>
 <body class="min-h-screen w-full bg-emerald-950 text-emerald-100 flex flex-col font-sans pb-32">
 
-    <!-- Header / Banner -->
-    <header class="w-full bg-emerald-900 border-b border-amber-500/30 p-4 sticky top-0 z-40 shadow-lg backdrop-blur-md">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl">📖</span>
-                <h1 class="text-xl font-bold text-amber-300">المكتبة الإسلامية الشاملة</h1>
+    <!-- Header Banner -->
+    <header class="bg-gradient-to-b from-emerald-900 via-emerald-950 to-emerald-950 text-white pt-8 pb-4 px-4 border-b border-amber-500/20 shadow-2xl sticky top-0 z-40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto text-center space-y-4">
+            <div class="inline-block px-4 py-1.5 bg-emerald-800/40 border border-amber-500/30 rounded-full text-amber-300 font-serif text-sm">
+                بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
             </div>
-            <nav class="flex flex-wrap gap-2 justify-center">
-                <button onclick="switchTab('articles')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-amber-400 text-emerald-950 font-bold shadow-md" data-tab="articles">المقالات</button>
-                <button onclick="switchTab('quranText')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-emerald-950/60 text-emerald-200 border border-emerald-800 hover:bg-emerald-800/50" data-tab="quranText">المصحف الشريف</button>
-                <button onclick="switchTab('quran')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-emerald-950/60 text-emerald-200 border border-emerald-800 hover:bg-emerald-800/50" data-tab="quran">الاستماع للقرآن</button>
-                <button onclick="switchTab('hadith')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-emerald-950/60 text-emerald-200 border border-emerald-800 hover:bg-emerald-800/50" data-tab="hadith">الحديث الشريف</button>
-                <button onclick="switchTab('adhkar')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-emerald-950/60 text-emerald-200 border border-emerald-800 hover:bg-emerald-800/50" data-tab="adhkar">الأذكار</button>
-            </nav>
+
+            <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 font-serif">
+                المكتبة الإسلامية الشاملة
+            </h1>
+
+            <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+                <button onclick="switchTab('quranText')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-amber-400 text-emerald-950 shadow-lg scale-105" data-tab="quranText">
+                    📖 المصحف المكتوب والتلاوة
+                </button>
+                <button onclick="switchTab('hadith')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="hadith">
+                    الأحاديث النبوية
+                </button>
+                <button onclick="switchTab('adhkar')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="adhkar">
+                    حصن المسلم والأذكار
+                </button>
+                <button onclick="switchTab('articles')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="articles">
+                    📚 المقالات والبحوث
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Main Content Area -->
     <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
         
-        <!-- Articles View (Default) -->
-        <div id="view-articles" class="tab-content space-y-6">
-            <div class="bg-emerald-900/40 border border-emerald-700/40 rounded-2xl p-6 shadow-lg backdrop-blur-sm space-y-3">
-                <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-lg border border-amber-500/30">مقالات إيمانية</span>
-                <h2 class="text-2xl font-bold text-amber-200">نحو فهم أعمق للسنن الكونية والقرآنية</h2>
-                <p class="text-emerald-200/90 leading-relaxed text-sm md:text-base">
-                    إن تدبر القرآن الكريم والاستماع لآياته العظيمة يفتح للبصيرة آفاقاً واسعة من اليقين والسكينة. هذه المنصة صُممت لتكون رفيقاً روحياً يجمع لك تلاوات خاشعة لأبرز القراء، مع مكتبة حديثة للأذكار والأحاديث النبوية الشريفة.
-                </p>
-            </div>
-        </div>
-
         <!-- Quran Text View -->
-        <div id="view-quranText" class="tab-content hidden space-y-6">
-            <div class="bg-emerald-900/40 border border-emerald-700/40 rounded-2xl p-5 shadow-lg backdrop-blur-sm space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-3">
-                    <h3 class="text-xl font-bold text-amber-300 flex items-center gap-2">📖 المصحف الشريف</h3>
-                    <div class="text-xs text-emerald-300/80 bg-emerald-950 px-3 py-1 rounded-lg border border-emerald-800">
-                        القارئ الحالي: <span id="text-reciter-display" class="font-bold text-amber-300">الشيخ إدريس أبكر</span>
+        <div id="view-quranText" class="tab-content space-y-6">
+            <div class="bg-gradient-to-r from-emerald-900/90 via-emerald-950 to-emerald-900/90 border border-amber-500/40 rounded-3xl p-5 md:p-6 shadow-2xl space-y-4">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-emerald-950 font-bold text-lg shadow-lg shrink-0">📖</div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-amber-300 font-serif">المصحف المكتوب المربوط بتظليل الآيات الأصفر التلقائي</h2>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2.5">
+                        <button onclick="changeFontSize(-2)" class="px-2.5 py-1 text-xs text-emerald-300 font-bold bg-emerald-950 rounded border border-emerald-800">A-</button>
+                        <span id="font-size-display" class="text-xs text-amber-400 font-mono">26px</span>
+                        <button onclick="changeFontSize(2)" class="px-2.5 py-1 text-xs text-emerald-300 font-bold bg-emerald-950 rounded border border-emerald-800">A+</button>
                     </div>
                 </div>
-                <div class="p-8 bg-emerald-950/80 border border-emerald-800 rounded-2xl text-center space-y-4 shadow-inner">
-                    <p class="text-amber-400 text-sm font-bold">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-                    <p class="text-xl md:text-2xl font-serif text-amber-100 leading-loose">
-                        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
-                    </p>
-                    <p class="text-xs text-emerald-400/60">(سورة الفاتحة - آياتها 7)</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Quran Reader / Audio List View -->
-        <div id="view-quran" class="tab-content hidden space-y-6">
-            <!-- Reciters Selector -->
-            <div class="bg-emerald-900/40 border border-emerald-700/50 rounded-2xl p-4 md:p-5 shadow-lg backdrop-blur-sm space-y-3">
-                <label class="text-sm font-bold text-amber-300 flex items-center gap-2">
-                    <span>🎙️ اختر القارئ المفضل:</span>
-                </label>
-                <div id="reciters-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-56 overflow-y-auto p-1">
-                    <!-- Dynamic Reciters injected via JS -->
+                <div class="flex items-center gap-3 pt-3 border-t border-emerald-800/60">
+                    <span class="text-xs text-amber-300 font-bold">القارئ:</span>
+                    <select id="text-reciter-select" onchange="onTextReciterChange(this.value)" class="bg-emerald-950 border border-amber-500/40 text-amber-200 text-sm font-bold rounded-xl px-3 py-2 outline-none"></select>
+
+                    <span class="text-xs text-amber-300 font-bold mr-auto">السورة:</span>
+                    <select id="text-surah-select" onchange="onTextSurahChange(this.value)" class="bg-emerald-950 border border-emerald-700 text-emerald-100 text-sm font-bold rounded-xl px-3 py-2 outline-none"></select>
                 </div>
             </div>
 
-            <!-- Search and Filter -->
-            <div class="flex flex-col sm:flex-row gap-3 items-center justify-between">
-                <input type="text" id="surah-search" oninput="filterSurahs()" placeholder="ابحث باسم السورة أو رقمها..." class="w-full sm:w-80 px-4 py-2.5 bg-emerald-950/80 border border-emerald-700/60 rounded-xl text-emerald-100 placeholder-emerald-400/60 text-sm focus:outline-none focus:border-amber-400 transition" />
-                <div class="flex items-center gap-2">
-                    <button onclick="setSurahFilter('all')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-amber-400 text-emerald-950 shadow-md" data-filter="all">جميع السور (114)</button>
-                    <button onclick="setSurahFilter('Meccan')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-emerald-950/60 text-emerald-200 border border-emerald-800" data-filter="Meccan">مكية 🕋</button>
-                    <button onclick="setSurahFilter('Medinan')" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-emerald-950/60 text-emerald-200 border border-emerald-800" data-filter="Medinan">مدنية 🕌</button>
+            <div class="bg-emerald-950/95 border-2 border-amber-500/40 rounded-3xl p-6 md:p-10 shadow-2xl space-y-6">
+                <div class="text-center space-y-3 border-b border-amber-500/30 pb-6">
+                    <div id="sync-surah-title" class="inline-block px-8 py-2.5 bg-amber-400/20 rounded-full text-amber-300 font-serif font-bold text-2xl">
+                        سورة الفاتحة
+                    </div>
+                    <audio id="quran-text-audio" controls autoplay ontimeupdate="handleSyncTimeUpdate(event)" class="w-full h-10 accent-amber-400 rounded-xl"></audio>
                 </div>
-            </div>
 
-            <!-- Surahs List Grid -->
-            <div id="surahs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
-                <!-- Dynamic Surahs injected via JS -->
+                <div id="sync-verses-container" class="font-serif leading-[2.8] text-right p-6 bg-emerald-900/30 rounded-2xl border border-emerald-800/60 shadow-inner"></div>
             </div>
         </div>
 
         <!-- Hadith Library View -->
         <div id="view-hadith" class="tab-content hidden space-y-6">
-            <div class="bg-emerald-900/40 border border-emerald-700/40 rounded-2xl p-5 shadow-lg backdrop-blur-sm">
-                <h3 class="text-xl font-bold text-amber-300">📚 مكتبة الأحاديث النبوية الشريفة</h3>
-                <p class="text-emerald-200/70 text-sm mt-1">أحاديث صحيحة ومأثورة عن النبي صلى الله عليه وسلم مع الشرح والفوائد</p>
+            <div class="bg-emerald-900/80 border border-amber-500/40 rounded-3xl p-5 shadow-2xl space-y-2">
+                <h3 class="text-2xl font-bold text-amber-300 font-serif">مكتبة الأحاديث النبوية الشريفة</h3>
             </div>
-            
-            <div class="flex flex-col sm:flex-row gap-3 items-center justify-between">
-                <input type="text" id="hadith-search" oninput="filterHadiths()" placeholder="ابحث في الأحاديث الشريفة..." class="w-full sm:w-80 px-4 py-2.5 bg-emerald-950/80 border border-emerald-700/60 rounded-xl text-emerald-100 placeholder-emerald-400/60 text-sm focus:outline-none focus:border-amber-400 transition" />
-                <div id="hadith-categories" class="flex gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 text-xs">
-                    <!-- Dynamic categories -->
-                </div>
-            </div>
-
-            <div id="hadiths-container" class="space-y-4">
-                <!-- Dynamic hadiths -->
-            </div>
+            <div id="hadiths-container" class="space-y-4"></div>
         </div>
 
         <!-- Adhkar View -->
         <div id="view-adhkar" class="tab-content hidden space-y-6">
-            <div class="bg-emerald-900/40 border border-emerald-700/40 rounded-2xl p-5 shadow-lg backdrop-blur-sm">
-                <h3 class="text-xl font-bold text-amber-300">✨ حصن المسلم - الأذكار والأدعية اليومية</h3>
-                <p class="text-emerald-200/70 text-sm mt-1">أذكار الصباح والمساء والاستغفار اليومي مع عداد إلكتروني للأذكار</p>
-            </div>
-
             <div class="flex gap-2 justify-center border-b border-emerald-800 pb-3">
-                <button onclick="setActiveDhikrCategory('morning')" class="dhkar-cat-btn px-5 py-2.5 rounded-xl font-bold transition text-sm bg-amber-400 text-emerald-950 shadow-lg" data-cat="morning">☀️ أذكار الصباح</button>
-                <button onclick="setActiveDhikrCategory('evening')" class="dhkar-cat-btn px-5 py-2.5 rounded-xl font-bold transition text-sm bg-emerald-950/60 text-emerald-200 border border-emerald-800" data-cat="evening">🌙 أذكار المساء</button>
-                <button onclick="setActiveDhikrCategory('general')" class="dhkar-cat-btn px-5 py-2.5 rounded-xl font-bold transition text-sm bg-emerald-950/60 text-emerald-200 border border-emerald-800" data-cat="general">📿 أدعية واستغفار</button>
+                <button onclick="setActiveDhikrCategory('morning')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-amber-400 text-emerald-950 shadow-md" data-cat="morning">☀️ أذكار الصباح</button>
+                <button onclick="setActiveDhikrCategory('evening')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800" data-cat="evening">🌙 أذكار المساء</button>
+                <button onclick="setActiveDhikrCategory('general')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800" data-cat="general">📿 أدعية واستغفار</button>
             </div>
+            <div id="adhkar-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
 
-            <div id="adhkar-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Dynamic Adhkar -->
+        <!-- Articles View -->
+        <div id="view-articles" class="tab-content hidden space-y-6">
+            <div class="bg-emerald-900/80 border border-amber-500/40 rounded-3xl p-5 shadow-2xl space-y-2">
+                <h3 class="text-2xl font-bold text-amber-300 font-serif">📚 مكتبة المقالات والبحوث الإسلامية</h3>
             </div>
+            <div id="article-categories" class="flex gap-2 overflow-x-auto pb-1 text-xs"></div>
+            <div id="articles-container" class="space-y-4"></div>
         </div>
 
     </main>
 
-    <!-- Footer / Copyright -->
+    <!-- Footer -->
     <footer class="text-center py-6 text-xs text-emerald-400/60 border-t border-emerald-900/50">
         المكتبة الإسلامية الشاملة • صدقة جارية لكل مسلم ومسلمة
     </footer>
 
-    <!-- Persistent Audio Player -->
-    <div class="fixed bottom-0 left-0 right-0 bg-emerald-950/98 backdrop-blur-md border-t border-amber-500/50 text-white p-3 md:p-4 shadow-2xl z-50">
+    <!-- Persistent Audio Player Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-emerald-950/98 border-t border-amber-500/50 text-white p-4 z-50 dir-rtl shadow-2xl">
         <audio id="main-audio" onended="handleNextSurah()"></audio>
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-3 w-full md:w-1/3 justify-start min-w-0">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-emerald-950 font-bold shrink-0 shadow-lg">🎵</div>
-                <div class="overflow-hidden text-right">
-                    <h4 id="player-surah-title" class="font-bold text-amber-300 text-base truncate">سورة الفاتحة</h4>
-                    <p id="player-reciter-name" class="text-xs text-emerald-200/80 truncate">الشيخ إدريس أبكر</p>
+        <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-400 text-emerald-950 font-bold flex items-center justify-center shadow-md">🎵</div>
+                <div>
+                    <h4 id="player-surah-title" class="font-bold text-amber-300 text-sm">سورة الفاتحة</h4>
+                    <p id="player-reciter-name" class="text-xs text-emerald-200/80">الشيخ إدريس أبكر</p>
                 </div>
             </div>
-
-            <div class="w-full md:w-1/3 flex items-center justify-center gap-3">
-                <button onclick="handlePrevSurah()" class="p-2 text-emerald-300 hover:text-amber-300 transition" title="السورة السابقة">◀</button>
-                <button id="player-toggle-btn" onclick="togglePlayPause()" class="px-6 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold flex items-center gap-2 shadow-lg transition">
-                    <span>▶ تشغيل التلاوة الآن</span>
+            <div class="flex items-center gap-3">
+                <button onclick="handlePrevSurah()" class="p-1 hover:text-amber-300 transition">◀</button>
+                <button id="player-toggle-btn" onclick="togglePlayPause()" class="px-5 py-2 bg-amber-400 text-emerald-950 font-bold rounded-xl flex items-center gap-1 shadow-md">
+                    <span>▶ تشغيل</span>
                 </button>
-                <button onclick="handleNextSurah()" class="p-2 text-emerald-300 hover:text-amber-300 transition" title="السورة التالية">▶</button>
-            </div>
-
-            <div class="flex items-center gap-3 w-full md:w-1/3 justify-end">
-                <a id="player-direct-link" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-amber-400 text-emerald-950 font-bold hover:bg-amber-300 rounded-xl transition flex items-center gap-1.5 text-xs shadow-md">
-                    <span>رابط الصوت المباشر ↗</span>
-                </a>
+                <button onclick="handleNextSurah()" class="p-1 hover:text-amber-300 transition">▶</button>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript logic replicating complete React state and dataset -->
+    <!-- Integrated Data & Application Script Logic -->
     <script>
         const RECITERS = [
-            { id: "abkar", name: "الشيخ إدريس أبكر", subtext: "المصحف المتاح - رواية حفص عن عاصم" },
-            { id: "mhs", name: "الشيخ محمد المحيسني", subtext: "المصحف الكامل - رواية حفص عن عاصم" },
-            { id: "frs", name: "الشيخ فارس عباد", subtext: "المصحف الكامل - رواية حفص عن عاصم" },
-            { id: "ajm", name: "الشيخ أحمد بن علي العجمي", subtext: "تلاوة خاشعة مميزة" },
-            { id: "sds", name: "الشيخ عبد الرحمن السديس", subtext: "إمام وخطيب المسجد الحرام" },
-            { id: "maher", name: "الشيخ ماهر المعيقلي", subtext: "إمام المسجد الحرام" },
-            { id: "afs", name: "الشيخ مشاري راشد العفاسي", subtext: "تلاوة خاشعة عذبة عالية الجودة" },
-            { id: "basit", name: "الشيخ عبد الباسط عبد الصمد", subtext: "الصوت الخاشع الخالد" },
-            { id: "ghamdi", name: "الشيخ سعد الغامدي", subtext: "تلاوة رائعة ومشهورة" },
-            { id: "dosari", name: "الشيخ ياسر الدوسري", subtext: "إمام المسجد الحرام" },
-            { id: "minshawi", name: "الشيخ محمد صديق المنشاوي", subtext: "التلاوة الخاشعة المؤثرة" },
-            { id: "husary", name: "الشيخ محمود خليل الحصري", subtext: "شيخ المقارئ المصرية" }
+            { id: "abkar", name: "الشيخ إدريس أبكر", subtext: "المصحف المتاح - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/idrees_abkar/" },
+            { id: "mhs", name: "الشيخ محمد المحيسني", subtext: "المصحف الكامل - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/muhammad_al_mhaisni/" },
+            { id: "frs", name: "الشيخ فارس عباد", subtext: "المصحف الكامل - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/fares_abbad/" },
+            { id: "ajm", name: "الشيخ أحمد بن علي العجمي", subtext: "تلاوة خاشعة مميزة", serverUrl: "https://download.quranicaudio.com/quran/ahmed_ibn_ali_al-ajamy/" },
+            { id: "sds", name: "الشيخ عبد الرحمن السديس", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/abdul_rahman_al_sudais/" },
+            { id: "maher", name: "الشيخ ماهر المعيقلي", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/maher_al_muaiqly/" },
+            { id: "afs", name: "الشيخ مشاري راشد العفاسي", subtext: "تلاوة عذبة عالية الجودة", serverUrl: "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afasy/" },
+            { id: "basit", name: "الشيخ عبد الباسط عبد الصمد", subtext: "الصوت الخاشع الخالد", serverUrl: "https://download.quranicaudio.com/quran/abdul_basit_murattal/" },
+            { id: "ghamdi", name: "الشيخ سعد الغامدي", subtext: "تلاوة مشهورة", serverUrl: "https://download.quranicaudio.com/quran/saad_al_ghamdi/" },
+            { id: "dosari", name: "الشيخ ياسر الدوسري", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/yasser_ad-dussary/" },
+            { id: "minshawi", name: "الشيخ محمد صديق المنشاوي", subtext: "التلاوة المؤثرة", serverUrl: "https://download.quranicaudio.com/quran/minshawi_murattal/" },
+            { id: "husary", name: "الشيخ محمود خليل الحصري", subtext: "شيخ المقارئ المصرية", serverUrl: "https://download.quranicaudio.com/quran/al_husary/" }
         ];
 
         const SURAHS = [
             { id: 1, name: "الفاتحة", transliteration: "Al-Fatiha", type: "Meccan", totalAyahs: 7 },
             { id: 2, name: "البقرة", transliteration: "Al-Baqarah", type: "Medinan", totalAyahs: 286 },
             { id: 3, name: "آل عمران", transliteration: "Ali 'Imran", type: "Medinan", totalAyahs: 200 },
-            { id: 4, name: "النساء", transliteration: "An-Nisa", type: "Medinan", totalAyahs: 176 },
-            { id: 5, name: "المائدة", transliteration: "Al-Ma'idah", type: "Medinan", totalAyahs: 120 },
-            { id: 6, name: "الأنعام", transliteration: "Al-An'am", type: "Meccan", totalAyahs: 165 },
-            { id: 7, name: "الأعراف", transliteration: "Al-A'raf", type: "Meccan", totalAyahs: 206 },
-            { id: 8, name: "الأنفال", transliteration: "Al-Anfal", type: "Medinan", totalAyahs: 75 },
-            { id: 9, name: "التوبة", transliteration: "At-Tawbah", type: "Medinan", totalAyahs: 129 },
-            { id: 10, name: "يونس", transliteration: "Yunus", type: "Meccan", totalAyahs: 109 },
-            { id: 11, name: "هود", transliteration: "Hud", type: "Meccan", totalAyahs: 123 },
-            { id: 12, name: "يوسف", transliteration: "Yusuf", type: "Meccan", totalAyahs: 111 },
-            { id: 13, name: "الرعد", transliteration: "Ar-Ra'd", type: "Medinan", totalAyahs: 43 },
-            { id: 14, name: "إبراهيم", transliteration: "Ibrahim", type: "Meccan", totalAyahs: 52 },
-            { id: 15, name: "الحجر", transliteration: "Al-Hijr", type: "Meccan", totalAyahs: 99 },
-            { id: 16, name: "النحل", transliteration: "An-Nahl", type: "Meccan", totalAyahs: 128 },
-            { id: 17, name: "الإسراء", transliteration: "Al-Isra", type: "Meccan", totalAyahs: 111 },
-            { id: 18, name: "الكهف", transliteration: "Al-Kahf", type: "Meccan", totalAyahs: 110 },
-            { id: 19, name: "مريم", transliteration: "Maryam", type: "Meccan", totalAyahs: 98 },
-            { id: 20, name: "طه", transliteration: "Taha", type: "Meccan", totalAyahs: 135 },
-            { id: 21, name: "الأنبياء", transliteration: "Al-Anbiya", type: "Meccan", totalAyahs: 112 },
-            { id: 22, name: "الحج", transliteration: "Al-Hajj", type: "Medinan", totalAyahs: 78 },
-            { id: 23, name: "المؤمنون", transliteration: "Al-Mu'minun", type: "Meccan", totalAyahs: 118 },
-            { id: 24, name: "النور", transliteration: "An-Nur", type: "Medinan", totalAyahs: 64 },
-            { id: 25, name: "الفرقان", transliteration: "Al-Furqan", type: "Meccan", totalAyahs: 77 },
-            { id: 26, name: "الشعراء", transliteration: "Ash-Shu'ara", type: "Meccan", totalAyahs: 227 },
-            { id: 27, name: "النمل", transliteration: "An-Naml", type: "Meccan", totalAyahs: 93 },
-            { id: 28, name: "القصص", transliteration: "Al-Qasas", type: "Meccan", totalAyahs: 88 },
-            { id: 29, name: "العنكبوت", transliteration: "Al-'Ankabut", type: "Meccan", totalAyahs: 69 },
-            { id: 30, name: "الروم", transliteration: "Ar-Rum", type: "Meccan", totalAyahs: 60 },
-            { id: 31, name: "لقمان", transliteration: "Luqman", type: "Meccan", totalAyahs: 34 },
-            { id: 32, name: "السجدة", transliteration: "As-Sajdah", type: "Meccan", totalAyahs: 30 },
-            { id: 33, name: "الأحزاب", transliteration: "Al-Ahzab", type: "Medinan", totalAyahs: 73 },
-            { id: 34, name: "سبأ", transliteration: "Saba", type: "Meccan", totalAyahs: 54 },
-            { id: 35, name: "فاطر", transliteration: "Fatir", type: "Meccan", totalAyahs: 45 },
             { id: 36, name: "يس", transliteration: "Yasin", type: "Meccan", totalAyahs: 83 },
-            { id: 37, name: "الصافات", transliteration: "As-Saffat", type: "Meccan", totalAyahs: 182 },
-            { id: 38, name: "ص", transliteration: "Sad", type: "Meccan", totalAyahs: 88 },
-            { id: 39, name: "الزمر", transliteration: "Az-Zumar", type: "Meccan", totalAyahs: 75 },
-            { id: 40, name: "غافر", transliteration: "Ghafir", type: "Meccan", totalAyahs: 85 },
-            { id: 41, name: "فصلت", transliteration: "Fussilat", type: "Meccan", totalAyahs: 54 },
-            { id: 42, name: "الشورى", transliteration: "Ash-Shura", type: "Meccan", totalAyahs: 53 },
-            { id: 43, name: "الزخرف", transliteration: "Az-Zukhruf", type: "Meccan", totalAyahs: 89 },
-            { id: 44, name: "الدخان", transliteration: "Ad-Dukhan", type: "Meccan", totalAyahs: 59 },
-            { id: 45, name: "الجاثية", transliteration: "Al-Jathiyah", type: "Meccan", totalAyahs: 37 },
-            { id: 46, name: "الأحقاف", transliteration: "Al-Ahqaf", type: "Meccan", totalAyahs: 35 },
-            { id: 47, name: "محمد", transliteration: "Muhammad", type: "Medinan", totalAyahs: 38 },
-            { id: 48, name: "الفتح", transliteration: "Al-Fath", type: "Medinan", totalAyahs: 29 },
-            { id: 49, name: "الحجرات", transliteration: "Al-Hujurat", type: "Medinan", totalAyahs: 18 },
-            { id: 50, name: "ق", transliteration: "Qaf", type: "Meccan", totalAyahs: 45 },
-            { id: 51, name: "الذاريات", transliteration: "Adh-Dhariyat", type: "Meccan", totalAyahs: 60 },
-            { id: 52, name: "الطور", transliteration: "At-Tur", type: "Meccan", totalAyahs: 49 },
-            { id: 53, name: "النجم", transliteration: "An-Najm", type: "Meccan", totalAyahs: 62 },
-            { id: 54, name: "القمر", transliteration: "Al-Qamar", type: "Meccan", totalAyahs: 55 },
             { id: 55, name: "الرحمن", transliteration: "Ar-Rahman", type: "Medinan", totalAyahs: 78 },
-            { id: 56, name: "الواقعة", transliteration: "Al-Waqi'ah", type: "Meccan", totalAyahs: 96 },
-            { id: 57, name: "الحديد", transliteration: "Al-Hadid", type: "Medinan", totalAyahs: 29 },
-            { id: 58, name: "المجادلة", transliteration: "Al-Mujadila", type: "Medinan", totalAyahs: 22 },
-            { id: 59, name: "الحشر", transliteration: "Al-Hashr", type: "Medinan", totalAyahs: 24 },
-            { id: 60, name: "الممتحنة", transliteration: "Al-Mumtahanah", type: "Medinan", totalAyahs: 13 },
-            { id: 61, name: "الصف", transliteration: "As-Saff", type: "Medinan", totalAyahs: 14 },
-            { id: 62, name: "الجمعة", transliteration: "Al-Jumu'ah", type: "Medinan", totalAyahs: 11 },
-            { id: 63, name: "المنافقون", transliteration: "Al-Munafiqun", type: "Medinan", totalAyahs: 11 },
-            { id: 64, name: "التغابن", transliteration: "At-Taghabun", type: "Medinan", totalAyahs: 18 },
-            { id: 65, name: "الطلاق", transliteration: "At-Talaq", type: "Medinan", totalAyahs: 12 },
-            { id: 66, name: "التحريم", transliteration: "At-Tahrim", type: "Medinan", totalAyahs: 12 },
             { id: 67, name: "الملك", transliteration: "Al-Mulk", type: "Meccan", totalAyahs: 30 },
-            { id: 68, name: "القلم", transliteration: "Al-Qalam", type: "Meccan", totalAyahs: 52 },
-            { id: 69, name: "الحاقة", transliteration: "Al-Haqqah", type: "Meccan", totalAyahs: 52 },
-            { id: 70, name: "المعارج", transliteration: "Al-Ma'arij", type: "Meccan", totalAyahs: 44 },
-            { id: 71, name: "نوح", transliteration: "Nuh", type: "Meccan", totalAyahs: 28 },
-            { id: 72, name: "الجن", transliteration: "Al-Jinn", type: "Meccan", totalAyahs: 28 },
-            { id: 73, name: "المزمل", transliteration: "Al-Muzzammil", type: "Meccan", totalAyahs: 20 },
-            { id: 74, name: "المدثر", transliteration: "Al-Muddaththir", type: "Meccan", totalAyahs: 56 },
-            { id: 75, name: "القيامة", transliteration: "Al-Qiyamah", type: "Meccan", totalAyahs: 40 },
-            { id: 76, name: "الإنسان", transliteration: "Al-Insan", type: "Medinan", totalAyahs: 31 },
-            { id: 77, name: "المرسلات", transliteration: "Al-Mursalat", type: "Meccan", totalAyahs: 50 },
-            { id: 78, name: "النبأ", transliteration: "An-Naba", type: "Meccan", totalAyahs: 40 },
-            { id: 79, name: "النازعات", transliteration: "An-Nazi'at", type: "Meccan", totalAyahs: 46 },
-            { id: 80, name: "عبس", transliteration: "'Abasa", type: "Meccan", totalAyahs: 42 },
-            { id: 81, name: "التكوير", transliteration: "At-Takwir", type: "Meccan", totalAyahs: 29 },
-            { id: 82, name: "الانفطار", transliteration: "Al-Infitar", type: "Meccan", totalAyahs: 19 },
-            { id: 83, name: "المطففين", transliteration: "Al-Mutaffifin", type: "Meccan", totalAyahs: 36 },
-            { id: 84, name: "الانشقاق", transliteration: "Al-Inshiqaq", type: "Meccan", totalAyahs: 25 },
-            { id: 85, name: "البروج", transliteration: "Al-Buruj", type: "Meccan", totalAyahs: 22 },
-            { id: 86, name: "الطارق", transliteration: "At-Tariq", type: "Meccan", totalAyahs: 17 },
-            { id: 87, name: "الأعلى", transliteration: "Al-A'la", type: "Meccan", totalAyahs: 19 },
-            { id: 88, name: "الغاشية", transliteration: "Al-Ghashiyah", type: "Meccan", totalAyahs: 26 },
-            { id: 89, name: "الفجر", transliteration: "Al-Fajr", type: "Meccan", totalAyahs: 30 },
-            { id: 90, name: "البلد", transliteration: "Al-Balad", type: "Meccan", totalAyahs: 20 },
-            { id: 91, name: "الشمس", transliteration: "Ash-Shams", type: "Meccan", totalAyahs: 15 },
-            { id: 92, name: "الليل", transliteration: "Al-Layl", type: "Meccan", totalAyahs: 21 },
-            { id: 93, name: "الضحى", transliteration: "Ad-Duha", type: "Meccan", totalAyahs: 11 },
-            { id: 94, name: "الشرح", transliteration: "Ash-Sharh", type: "Meccan", totalAyahs: 8 },
-            { id: 95, name: "التين", transliteration: "At-Tin", type: "Meccan", totalAyahs: 8 },
-            { id: 96, name: "العلق", transliteration: "Al-'Alaq", type: "Meccan", totalAyahs: 19 },
-            { id: 97, name: "القدر", transliteration: "Al-Qadr", type: "Meccan", totalAyahs: 5 },
-            { id: 98, name: "البينة", transliteration: "Al-Bayyinah", type: "Medinan", totalAyahs: 8 },
-            { id: 99, name: "الزلزلة", transliteration: "Az-Zalzalah", type: "Medinan", totalAyahs: 8 },
-            { id: 100, name: "العاديات", transliteration: "Al-'Adiyat", type: "Meccan", totalAyahs: 11 },
-            { id: 101, name: "القارعة", transliteration: "Al-Qari'ah", type: "Meccan", totalAyahs: 11 },
-            { id: 102, name: "التكاثر", transliteration: "At-Takathur", type: "Meccan", totalAyahs: 8 },
-            { id: 103, name: "العصر", transliteration: "Al-'Asr", type: "Meccan", totalAyahs: 3 },
-            { id: 104, name: "الهمزة", transliteration: "Al-Humazah", type: "Meccan", totalAyahs: 9 },
-            { id: 105, name: "الفيل", transliteration: "Al-Fil", type: "Meccan", totalAyahs: 5 },
-            { id: 106, name: "قريش", transliteration: "Quraysh", type: "Meccan", totalAyahs: 4 },
-            { id: 107, name: "الماعون", transliteration: "Al-Ma'un", type: "Meccan", totalAyahs: 7 },
-            { id: 108, name: "الكوثر", transliteration: "Al-Kawthar", type: "Meccan", totalAyahs: 3 },
-            { id: 109, name: "الكافرون", transliteration: "Al-Kafirun", type: "Meccan", totalAyahs: 6 },
-            { id: 110, name: "النصر", transliteration: "An-Nasr", type: "Medinan", totalAyahs: 3 },
-            { id: 111, name: "المسد", transliteration: "Al-Masad", type: "Meccan", totalAyahs: 5 },
             { id: 112, name: "الإخلاص", transliteration: "Al-Ikhlas", type: "Meccan", totalAyahs: 4 },
             { id: 113, name: "الفلق", transliteration: "Al-Falaq", type: "Meccan", totalAyahs: 5 },
             { id: 114, name: "الناس", transliteration: "An-Nas", type: "Meccan", totalAyahs: 6 }
         ];
 
+        const DETAILED_SURAHS_AYATS = {
+            1: [
+                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 1, text: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ" },
+                { number: 2, text: "الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 3, text: "مَالِكِ يَوْمِ الدِّينِ" },
+                { number: 4, text: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ" },
+                { number: 5, text: "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ" },
+                { number: 6, text: "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ" }
+            ],
+            2: [
+                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 1, text: "الم" },
+                { number: 2, text: "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ" },
+                { number: 3, text: "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ" },
+                { number: 4, text: "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ" }
+            ],
+            112: [
+                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 1, text: "قُلْ هُوَ اللَّهُ أَحَدٌ" },
+                { number: 2, text: "اللَّهُ الصَّمَدُ" },
+                { number: 3, text: "لَمْ يـَلِدْ وَلَمْ يُولَدْ" },
+                { number: 4, text: "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ" }
+            ],
+            113: [
+                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 1, text: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ" },
+                { number: 2, text: "مِن شَرِّ مَا خَلَقَ" },
+                { number: 3, text: "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ" },
+                { number: 4, text: "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ" },
+                { number: 5, text: "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ" }
+            ],
+            114: [
+                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
+                { number: 1, text: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ" },
+                { number: 2, text: "مَلِكِ النَّاسِ" },
+                { number: 3, text: "إِلَٰهِ النَّاسِ" },
+                { number: 4, text: "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ" },
+                { number: 5, text: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ" },
+                { number: 6, text: "مِنَ الْجِنَّةِ وَالنَّاسِ" }
+            ]
+        };
+
         const HADITHS = [
-            { id: 1, title: "إنما الأعمال بالنيات", narrator: "عمر بن الخطاب رضي الله عنه", source: "صحيح البخاري ومسلم", category: "الإيمان والنية", arabicText: "سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى...»", explanation: "هذا الحديث أصل عظيم من أصول الإسلام، وعليه مدار أحكام الشريعة في تصحيح الأعمال وقبولها." },
-            { id: 2, title: "خيركم من تعلم القرآن وعلمه", narrator: "عثمان بن عفان رضي الله عنه", source: "صحيح البخاري", category: "فضل القرآن", arabicText: "عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «خَيْرُكُمْ مَنْ تَعَلَّمَ القُرْآنَ وَعَلَّمَهُ».", explanation: "يبين فضل الاشتغال بكتاب الله تعالى تلاوة وتدبراً وتعليماً للناس." },
-            { id: 3, title: "الدين النصيحة", narrator: "تميم الداري رضي الله عنه", source: "صحيح مسلم", category: "الأخلاق والسلوك", arabicText: "أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «الدِّينُ النَّصِيحَةُ». قُلْنَا: لِمَنْ؟ قَالَ: «لِلَّهِ وَلِكِتَابِهِ وَلِرَسُولِهِ وَلأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ».", explanation: "النصيحة كلمة جامعة تتضمن قيام الناصح للمنصوح له بوجوه الخير والصدق والإخلاص." },
-            { id: 4, title: "المسلم من سلم المسلمون من لسانه ويده", narrator: "عبد الله بن عمرو رضي الله عنهما", source: "صحيح البخاري ومسلم", category: "الأخلاق والسلوك", arabicText: "عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «المُسْلِمُ مَنْ سَلِمَ المَسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ...»", explanation: "يحث الحديث على كف الأذى عن المسلمين باللسان واليد." }
+            { id: 1, title: "إنما الأعمال بالنيات", narrator: "عمر بن الخطاب رضي الله عنه", source: "صحيح البخاري ومسلم", category: "الإيمان والنية", arabicText: "سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ...»", explanation: "أصل عظيم من أصول الإسلام." },
+            { id: 2, title: "خيركم من تعلم القرآن وعلمه", narrator: "عثمان بن عفان رضي الله عنه", source: "صحيح البخاري", category: "فضل القرآن", arabicText: "عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «خَيْرُكُمْ مَنْ تَعَلَّمَ القُرْآنَ وَعَلَّمَهُ».", explanation: "فضل الاشتغال بكتاب الله تعالى." }
         ];
 
         const ADHKAR = [
-            { id: 1, text: "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ...", category: "morning", countTarget: 1, reward: "دعاء صباحي ثابت للحفظ والبركة" },
-            { id: 2, text: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ...", category: "evening", countTarget: 1, reward: "دعاء مسائي للحفظ والسكينة" },
-            { id: 3, text: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", category: "general", countTarget: 100, reward: "من قالها مائة مرة حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ" },
-            { id: 4, text: "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ", category: "general", countTarget: 100, reward: "محو الذنوب وجلب الرزق والفرج" }
+            { id: 1, text: "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ...", category: "morning", countTarget: 1, reward: "دعاء صباحي ثابت للحفظ والبركة" },
+            { id: 2, text: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ...", category: "evening", countTarget: 1, reward: "دعاء مسائي للحفظ والسكينة" },
+            { id: 3, text: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", category: "general", countTarget: 100, reward: "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ" }
         ];
 
+        const ARTICLE_CATEGORIES = ["جميع المقالات", "القرآن وعلومه", "العقيدة والتوحيد", "الفقه والأحكام", "الأخلاق والرقائق"];
+
+        const ARTICLES = [
+            { id: 1, title: "شروط قبول الدعاء", category: "العقيدة والتوحيد", summary: "بيان شروط وشواهد إجابة الدعاء من الثقة بالله والإخلاص.", content: "من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ..." },
+            { id: 2, title: "المنهج النبوي في سعة الرزق وقضاء الدين", category: "الفقه والأحكام", summary: "بيان الأسباب الشرعية لجلب الرزق والبركة وقضاء الديون.", content: "تمر على المسلم أوقات يشاء الله فيها الكرب وتتراكم الديون..." },
+            { id: 3, title: "أهمية الصلاة والخشوع فيها", category: "الأخلاق والرقائق", summary: "بيان المنزلة العظيمة للصلاة في الإسلام وأهمية الخشوع.", content: "الصلاة هي الركن الثاني من أركان الإسلام وعماد الدين..." }
+        ];
+
+        // Global State Simulation
         let state = {
-            activeTab: "articles",
+            activeTab: "quranText",
             currentReciter: RECITERS[0],
             currentSurah: SURAHS[0],
             isPlaying: false,
-            surahFilter: "all",
-            surahSearchQuery: "",
-            hadithSearchQuery: "",
-            hadithCategory: "all",
+            syncSurahId: 1,
+            activeAyahIndex: 0,
+            fontSize: 26,
             dhkarCategory: "morning",
-            dhkarCounts: {}
+            dhkarCounts: {},
+            articleCategory: "جميع المقالات",
+            expandedArticleId: 1,
+            copiedArticleId: null
         };
 
-        function getAudioUrl(reciterId, surahId) {
+        function getAudioUrl(reciter, surahId) {
             const padded = String(surahId).padStart(3, "0");
-            return `https://download.quranicaudio.com/quran/idrees_abkar/${padded}.mp3`;
+            return `${reciter.serverUrl}${padded}.mp3`;
         }
 
         function switchTab(tabId) {
@@ -357,187 +278,191 @@
 
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 if (btn.dataset.tab === tabId) {
-                    btn.className = "tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-amber-400 text-emerald-950 font-bold shadow-md";
+                    btn.className = "tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-amber-400 text-emerald-950 shadow-lg scale-105";
                 } else {
-                    btn.className = "tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition bg-emerald-950/60 text-emerald-200 border border-emerald-800 hover:bg-emerald-800/50";
+                    btn.className = "tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50";
                 }
             });
 
-            if (tabId === 'quran') {
-                renderReciters();
-                renderSurahs();
+            if (tabId === 'quranText') {
+                initQuranTextView();
             } else if (tabId === 'hadith') {
-                renderHadithCategories();
                 renderHadiths();
             } else if (tabId === 'adhkar') {
                 renderAdhkar();
+            } else if (tabId === 'articles') {
+                renderArticleCategories();
+                renderArticles();
             }
         }
 
-        function renderReciters() {
-            const container = document.getElementById('reciters-grid');
-            container.innerHTML = RECITERS.map(r => {
-                const isSelected = r.id === state.currentReciter.id;
-                return `
-                    <button onclick="selectReciter('${r.id}')" class="p-3 rounded-xl text-right transition-all flex flex-col gap-1 border ${isSelected ? 'bg-amber-400 text-emerald-950 font-bold border-amber-300 shadow-md' : 'bg-emerald-950/60 text-emerald-100 border-emerald-800 hover:bg-emerald-800/50'}">
-                        <span class="text-sm truncate">${r.name}</span>
-                        <span class="text-xs truncate ${isSelected ? 'text-emerald-900/80' : 'text-emerald-300/60'}">${r.subtext}</span>
-                    </button>
-                `;
-            }).join('');
+        // --- Quran Text Sync View Logic ---
+        function initQuranTextView() {
+            const reciterSelect = document.getElementById('text-reciter-select');
+            reciterSelect.innerHTML = RECITERS.map(r => `<option value="${r.id}" ${r.id === state.currentReciter.id ? 'selected' : ''}>${r.name}</option>`).join('');
+
+            const surahSelect = document.getElementById('text-surah-select');
+            surahSelect.innerHTML = SURAHS.map(s => `<option value="${s.id}" ${s.id === state.syncSurahId ? 'selected' : ''}>${s.id}. سورة ${s.name}</option>`).join('');
+
+            loadSyncSurahContent();
         }
 
-        function selectReciter(id) {
-            state.currentReciter = RECITERS.find(r => r.id === id) || RECITERS[0];
-            document.getElementById('text-reciter-display').innerText = state.currentReciter.name;
-            renderReciters();
-            renderSurahs();
+        function onTextReciterChange(recId) {
+            state.currentReciter = RECITERS.find(r => r.id === recId) || RECITERS[0];
+            loadSyncSurahContent();
         }
 
-        function setSurahFilter(filter) {
-            state.surahFilter = filter;
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                if (btn.dataset.filter === filter) {
-                    btn.className = "filter-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-amber-400 text-emerald-950 shadow-md";
-                } else {
-                    btn.className = "filter-btn px-3.5 py-2 rounded-xl text-xs font-bold transition bg-emerald-950/60 text-emerald-200 border border-emerald-800";
-                }
-            });
-            renderSurahs();
-        }
-
-        function filterSurahs() {
-            state.surahSearchQuery = document.getElementById('surah-search').value;
-            renderSurahs();
-        }
-
-        function renderSurahs() {
-            const container = document.getElementById('surahs-grid');
-            const filtered = SURAHS.filter(s => {
-                const matchesSearch = s.name.includes(state.surahSearchQuery) || s.id.toString() === state.surahSearchQuery;
-                const matchesType = state.surahFilter === 'all' || s.type === state.surahFilter;
-                return matchesSearch && matchesType;
-            });
-
-            container.innerHTML = filtered.map(surah => {
-                const isActive = state.currentSurah.id === surah.id;
-                const url = getAudioUrl(state.currentReciter.id, surah.id);
-                return `
-                    <div class="p-4 rounded-2xl border transition-all shadow-md flex flex-col justify-between gap-3 ${isActive ? 'bg-gradient-to-br from-emerald-900 to-emerald-950 border-amber-400 ring-1 ring-amber-400' : 'bg-emerald-950/60 border-emerald-800 hover:border-emerald-700'}">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-300 font-bold flex items-center justify-center text-sm border border-amber-500/30">${surah.id}</div>
-                                <div>
-                                    <h4 class="font-bold text-amber-200 text-base">سورة ${surah.name}</h4>
-                                    <p class="text-xs text-emerald-300/70">${surah.transliteration} • ${surah.totalAyahs} آية</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between pt-2 border-t border-emerald-800/50">
-                            <button onclick="playSurah(${surah.id})" class="px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${isActive ? 'bg-amber-400 text-emerald-950 shadow-md' : 'bg-emerald-900/80 text-amber-300 hover:bg-amber-400 hover:text-emerald-950 border border-emerald-700'}">
-                                <span>${isActive && state.isPlaying ? '⏸ مؤقت' : '▶ استماع'}</span>
-                            </button>
-                            <a href="${url}" target="_blank" class="p-2 text-emerald-300 hover:text-amber-300 transition text-xs">تحميل MP3 ↗</a>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function playSurah(surahId) {
-            state.currentSurah = SURAHS.find(s => s.id === surahId);
-            const audio = document.getElementById('main-audio');
-            audio.src = getAudioUrl(state.currentReciter.id, surahId);
-            audio.play();
-            state.isPlaying = true;
+        function onTextSurahChange(surahId) {
+            state.syncSurahId = Number(surahId);
+            state.activeAyahIndex = 0;
+            state.currentSurah = SURAHS.find(s => s.id === state.syncSurahId) || SURAHS[0];
+            loadSyncSurahContent();
             updatePlayerBar();
-            renderSurahs();
         }
 
-        function togglePlayPause() {
-            const audio = document.getElementById('main-audio');
-            if (!audio.src) {
-                playSurah(state.currentSurah.id);
-                return;
-            }
-            if (state.isPlaying) {
-                audio.pause();
+        function loadSyncSurahContent() {
+            const surah = SURAHS.find(s => s.id === state.syncSurahId) || SURAHS[0];
+            document.getElementById('sync-surah-title').innerText = `سورة ${surah.name}`;
+            
+            const audio = document.getElementById('quran-text-audio');
+            const url = getAudioUrl(state.currentReciter, surah.id);
+            audio.src = url;
+            audio.play().then(() => {
+                state.isPlaying = true;
+                updatePlayerBar();
+            }).catch(() => {
                 state.isPlaying = false;
-            } else {
+                updatePlayerBar();
+            });
+
+            renderSyncAyaths();
+        }
+
+        function renderSyncAyaths() {
+            const container = document.getElementById('sync-verses-container');
+            const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [{ number: 1, text: "تلاوة آيات السورة المباركة" }];
+
+            container.style.fontSize = `${state.fontSize}px`;
+            container.innerHTML = ayaths.map((ayah, idx) => {
+                const isCurrent = idx === state.activeAyahIndex;
+                return `
+                    <span onclick="handleAyahClick(${idx})" class="inline-block mx-1.5 my-1.5 p-3 rounded-2xl cursor-pointer transition-all ${isCurrent ? 'bg-yellow-400 text-emerald-950 font-bold border-2 border-yellow-300 shadow-xl scale-[1.03]' : 'text-amber-100 hover:bg-emerald-900/50'}">
+                        ${ayah.text} 
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full border text-xs mx-1 bg-emerald-950 text-amber-300">﴿${ayah.number}﴾</span>
+                    </span>
+                `;
+            }).join('');
+        }
+
+        function changeFontSize(delta) {
+            state.fontSize = Math.min(42, Math.max(18, state.fontSize + delta));
+            document.getElementById('font-size-display').innerText = `${state.fontSize}px`;
+            renderSyncAyaths();
+        }
+
+        function handleSyncTimeUpdate(e) {
+            const audio = e.target;
+            if (!audio.duration || audio.duration <= 0) return;
+
+            const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [{ number: 1 }];
+            const totalChars = ayaths.reduce((acc, a) => acc + a.text.length, 0);
+            let accumulatedChars = 0;
+            const thresholds = ayaths.map(a => {
+                accumulatedChars += a.text.length;
+                return accumulatedChars / (totalChars || 1);
+            });
+
+            const conservativeTime = Math.max(0, audio.currentTime - 1.2);
+            const ratio = conservativeTime / audio.duration;
+            let foundIndex = thresholds.findIndex(t => ratio < t);
+            if (foundIndex === -1) foundIndex = ayaths.length - 1;
+
+            if (foundIndex !== state.activeAyahIndex) {
+                state.activeAyahIndex = foundIndex;
+                renderSyncAyaths();
+            }
+        }
+
+        function handleAyahClick(index) {
+            state.activeAyahIndex = index;
+            renderSyncAyaths();
+            const audio = document.getElementById('quran-text-audio');
+            if (audio && audio.duration) {
+                const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [];
+                const totalChars = ayaths.reduce((acc, a) => acc + a.text.length, 0);
+                let accumulatedChars = 0;
+                const thresholds = ayaths.map(a => {
+                    accumulatedChars += a.text.length;
+                    return accumulatedChars / (totalChars || 1);
+                });
+                const startTimeRatio = index > 0 ? thresholds[index - 1] : 0;
+                audio.currentTime = startTimeRatio * audio.duration;
+                audio.play().catch(() => {});
+            }
+        }
+
+        // --- Player Controls Simulation ---
+        function togglePlayPause() {
+            const audio = document.getElementById('quran-text-audio');
+            if (audio.paused) {
                 audio.play();
                 state.isPlaying = true;
+            } else {
+                audio.pause();
+                state.isPlaying = false;
             }
             updatePlayerBar();
-            renderSurahs();
-        }
-
-        function handleNextSurah() {
-            if (state.currentSurah.id < 114) {
-                playSurah(state.currentSurah.id + 1);
-            }
-        }
-
-        function handlePrevSurah() {
-            if (state.currentSurah.id > 1) {
-                playSurah(state.currentSurah.id - 1);
-            }
         }
 
         function updatePlayerBar() {
             document.getElementById('player-surah-title').innerText = `سورة ${state.currentSurah.name}`;
             document.getElementById('player-reciter-name').innerText = state.currentReciter.name;
-            document.getElementById('player-toggle-btn').innerHTML = state.isPlaying ? '<span>⏸ إيقاف مؤقت</span>' : '<span>▶ تشغيل التلاوة الآن</span>';
-            document.getElementById('player-direct-link').href = getAudioUrl(state.currentReciter.id, state.currentSurah.id);
+            document.getElementById('player-toggle-btn').innerHTML = state.isPlaying ? '<span>⏸ إيقاف</span>' : '<span>▶ تشغيل</span>';
         }
 
-        function renderHadithCategories() {
-            const categories = ["all", ...Array.from(new Set(HADITHS.map(h => h.category)))];
-            const container = document.getElementById('hadith-categories');
-            container.innerHTML = categories.map(cat => `
-                <button onclick="setHadithCategory('${cat}')" class="px-3 py-2 rounded-xl shrink-0 transition ${state.hadithCategory === cat ? 'bg-amber-500 text-emerald-950 font-bold shadow-md' : 'bg-emerald-950/70 text-emerald-200 border border-emerald-800'}">
-                    ${cat === 'all' ? 'جميع التصنيفات' : cat}
-                </button>
-            `).join('');
+        function handleNextSurah() {
+            const currentIndex = SURAHS.findIndex(s => s.id === state.currentSurah.id);
+            if (currentIndex < SURAHS.length - 1) {
+                state.currentSurah = SURAHS[currentIndex + 1];
+                state.syncSurahId = state.currentSurah.id;
+                document.getElementById('text-surah-select').value = state.syncSurahId;
+                loadSyncSurahContent();
+            }
         }
 
-        function setHadithCategory(cat) {
-            state.hadithCategory = cat;
-            renderHadithCategories();
-            renderHadiths();
+        function handlePrevSurah() {
+            const currentIndex = SURAHS.findIndex(s => s.id === state.currentSurah.id);
+            if (currentIndex > 0) {
+                state.currentSurah = SURAHS[currentIndex - 1];
+                state.syncSurahId = state.currentSurah.id;
+                document.getElementById('text-surah-select').value = state.syncSurahId;
+                loadSyncSurahContent();
+            }
         }
 
-        function filterHadiths() {
-            state.hadithSearchQuery = document.getElementById('hadith-search').value;
-            renderHadiths();
-        }
-
+        // --- Hadith Logic ---
         function renderHadiths() {
             const container = document.getElementById('hadiths-container');
-            const filtered = HADITHS.filter(h => {
-                const matchesSearch = h.title.includes(state.hadithSearchQuery) || h.arabicText.includes(state.hadithSearchQuery);
-                const matchesCat = state.hadithCategory === 'all' || h.category === state.hadithCategory;
-                return matchesSearch && matchesCat;
-            });
-
-            container.innerHTML = filtered.map(h => `
-                <div class="bg-emerald-950/60 border border-emerald-800 rounded-2xl p-5 shadow-md space-y-4">
-                    <div class="flex items-center justify-between border-b border-emerald-800/50 pb-3">
-                        <span class="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-lg border border-amber-500/35">${h.category}</span>
-                        <span class="text-xs text-emerald-300/60">المصدر: ${h.source}</span>
+            container.innerHTML = HADITHS.map(h => `
+                <div class="bg-emerald-950/60 border border-emerald-800 rounded-2xl p-5 space-y-3">
+                    <div class="flex justify-between items-center border-b border-emerald-800/50 pb-2">
+                        <span class="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-lg">${h.category}</span>
                     </div>
                     <p class="text-lg text-amber-100 font-serif leading-loose text-right">${h.arabicText}</p>
-                    <div class="text-xs text-emerald-300/70">عن ${h.narrator}</div>
+                    <div class="text-xs text-emerald-300/70">عن ${h.narrator} • ${h.source}</div>
+                    ${h.explanation ? `<div class="bg-emerald-900/60 border-r-4 border-amber-400 p-3 rounded-xl text-emerald-100 text-sm">${h.explanation}</div>` : ''}
                 </div>
             `).join('');
         }
 
+        // --- Adhkar Logic ---
         function setActiveDhikrCategory(cat) {
             state.dhkarCategory = cat;
             document.querySelectorAll('.dhkar-cat-btn').forEach(btn => {
                 if (btn.dataset.cat === cat) {
-                    btn.className = "dhkar-cat-btn px-5 py-2.5 rounded-xl font-bold transition text-sm bg-amber-400 text-emerald-950 shadow-lg";
+                    btn.className = "dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-amber-400 text-emerald-950 shadow-md";
                 } else {
-                    btn.className = "dhkar-cat-btn px-5 py-2.5 rounded-xl font-bold transition text-sm bg-emerald-950/60 text-emerald-200 border border-emerald-800";
+                    btn.className = "dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800";
                 }
             });
             renderAdhkar();
@@ -551,15 +476,13 @@
                 const count = state.dhkarCounts[d.id] || 0;
                 const isCompleted = count >= d.countTarget;
                 return `
-                    <div class="p-5 rounded-2xl border transition-all shadow-md flex flex-col justify-between gap-4 ${isCompleted ? 'bg-emerald-900/30 border-emerald-600/60 opacity-80' : 'bg-emerald-950/60 border-emerald-800'}">
-                        <div class="space-y-3">
-                            <p class="text-lg text-amber-100 font-serif leading-relaxed text-right">${d.text}</p>
-                            ${d.reward ? `<p class="text-xs text-amber-300/80 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">💡 ${d.reward}</p>` : ''}
-                        </div>
-                        <div class="flex items-center justify-between pt-2 border-t border-emerald-800/50">
-                            <button onclick="resetDhikr(${d.id})" class="p-2 text-emerald-400/60 hover:text-amber-400 text-xs">إعادة ↺</button>
-                            <button onclick="incrementDhikr(${d.id}, ${d.countTarget})" class="px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow-md ${isCompleted ? 'bg-emerald-800 text-emerald-300' : 'bg-gradient-to-r from-amber-400 to-amber-500 text-emerald-950'}">
-                                ${isCompleted ? 'تم الانتهاء (' + d.countTarget + ')' : count + ' / ' + d.countTarget}
+                    <div class="p-5 rounded-2xl bg-emerald-950/60 border border-emerald-800 space-y-4">
+                        <p class="text-lg text-amber-100 font-serif text-right">${d.text}</p>
+                        ${d.reward ? `<p class="text-xs text-amber-300/80 bg-amber-500/10 p-2 rounded-lg">💡 ${d.reward}</p>` : ''}
+                        <div class="flex justify-between items-center pt-2 border-t border-emerald-800/50">
+                            <button onclick="resetDhikr(${d.id})" class="p-2 text-emerald-400">↺</button>
+                            <button onclick="incrementDhikr(${d.id}, ${d.countTarget})" class="px-6 py-2 rounded-xl font-bold ${isCompleted ? 'bg-emerald-800 text-emerald-300' : 'bg-amber-400 text-emerald-950'}">
+                                ${isCompleted ? 'تم الانتهاء' : count + ' / ' + d.countTarget}
                             </button>
                         </div>
                     </div>
@@ -580,9 +503,69 @@
             renderAdhkar();
         }
 
-        // Initialize default view
-        renderReciters();
-        renderSurahs();
+        // --- Articles Logic ---
+        function renderArticleCategories() {
+            const container = document.getElementById('article-categories');
+            container.innerHTML = ARTICLE_CATEGORIES.map(cat => `
+                <button onclick="setArticleCategory('${cat}')" class="px-3.5 py-2 rounded-xl shrink-0 font-bold transition ${state.articleCategory === cat ? 'bg-amber-400 text-emerald-950 shadow-md' : 'bg-emerald-950 text-emerald-200 border border-emerald-800'}">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function setArticleCategory(cat) {
+            state.articleCategory = cat;
+            renderArticleCategories();
+            renderArticles();
+        }
+
+        function renderArticles() {
+            const container = document.getElementById('articles-container');
+            const filtered = state.articleCategory === "جميع المقالات" ? ARTICLES : ARTICLES.filter(a => a.category === state.articleCategory);
+
+            container.innerHTML = filtered.map(article => {
+                const isExpanded = state.expandedArticleId === article.id;
+                return `
+                    <div class="bg-emerald-950/90 border border-emerald-800/80 rounded-2xl p-5 space-y-4">
+                        <div class="flex justify-between items-center border-b border-emerald-800/60 pb-3">
+                            <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-lg border border-amber-500/30">${article.category}</span>
+                            <div class="flex items-center gap-2">
+                                <button onclick="copyArticle(${article.id})" class="p-2 text-emerald-300 text-xs flex items-center gap-1 hover:text-amber-300">
+                                    <span>${state.copiedArticleId === article.id ? '✓ تم النسخ' : 'نسخ'}</span>
+                                </button>
+                                <button onclick="toggleExpandArticle(${article.id})" class="px-3 py-1.5 bg-emerald-900 text-xs font-bold text-amber-300 rounded-xl">
+                                    ${isExpanded ? 'طي' : 'قراءة المقال'}
+                                </button>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-amber-200 font-serif">${article.title}</h4>
+                        <p class="text-sm text-emerald-200/90 bg-emerald-900/30 p-3 rounded-xl">${article.summary}</p>
+                        ${isExpanded ? `<div class="pt-3 border-t border-amber-500/20 text-amber-100 font-serif text-lg leading-loose whitespace-pre-line text-right bg-emerald-900/20 p-4 rounded-xl">${article.content}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleExpandArticle(id) {
+            state.expandedArticleId = state.expandedArticleId === id ? null : id;
+            renderArticles();
+        }
+
+        function copyArticle(id) {
+            const art = ARTICLES.find(a => a.id === id);
+            if (art) {
+                navigator.clipboard.writeText(`📖 ${art.title}\n\n${art.content}`);
+                state.copiedArticleId = id;
+                renderArticles();
+                setTimeout(() => {
+                    state.copiedArticleId = null;
+                    renderArticles();
+                }, 2000);
+            }
+        }
+
+        // Initialize application default tab
+        initQuranTextView();
     </script>
 </body>
 </html>
