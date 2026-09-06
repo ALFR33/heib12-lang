@@ -1,621 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 55775لاىىا -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="2344597852"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المكتبة الإسلامية الشاملة</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        emerald: {
-                            950: '#022c22',
-                            900: '#064e3b',
-                            800: '#065f46',
-                            700: '#047857',
-                            400: '#34d399',
-                            300: '#6ee7b7',
-                            200: '#a7f3d0',
-                            100: '#d1fae5',
-                        },
-                        amber: {
-                            300: '#fcd34d',
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 55775لاىىا -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="2344597852"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script> 
-<body class="min-h-screen w-full bg-emerald-950 text-emerald-100 flex flex-col font-sans pb-32">
-
-    <!-- Header Banner -->
-    <header class="bg-gradient-to-b from-emerald-900 via-emerald-950 to-emerald-950 text-white pt-8 pb-4 px-4 border-b border-amber-500/20 shadow-2xl sticky top-0 z-40 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto text-center space-y-4">
-            <div class="inline-block px-4 py-1.5 bg-emerald-800/40 border border-amber-500/30 rounded-full text-amber-300 font-serif text-sm">
-                بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
-            </div>
-
-            <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200 font-serif">
-                المكتبة الإسلامية الشاملة
-            </h1>
-
-            <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
-                <button onclick="switchTab('quranText')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-amber-400 text-emerald-950 shadow-lg scale-105" data-tab="quranText">
-                    📖 المصحف المكتوب والتلاوة
-                </button>
-                <button onclick="switchTab('hadith')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="hadith">
-                    الأحاديث النبوية
-                </button>
-                <button onclick="switchTab('adhkar')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="adhkar">
-                    حصن المسلم والأذكار
-                </button>
-                <button onclick="switchTab('articles')" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50" data-tab="articles">
-                    📚 المقالات والبحوث
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
-        
-        <!-- Quran Text View -->
-        <div id="view-quranText" class="tab-content space-y-6">
-            <div class="bg-gradient-to-r from-emerald-900/90 via-emerald-950 to-emerald-900/90 border border-amber-500/40 rounded-3xl p-5 md:p-6 shadow-2xl space-y-4">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-emerald-950 font-bold text-lg shadow-lg shrink-0">📖</div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-amber-300 font-serif">المصحف المكتوب المربوط بتظليل الآيات الأصفر التلقائي</h2>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2.5">
-                        <button onclick="changeFontSize(-2)" class="px-2.5 py-1 text-xs text-emerald-300 font-bold bg-emerald-950 rounded border border-emerald-800">A-</button>
-                        <span id="font-size-display" class="text-xs text-amber-400 font-mono">26px</span>
-                        <button onclick="changeFontSize(2)" class="px-2.5 py-1 text-xs text-emerald-300 font-bold bg-emerald-950 rounded border border-emerald-800">A+</button>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3 pt-3 border-t border-emerald-800/60">
-                    <span class="text-xs text-amber-300 font-bold">القارئ:</span>
-                    <select id="text-reciter-select" onchange="onTextReciterChange(this.value)" class="bg-emerald-950 border border-amber-500/40 text-amber-200 text-sm font-bold rounded-xl px-3 py-2 outline-none"></select>
-
-                    <span class="text-xs text-amber-300 font-bold mr-auto">السورة:</span>
-                    <select id="text-surah-select" onchange="onTextSurahChange(this.value)" class="bg-emerald-950 border border-emerald-700 text-emerald-100 text-sm font-bold rounded-xl px-3 py-2 outline-none"></select>
-                </div>
-            </div>
-
-            <div class="bg-emerald-950/95 border-2 border-amber-500/40 rounded-3xl p-6 md:p-10 shadow-2xl space-y-6">
-                <div class="text-center space-y-3 border-b border-amber-500/30 pb-6">
-                    <div id="sync-surah-title" class="inline-block px-8 py-2.5 bg-amber-400/20 rounded-full text-amber-300 font-serif font-bold text-2xl">
-                        سورة الفاتحة
-                    </div>
-                    <audio id="quran-text-audio" controls autoplay ontimeupdate="handleSyncTimeUpdate(event)" class="w-full h-10 accent-amber-400 rounded-xl"></audio>
-                </div>
-
-                <div id="sync-verses-container" class="font-serif leading-[2.8] text-right p-6 bg-emerald-900/30 rounded-2xl border border-emerald-800/60 shadow-inner"></div>
-            </div>
-        </div>
-
-        <!-- Hadith Library View -->
-        <div id="view-hadith" class="tab-content hidden space-y-6">
-            <div class="bg-emerald-900/80 border border-amber-500/40 rounded-3xl p-5 shadow-2xl space-y-2">
-                <h3 class="text-2xl font-bold text-amber-300 font-serif">مكتبة الأحاديث النبوية الشريفة</h3>
-            </div>
-            <div id="hadiths-container" class="space-y-4"></div>
-        </div>
-
-        <!-- Adhkar View -->
-        <div id="view-adhkar" class="tab-content hidden space-y-6">
-            <div class="flex gap-2 justify-center border-b border-emerald-800 pb-3">
-                <button onclick="setActiveDhikrCategory('morning')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-amber-400 text-emerald-950 shadow-md" data-cat="morning">☀️ أذكار الصباح</button>
-                <button onclick="setActiveDhikrCategory('evening')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800" data-cat="evening">🌙 أذكار المساء</button>
-                <button onclick="setActiveDhikrCategory('general')" class="dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800" data-cat="general">📿 أدعية واستغفار</button>
-            </div>
-            <div id="adhkar-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-        </div>
-
-        <!-- Articles View -->
-        <div id="view-articles" class="tab-content hidden space-y-6">
-            <div class="bg-emerald-900/80 border border-amber-500/40 rounded-3xl p-5 shadow-2xl space-y-2">
-                <h3 class="text-2xl font-bold text-amber-300 font-serif">📚 مكتبة المقالات والبحوث الإسلامية</h3>
-            </div>
-            <div id="article-categories" class="flex gap-2 overflow-x-auto pb-1 text-xs"></div>
-            <div id="articles-container" class="space-y-4"></div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-6 text-xs text-emerald-400/60 border-t border-emerald-900/50">
-        المكتبة الإسلامية الشاملة • صدقة جارية لكل مسلم ومسلمة
-    </footer>
-
-    <!-- Persistent Audio Player Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-emerald-950/98 border-t border-amber-500/50 text-white p-4 z-50 dir-rtl shadow-2xl">
-        <audio id="main-audio" onended="handleNextSurah()"></audio>
-        <div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-amber-400 text-emerald-950 font-bold flex items-center justify-center shadow-md">🎵</div>
-                <div>
-                    <h4 id="player-surah-title" class="font-bold text-amber-300 text-sm">سورة الفاتحة</h4>
-                    <p id="player-reciter-name" class="text-xs text-emerald-200/80">الشيخ إدريس أبكر</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <button onclick="handlePrevSurah()" class="p-1 hover:text-amber-300 transition">◀</button>
-                <button id="player-toggle-btn" onclick="togglePlayPause()" class="px-5 py-2 bg-amber-400 text-emerald-950 font-bold rounded-xl flex items-center gap-1 shadow-md">
-                    <span>▶ تشغيل</span>
-                </button>
-                <button onclick="handleNextSurah()" class="p-1 hover:text-amber-300 transition">▶</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Integrated Data & Application Script Logic -->
-    <script>
-        const RECITERS = [
-            { id: "abkar", name: "الشيخ إدريس أبكر", subtext: "المصحف المتاح - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/idrees_abkar/" },
-            { id: "mhs", name: "الشيخ محمد المحيسني", subtext: "المصحف الكامل - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/muhammad_al_mhaisni/" },
-            { id: "frs", name: "الشيخ فارس عباد", subtext: "المصحف الكامل - رواية حفص عن عاصم", serverUrl: "https://download.quranicaudio.com/quran/fares_abbad/" },
-            { id: "ajm", name: "الشيخ أحمد بن علي العجمي", subtext: "تلاوة خاشعة مميزة", serverUrl: "https://download.quranicaudio.com/quran/ahmed_ibn_ali_al-ajamy/" },
-            { id: "sds", name: "الشيخ عبد الرحمن السديس", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/abdul_rahman_al_sudais/" },
-            { id: "maher", name: "الشيخ ماهر المعيقلي", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/maher_al_muaiqly/" },
-            { id: "afs", name: "الشيخ مشاري راشد العفاسي", subtext: "تلاوة عذبة عالية الجودة", serverUrl: "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afasy/" },
-            { id: "basit", name: "الشيخ عبد الباسط عبد الصمد", subtext: "الصوت الخاشع الخالد", serverUrl: "https://download.quranicaudio.com/quran/abdul_basit_murattal/" },
-            { id: "ghamdi", name: "الشيخ سعد الغامدي", subtext: "تلاوة مشهورة", serverUrl: "https://download.quranicaudio.com/quran/saad_al_ghamdi/" },
-            { id: "dosari", name: "الشيخ ياسر الدوسري", subtext: "إمام المسجد الحرام", serverUrl: "https://download.quranicaudio.com/quran/yasser_ad-dussary/" },
-            { id: "minshawi", name: "الشيخ محمد صديق المنشاوي", subtext: "التلاوة المؤثرة", serverUrl: "https://download.quranicaudio.com/quran/minshawi_murattal/" },
-            { id: "husary", name: "الشيخ محمود خليل الحصري", subtext: "شيخ المقارئ المصرية", serverUrl: "https://download.quranicaudio.com/quran/al_husary/" }
-        ];
-
-        const SURAHS = [
-            { id: 1, name: "الفاتحة", transliteration: "Al-Fatiha", type: "Meccan", totalAyahs: 7 },
-            { id: 2, name: "البقرة", transliteration: "Al-Baqarah", type: "Medinan", totalAyahs: 286 },
-            { id: 3, name: "آل عمران", transliteration: "Ali 'Imran", type: "Medinan", totalAyahs: 200 },
-            { id: 36, name: "يس", transliteration: "Yasin", type: "Meccan", totalAyahs: 83 },
-            { id: 55, name: "الرحمن", transliteration: "Ar-Rahman", type: "Medinan", totalAyahs: 78 },
-            { id: 67, name: "الملك", transliteration: "Al-Mulk", type: "Meccan", totalAyahs: 30 },
-            { id: 112, name: "الإخلاص", transliteration: "Al-Ikhlas", type: "Meccan", totalAyahs: 4 },
-            { id: 113, name: "الفلق", transliteration: "Al-Falaq", type: "Meccan", totalAyahs: 5 },
-            { id: 114, name: "الناس", transliteration: "An-Nas", type: "Meccan", totalAyahs: 6 }
-        ];
-
-        const DETAILED_SURAHS_AYATS = {
-            1: [
-                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 1, text: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ" },
-                { number: 2, text: "الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 3, text: "مَالِكِ يَوْمِ الدِّينِ" },
-                { number: 4, text: "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ" },
-                { number: 5, text: "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ" },
-                { number: 6, text: "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ" }
-            ],
-            2: [
-                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 1, text: "الم" },
-                { number: 2, text: "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ" },
-                { number: 3, text: "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ" },
-                { number: 4, text: "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ" }
-            ],
-            112: [
-                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 1, text: "قُلْ هُوَ اللَّهُ أَحَدٌ" },
-                { number: 2, text: "اللَّهُ الصَّمَدُ" },
-                { number: 3, text: "لَمْ يـَلِدْ وَلَمْ يُولَدْ" },
-                { number: 4, text: "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ" }
-            ],
-            113: [
-                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 1, text: "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ" },
-                { number: 2, text: "مِن شَرِّ مَا خَلَقَ" },
-                { number: 3, text: "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ" },
-                { number: 4, text: "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ" },
-                { number: 5, text: "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ" }
-            ],
-            114: [
-                { number: 0, text: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" },
-                { number: 1, text: "قُلْ أَعُوذُ بِرَبِّ النَّاسِ" },
-                { number: 2, text: "مَلِكِ النَّاسِ" },
-                { number: 3, text: "إِلَٰهِ النَّاسِ" },
-                { number: 4, text: "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ" },
-                { number: 5, text: "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ" },
-                { number: 6, text: "مِنَ الْجِنَّةِ وَالنَّاسِ" }
-            ]
-        };
-
-        const HADITHS = [
-            { id: 1, title: "إنما الأعمال بالنيات", narrator: "عمر بن الخطاب رضي الله عنه", source: "صحيح البخاري ومسلم", category: "الإيمان والنية", arabicText: "سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ...»", explanation: "أصل عظيم من أصول الإسلام." },
-            { id: 2, title: "خيركم من تعلم القرآن وعلمه", narrator: "عثمان بن عفان رضي الله عنه", source: "صحيح البخاري", category: "فضل القرآن", arabicText: "عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: «خَيْرُكُمْ مَنْ تَعَلَّمَ القُرْآنَ وَعَلَّمَهُ».", explanation: "فضل الاشتغال بكتاب الله تعالى." }
-        ];
-
-        const ADHKAR = [
-            { id: 1, text: "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ...", category: "morning", countTarget: 1, reward: "دعاء صباحي ثابت للحفظ والبركة" },
-            { id: 2, text: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ...", category: "evening", countTarget: 1, reward: "دعاء مسائي للحفظ والسكينة" },
-            { id: 3, text: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", category: "general", countTarget: 100, reward: "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ" }
-        ];
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-        const ARTICLE_CATEGORIES = ["جميع المقالات", "القرآن وعلومه", "العقيدة والتوحيد", "الفقه والأحكام", "الأخلاق والرقائق"];
-
-        const ARTICLES = [
-            { id: 1, title: "شروط قبول الدعاء", category: "العقيدة والتوحيد", summary: "بيان شروط وشواهد إجابة الدعاء من الثقة بالله والإخلاص.", content: "من أعظم الشروط الثقة بالله، والتصديق له ولرسوله ﷺ..." },
-            { id: 2, title: "المنهج النبوي في سعة الرزق وقضاء الدين", category: "الفقه والأحكام", summary: "بيان الأسباب الشرعية لجلب الرزق والبركة وقضاء الديون.", content: "تمر على المسلم أوقات يشاء الله فيها الكرب وتتراكم الديون..." },
-            { id: 3, title: "أهمية الصلاة والخشوع فيها", category: "الأخلاق والرقائق", summary: "بيان المنزلة العظيمة للصلاة في الإسلام وأهمية الخشوع.", content: "الصلاة هي الركن الثاني من أركان الإسلام وعماد الدين..." }
-        ];<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-        // Global State Simulation
-        let state = {
-            activeTab: "quranText",
-            currentReciter: RECITERS[0],
-            currentSurah: SURAHS[0],
-            isPlaying: false,
-            syncSurahId: 1,
-            activeAyahIndex: 0,
-            fontSize: 26,
-            dhkarCategory: "morning",
-            dhkarCounts: {},
-            articleCategory: "جميع المقالات",
-            expandedArticleId: 1,
-            copiedArticleId: null
-        };
-
-        function getAudioUrl(reciter, surahId) {
-            const padded = String(surahId).padStart(3, "0");
-            return `${reciter.serverUrl}${padded}.mp3`;
-        }
-
-        function switchTab(tabId) {
-            state.activeTab = tabId;
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById(`view-${tabId}`).classList.remove('hidden');
-
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                if (btn.dataset.tab === tabId) {
-                    btn.className = "tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-amber-400 text-emerald-950 shadow-lg scale-105";
-                } else {
-                    btn.className = "tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition bg-emerald-900/60 text-emerald-200 border border-emerald-700/50 hover:bg-emerald-800/50";
-                }
-            });
-
-            if (tabId === 'quranText') {
-                initQuranTextView();
-            } else if (tabId === 'hadith') {
-                renderHadiths();
-            } else if (tabId === 'adhkar') {
-                renderAdhkar();
-            } else if (tabId === 'articles') {
-                renderArticleCategories();
-                renderArticles();
-            }
-        }
-
-        // --- Quran Text Sync View Logic ---
-        function initQuranTextView() {
-            const reciterSelect = document.getElementById('text-reciter-select');
-            reciterSelect.innerHTML = RECITERS.map(r => `<option value="${r.id}" ${r.id === state.currentReciter.id ? 'selected' : ''}>${r.name}</option>`).join('');
-
-            const surahSelect = document.getElementById('text-surah-select');
-            surahSelect.innerHTML = SURAHS.map(s => `<option value="${s.id}" ${s.id === state.syncSurahId ? 'selected' : ''}>${s.id}. سورة ${s.name}</option>`).join('');
-
-            loadSyncSurahContent();
-        }
-
-        function onTextReciterChange(recId) {
-            state.currentReciter = RECITERS.find(r => r.id === recId) || RECITERS[0];
-            loadSyncSurahContent();
-        }
-
-        function onTextSurahChange(surahId) {
-            state.syncSurahId = Number(surahId);
-            state.activeAyahIndex = 0;
-            state.currentSurah = SURAHS.find(s => s.id === state.syncSurahId) || SURAHS[0];
-            loadSyncSurahContent();
-            updatePlayerBar();
-        }
-
-        function loadSyncSurahContent() {
-            const surah = SURAHS.find(s => s.id === state.syncSurahId) || SURAHS[0];
-            document.getElementById('sync-surah-title').innerText = `سورة ${surah.name}`;
-            
-            const audio = document.getElementById('quran-text-audio');
-            const url = getAudioUrl(state.currentReciter, surah.id);
-            audio.src = url;
-            audio.play().then(() => {
-                state.isPlaying = true;
-                updatePlayerBar();
-            }).catch(() => {
-                state.isPlaying = false;
-                updatePlayerBar();
-            });
-
-            renderSyncAyaths();
-        }
-
-        function renderSyncAyaths() {
-            const container = document.getElementById('sync-verses-container');
-            const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [{ number: 1, text: "تلاوة آيات السورة المباركة" }];
-
-            container.style.fontSize = `${state.fontSize}px`;
-            container.innerHTML = ayaths.map((ayah, idx) => {
-                const isCurrent = idx === state.activeAyahIndex;
-                return `
-                    <span onclick="handleAyahClick(${idx})" class="inline-block mx-1.5 my-1.5 p-3 rounded-2xl cursor-pointer transition-all ${isCurrent ? 'bg-yellow-400 text-emerald-950 font-bold border-2 border-yellow-300 shadow-xl scale-[1.03]' : 'text-amber-100 hover:bg-emerald-900/50'}">
-                        ${ayah.text} 
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full border text-xs mx-1 bg-emerald-950 text-amber-300">﴿${ayah.number}﴾</span>
-                    </span>
-                `;
-            }).join('');
-        }
-
-        function changeFontSize(delta) {
-            state.fontSize = Math.min(42, Math.max(18, state.fontSize + delta));
-            document.getElementById('font-size-display').innerText = `${state.fontSize}px`;
-            renderSyncAyaths();
-        }
-
-        function handleSyncTimeUpdate(e) {
-            const audio = e.target;
-            if (!audio.duration || audio.duration <= 0) return;
-
-            const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [{ number: 1 }];
-            const totalChars = ayaths.reduce((acc, a) => acc + a.text.length, 0);
-            let accumulatedChars = 0;
-            const thresholds = ayaths.map(a => {
-                accumulatedChars += a.text.length;
-                return accumulatedChars / (totalChars || 1);
-            });
-
-            const conservativeTime = Math.max(0, audio.currentTime - 1.2);
-            const ratio = conservativeTime / audio.duration;
-            let foundIndex = thresholds.findIndex(t => ratio < t);
-            if (foundIndex === -1) foundIndex = ayaths.length - 1;
-
-            if (foundIndex !== state.activeAyahIndex) {
-                state.activeAyahIndex = foundIndex;
-                renderSyncAyaths();
-            }
-        }
-
-        function handleAyahClick(index) {
-            state.activeAyahIndex = index;
-            renderSyncAyaths();
-            const audio = document.getElementById('quran-text-audio');
-            if (audio && audio.duration) {
-                const ayaths = DETAILED_SURAHS_AYATS[state.syncSurahId] || [];
-                const totalChars = ayaths.reduce((acc, a) => acc + a.text.length, 0);
-                let accumulatedChars = 0;
-                const thresholds = ayaths.map(a => {
-                    accumulatedChars += a.text.length;
-                    return accumulatedChars / (totalChars || 1);
-                });
-                const startTimeRatio = index > 0 ? thresholds[index - 1] : 0;
-                audio.currentTime = startTimeRatio * audio.duration;
-                audio.play().catch(() => {});
-            }
-        }
-
-        // --- Player Controls Simulation ---
-        function togglePlayPause() {
-            const audio = document.getElementById('quran-text-audio');
-            if (audio.paused) {
-                audio.play();
-                state.isPlaying = true;
-            } else {
-                audio.pause();
-                state.isPlaying = false;
-            }
-            updatePlayerBar();
-        }
-
-        function updatePlayerBar() {
-            document.getElementById('player-surah-title').innerText = `سورة ${state.currentSurah.name}`;
-            document.getElementById('player-reciter-name').innerText = state.currentReciter.name;
-            document.getElementById('player-toggle-btn').innerHTML = state.isPlaying ? '<span>⏸ إيقاف</span>' : '<span>▶ تشغيل</span>';
-        }
-
-        function handleNextSurah() {
-            const currentIndex = SURAHS.findIndex(s => s.id === state.currentSurah.id);
-            if (currentIndex < SURAHS.length - 1) {
-                state.currentSurah = SURAHS[currentIndex + 1];
-                state.syncSurahId = state.currentSurah.id;
-                document.getElementById('text-surah-select').value = state.syncSurahId;
-                loadSyncSurahContent();
-            }
-        }
-
-        function handlePrevSurah() {
-            const currentIndex = SURAHS.findIndex(s => s.id === state.currentSurah.id);
-            if (currentIndex > 0) {
-                state.currentSurah = SURAHS[currentIndex - 1];
-                state.syncSurahId = state.currentSurah.id;
-                document.getElementById('text-surah-select').value = state.syncSurahId;
-                loadSyncSurahContent();
-            }
-        }
-
-        // --- Hadith Logic ---
-        function renderHadiths() {
-            const container = document.getElementById('hadiths-container');
-            container.innerHTML = HADITHS.map(h => `
-                <div class="bg-emerald-950/60 border border-emerald-800 rounded-2xl p-5 space-y-3">
-                    <div class="flex justify-between items-center border-b border-emerald-800/50 pb-2">
-                        <span class="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-lg">${h.category}</span>
-                    </div>
-                    <p class="text-lg text-amber-100 font-serif leading-loose text-right">${h.arabicText}</p>
-                    <div class="text-xs text-emerald-300/70">عن ${h.narrator} • ${h.source}</div>
-                    ${h.explanation ? `<div class="bg-emerald-900/60 border-r-4 border-amber-400 p-3 rounded-xl text-emerald-100 text-sm">${h.explanation}</div>` : ''}
-                </div>
-            `).join('');
-        }
-
-        // --- Adhkar Logic ---
-        function setActiveDhikrCategory(cat) {
-            state.dhkarCategory = cat;
-            document.querySelectorAll('.dhkar-cat-btn').forEach(btn => {
-                if (btn.dataset.cat === cat) {
-                    btn.className = "dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-amber-400 text-emerald-950 shadow-md";
-                } else {
-                    btn.className = "dhkar-cat-btn px-4 py-2 rounded-xl font-bold bg-emerald-950 text-emerald-200 border border-emerald-800";
-                }
-            });
-            renderAdhkar();
-        }
-
-        function renderAdhkar() {
-            const container = document.getElementById('adhkar-container');
-            const filtered = ADHKAR.filter(d => d.category === state.dhkarCategory);
-
-            container.innerHTML = filtered.map(d => {
-                const count = state.dhkarCounts[d.id] || 0;
-                const isCompleted = count >= d.countTarget;
-                return `
-                    <div class="p-5 rounded-2xl bg-emerald-950/60 border border-emerald-800 space-y-4">
-                        <p class="text-lg text-amber-100 font-serif text-right">${d.text}</p>
-                        ${d.reward ? `<p class="text-xs text-amber-300/80 bg-amber-500/10 p-2 rounded-lg">💡 ${d.reward}</p>` : ''}
-                        <div class="flex justify-between items-center pt-2 border-t border-emerald-800/50">
-                            <button onclick="resetDhikr(${d.id})" class="p-2 text-emerald-400">↺</button>
-                            <button onclick="incrementDhikr(${d.id}, ${d.countTarget})" class="px-6 py-2 rounded-xl font-bold ${isCompleted ? 'bg-emerald-800 text-emerald-300' : 'bg-amber-400 text-emerald-950'}">
-                                ${isCompleted ? 'تم الانتهاء' : count + ' / ' + d.countTarget}
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function incrementDhikr(id, target) {
-            const current = state.dhkarCounts[id] || 0;
-            if (current < target) {
-                state.dhkarCounts[id] = current + 1;
-                renderAdhkar();
-            }
-        }
-
-        function resetDhikr(id) {
-            state.dhkarCounts[id] = 0;
-            renderAdhkar();
-        }
-
-        // --- Articles Logic ---
-        function renderArticleCategories() {
-            const container = document.getElementById('article-categories');
-            container.innerHTML = ARTICLE_CATEGORIES.map(cat => `
-                <button onclick="setArticleCategory('${cat}')" class="px-3.5 py-2 rounded-xl shrink-0 font-bold transition ${state.articleCategory === cat ? 'bg-amber-400 text-emerald-950 shadow-md' : 'bg-emerald-950 text-emerald-200 border border-emerald-800'}">
-                    ${cat}
-                </button>
-            `).join('');
-        }
-
-        function setArticleCategory(cat) {
-            state.articleCategory = cat;
-            renderArticleCategories();
-            renderArticles();
-        }
-
-        function renderArticles() {
-            const container = document.getElementById('articles-container');
-            const filtered = state.articleCategory === "جميع المقالات" ? ARTICLES : ARTICLES.filter(a => a.category === state.articleCategory);
-
-            container.innerHTML = filtered.map(article => {
-                const isExpanded = state.expandedArticleId === article.id;
-                return `
-                    <div class="bg-emerald-950/90 border border-emerald-800/80 rounded-2xl p-5 space-y-4">
-                        <div class="flex justify-between items-center border-b border-emerald-800/60 pb-3">
-                            <span class="bg-amber-500/20 text-amber-300 text-xs px-3 py-1 rounded-lg border border-amber-500/30">${article.category}</span>
-                            <div class="flex items-center gap-2">
-                                <button onclick="copyArticle(${article.id})" class="p-2 text-emerald-300 text-xs flex items-center gap-1 hover:text-amber-300">
-                                    <span>${state.copiedArticleId === article.id ? '✓ تم النسخ' : 'نسخ'}</span>
-                                </button>
-                                <button onclick="toggleExpandArticle(${article.id})" class="px-3 py-1.5 bg-emerald-900 text-xs font-bold text-amber-300 rounded-xl">
-                                    ${isExpanded ? 'طي' : 'قراءة المقال'}
-                                </button>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-amber-200 font-serif">${article.title}</h4>
-                        <p class="text-sm text-emerald-200/90 bg-emerald-900/30 p-3 rounded-xl">${article.summary}</p>
-                        ${isExpanded ? `<div class="pt-3 border-t border-amber-500/20 text-amber-100 font-serif text-lg leading-loose whitespace-pre-line text-right bg-emerald-900/20 p-4 rounded-xl">${article.content}</div>` : ''}
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function toggleExpandArticle(id) {
-            state.expandedArticleId = state.expandedArticleId === id ? null : id;
-            renderArticles();
-        }
-
-        function copyArticle(id) {
-            const art = ARTICLES.find(a => a.id === id);
-            if (art) {
-                navigator.clipboard.writeText(`📖 ${art.title}\n\n${art.content}`);
-                state.copiedArticleId = id;
-                renderArticles();
-                setTimeout(() => {
-                    state.copiedArticleId = null;
-                    renderArticles();
-                }, 2000);
-            }
-        }
-
-        // Initialize application default tab
-        initQuranTextView();
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
     <!-- ads.txt: google.com, pub-2244311957196913, DIRECT, f08c47fec0942fa0 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -922,18 +307,6 @@
                             #status { margin-top: 15px; color: #28a745; font-weight: bold; display: none; }
                         </style>
                     </head>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 55775لاىىا -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="2344597852"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
                     <body>
                         <div class="main-card">
                             <div class="logo">محوّل الملفات الذكي</div>
@@ -1027,18 +400,6 @@
                             .preview-info { font-size: 12px; color: #7f8c8d; margin-top: 5px; }
                         </style>
                     </head>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<!-- 55775لاىىا -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="2344597852"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
                     <body>
                         <div class="resize-card">
                             <h2>📐 مهندس مقاسات الصور</h2>
@@ -1207,33 +568,13 @@
             <div class="privacy-box" dir="rtl">
                 <h2>سياسة الخصوصية لتطبيق وموقع "صحيح"</h2>
                 <p>تعتبر خصوصية زوارنا ومستخدمينا ذات أهمية بالغة بالنسبة لنا. توضح هذه الوثيقة أنواع المعلومات الشخصية التي يتم استلامها وجمعها وكيفية استخدامها.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
                 <h3>1. جمع البيانات</h3>
                 <p>تطبيق "صحيح" هو تطبيق WebView يعرض محتوى مدونتنا. نحن لا نطلب منك تسجيل حساب، ولا نقوم بجمع أي معلومات شخصية مثل الاسم أو رقم الهاتف أو الموقع الجغرافي.</p>
 
                 <h3>2. ملفات تعريف الارتباط (Cookies)</h3>
                 <p>مثل معظم المواقع، يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليل حركة المرور عبر Google Analytics.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
                 <h3>3. الإعلانات</h3>
                 <p>قد نستخدم شركات إعلان طرف ثالث (مثل Google AdSense) لعرض الإعلانات عند زيارتك لموقعنا. قد تستخدم هذه الشركات معلومات حول زياراتك لتوفير إعلانات حول السلع والخدمات التي تهمك.</p>
 
@@ -1259,30 +600,10 @@
             <h3 style="color: var(--accent-gold); border-bottom: 1px solid #334155; padding-bottom: 8px;">1. تحديد الكم وتقسيم السورة بحسب قدرة الطالب</h3>
             <p>
                 تتمثّل هذه الطريقة بتحديد الكَمّ؛ أي أن تُقسَّم السورة الواحدة إلى أكثر من قسم -حسب قدرة الحافظ على الحِفظ-؛ فمثلاً يحفظ سورة الكهف على أربعة مراحل، أو خمسة -حسب استطاعته-، وتقسيم الحافظ للسورة المُراد حِفظها لا بُدّ أن يكون وِفقاً للآيات المُترابطة في المعنى؛ فلا مانع من قراءة التفسير المُيسّر للآيات قبل الشروع في حِفظها لزيادة التمكُّن، كما يحرص الحافظ على تكرير المقطع الواحد خمس مرّات فأكثر حتى يترسَّخ في ذهنه دون تفلُّت.
-            </p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </p>
             <p>
                 وعند الانتهاء من حِفظ المقطع الأوّل يبدأ بحِفظ المقطع الثاني من آخر آيةٍ في المقطع الأوّل؛ إذ يساعده ذلك على الرَّبط بينهما، مع ضرورة تكرار ما تمّ حِفظه بتركيز، ورَبط المقاطع جميعها ببعضها. وعلى الرغم من صعوبة رَبط السورة دفعة واحدة لاختلاف الأوقات والظروف التي تمّ حِفظها فيها، إلّا أنّه من الممكن حلّ هذه المشكلة وتلافيها بكثرة تلاوة الحافظ للسورة على دفعة واحدة في وقت واحد، ومع الوقت، فإنّه سيتمكّن من تسميع السورة دفعة واحدة. وتُعَدّ هذه الطريقة من الطرق المُنتشرة بين الحُفّاظ والمُقرِئين؛ لأنّ الرسول ﷺ كان يأخذ القرآن من جبريل خمساً خمساً.
-            </p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </p>
             <p>
                 وكان الصحابة رضي الله عنهم لا يحفظون الجديد إلّا بعد إتقانهم الحِفظَ القديم، وعملهم بما جاء فيه. وتساعد هذه الطريقة على ترسيخ الحفظ، كما تُعد من الطرق السهلة في تحفيظ القرآن للأطفال ولِمَن تنقصهم الخبرة، فضلاً عن مساعدة الحافظ على التفريق بين الآيات المُتشابهة في التراكيب والألفاظ. علماً أنّه لا بدّ من وضع خطّة زمنيّة للحِفظ حتى يتيسّر للحافظ تقسيم السورة، وحِفظها وِفق جدول يتناسب مع طاقته.
             </p>
@@ -1295,17 +616,7 @@
             </p>
             <p>
                 ومن ثمّ يكون الجهد على الحافظ بترديد ما حَفِظه من الآيات طوال يومه حتى يتمكّن من حِفظها، مع مُداومته على مراجعة كلّ ما حَفِظه في الأيّام التالية وتثبيته بكثرة قراءته بحيث يقرأ كلّ يوم منه وِرْداً. وخير الأوقات وأفضلها للحِفظ والمراجعة ما يكون وقت الفجر؛ سواء كان قبل الفجر أو بَعده، وينبغي على الحافظ أن يكون من الصابرين؛ فالصبر هو المُعين على المُداومة والاستمرار.
-            </p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </p>
 
             <hr style="border: 0; border-top: 1px solid #334155; margin: 25px 0;">
 
@@ -1415,17 +726,7 @@
             <p>
                 هذا من البدع التي لم يشرعها الله عند جمهور أهل العلم، وإنما المشروع التوسل إلى الله  بأسمائه وصفاته، وتوحيده، ومحبته، والإيمان به، وبالأعمال الصالحات، كما قال سبحانه: ﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَى فَادْعُوهُ بِهَا﴾ [الأعراف:180] ولم يقل سبحانه: فادعوه بجاه محمد، أو بجاه الأنبياء أو بجاه الأولياء، أو بحق بيته العتيق، أو نحو ذلك، وإنما قال سبحانه: ﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَى فَادْعُوهُ بِهَا﴾ أي بأسمائه هو وصفاته.
             </p>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            
             <p>
                 ويدعى أيضًا بتوحيده كما جاءت الأحاديث بذلك، ومنها الحديث:
             </p>
@@ -1495,17 +796,7 @@
             <p style="color: #ef4444; font-weight: bold; background: rgba(239, 68, 68, 0.1); padding: 12px; border-radius: 6px; border-right: 3px solid #ef4444;">
                 أما السجود على اليد كونه يسجد على اليد يضع جبهته على اليد فهذا السجود محرم، ويسميه بعض أهل العلم السجدة الصغرى، هذا لا يجوز، كونه يضع جبهته على يد إنسان سجوداً عليها لا يجوز قطيعةً.
             </p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
             <p>
                 لكن تقبيلها بفمه إذا كان غير معتاد إنما نادر أو قليل فلا بأس؛ لأنه ورد عن النبي صلى الله عليه وسلم أنه قبّل بعض الصحابة يده وقدمه، وفعله بعض الصحابة فالأمر في هذا سهل إذا كان قليلاً، أما اعتياده دائماً فيكره أو يحرم.
             </p>
@@ -1529,17 +820,7 @@
             <p>
                 وأما الانحناء فهو لا يجوز، كونه ينحني كالراكع هذا لا يجوز لأن الركوع عبادة ولا يجوز أن ينحني، أما إذا كان انحناؤه ما هو من أجل التعظيم، انحنى له لأنه قصير والمسلِّم طويل فانحنى له حتى يصافحه، لا لأجل التعظيم بل لأجل أن المسلَّم عليه قصير، أو مقعد، أو جالس فلا بأس بهذا. أما أنه ينحني لتعظيمه فهذا لا يجوز، ويخشى أن يكون من الشرك إذا قصد تعظيمه بذلك.
             </p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
             <div class="hadith-quote">
                 وقد روي عن النبي ﷺ أنه سئل قيل: يا رسول الله! ألقى الرجل فهل أنحني له؟ قال: «لا»، قال: فهل ألتزمه وأقبله؟ قال: «لا»، قال: فهل آخذ بيده وأصافحه؟ قال: «نعم». وإن كان في سنده ضعف.. الحديث ضعيف الإسناد، لكن ينبغي العمل به؛ لأن الشواهد الكثيرة تشهد له في المعنى، والأدلة كذلك تدل على أن الانحناء والركوع للناس لا يجوز.
             </div>
@@ -1573,32 +854,12 @@
         <div class="article-content">
             <p>
                 التأويل في الصفات منكر لا يجوز، بل يجب إمرار الصفات كما جاءت على ظاهرها اللائق بالله جل وعلا، بغير تحريف ولا تعطيل، ولا تكييف ولا تمثيل، فالله جل جلاله أخبرنا عن صفاته وعن أسمائه، وقال: ﴿لَيْسَ كَمِثْلِهِ شَيْءٌ وَهُوَ السَّمِيعُ الْبَصِيرُ﴾ [الشورى:11] فعلينا أن نمرها كما جاءت، وهكذا قال أهل السنة والجماعة: <em>أمروها كما جاءت بلا كيف</em>، أي أمروها كما جاءت بغير تحريف لها ولا تأويل ولا تكييف، بل يقر بها كما جاءت على ظاهرها وعلى الوجه الذي يليق بالله جل وعلا، ومن دون تكييف ولا تمثيل.
-            </p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </p>
             
             <div class="hadith-quote">
                 فيقال في قوله تعالى: ﴿الرَّحْمَنُ عَلَى الْعَرْشِ اسْتَوَى﴾ [طه:5] وأمثالها من الآيات: إنه استواء يليق بجلال الله وعظمته، لا يشبه استواء المخلوقين، ومعناه عند أهل الحق: العلو والارتفاع.
             </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
             <p>
                 وهكذا يقال في العين، والسمع والبصر واليد والقدم، وغير ذلك من الصفات الثابتة لله جل وعلا، والواردة في النصوص الشرعية، وكلها صفات تليق بالله سبحانه، لا يشابهه فيها الخلق جل وعلا، وعلى هذا سار أهل العلم من أصحاب النبي ﷺ ومن بعدهم من أئمة السنة، كالأوزاعي والثوري ومالك وأبي حنيفة وأحمد وإسحاق وغيرهم من أئمة المسلمين -رحمهم الله جميعا.
             </p>
@@ -1614,17 +875,7 @@
             <p>
                 وهكذا قوله سبحانه للنبي ﷺ: ﴿وَاصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا﴾ [الطور:48] أي أنك تحت كلاءتنا وعنايتنا وحفظنا. وليس هذا كله من التأويل، بل ذلك من التفسير المعروف في لغة العرب وأساليبها.
             </p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
             <div class="hadith-quote">
                 ومن ذلك الحديث القدسي، وهو قول الله سبحانه: «من تقرب إلي شبرا تقربت إليه ذراعا، ومن تقرب إلي ذراعا تقربت إليه باعا، ومن أتاني يمشي أتيته هرولة» يمر كما جاء عن الله سبحانه وتعالى، من غير تحريف ولا تكييف ولا تمثيل، بل على الوجه الذي أراده الله سبحانه وتعالى، وهكذا نزوله سبحانه في آخر الليل.
             </div>
@@ -1679,17 +930,7 @@
             </p>
             <div class="hadith-quote">
                 «اللهم صل على محمد وعلى آل محمد، كما صليت على إبراهيم وعلى آل إبراهيم إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد، كما باركت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد»
-            </div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </div>
             <p>
                 هذه الصلاة هي الصلاة المعروفة الثابتة عن النبي ﷺ ولها أنواع، وبأي نوع منها صلى فقد فعل المشروع إذا كان من الأنواع الثابتة عنه ﷺ.
             </p>
@@ -1719,17 +960,7 @@
             </p>
             <div class="hadith-quote">
                 وقد صح عن رسول الله ﷺ أنه قال: «ما من عبد يدعو الله بدعوة ليس فيها إثم ولا قطيعة رحم إلا أعطاه الله بها إحدى ثلاث: إما أن تعجل له دعوته في الدنيا، وإما أن تدخر له في الآخرة، وإما أن يصرف عنه من الشر مثل ذلك»، قالوا يا رسول الله، إذا نكثر قال: «الله أكثر».
-            </div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            </div>
             <p>
                 وبذلك يعلم المؤمن والمؤمنة أن إجابته قد تؤجل إلى الآخرة لأسباب اقتضتها حكمة الله سبحانه، وقد يصرف عنه بأسباب الدعاء شر كثير بدلا من أن يعطى طلبه، والله  هو الحكيم العليم في أفعاله وأقواله وشرعه وقدره، كما قال عز وجل: ﴿إِنَّ رَبَّكَ عَلِيمٌ حَكِيمٌ﴾ [يوسف: 6]، والله ولي التوفيق.
             </p>
@@ -2049,15 +1280,5 @@
         window.onload = loadQuran;
     </script>
 </body>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-2244311957196913"
-     data-ad-slot="7546999249"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </html>
+
