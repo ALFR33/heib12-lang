@@ -1,6 +1,178 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المكتبة الإسلامية الشاملة</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- React & ReactDOM (v18) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Compiler للـ JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- الخطوط العربية (Cairo & Amiri) -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .font-serif { font-family: 'Amiri', serif; }
+    .custom-scrollbar::-webkit-scrollbar { height: 6px; width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #059669; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-emerald-950 text-emerald-100 min-h-screen pb-24">
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // --- البيانات والمقالات والقراء ---
+    const RECITERS = [
+      { id: "abkar", name: "الشيخ إدريس أبكر", subtext: "رواية حفص عن عاصم", url: "https://download.quranicaudio.com/quran/idrees_abkar/" },
+      { id: "sds", name: "الشيخ عبد الرحمن السديس", subtext: "إمام المسجد الحرام", url: "https://download.quranicaudio.com/quran/abdul_rahman_al_sudais/" },
+      {name: "الشيخ ماهر المعيقلي", subtext: "إمام المسجد الحرام", url: "https://download.quranicaudio.com/quran/maher_al_muaiqly/" },
+      { id: "afs", name: "الشيخ مشاري العفاسي", subtext: "تلاوة عذبة خاشعة", url: "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afasy/" }
+    ];
+
+    const SURAHS = [
+      { id: 1, name: "الفاتحة", type: "مكية", ayahs: 7 },
+      { id: 2, name: "البقرة", type: "مدنية", ayahs: 286 },
+      { id: 3, name: "آل عمران", type: "مدنية", ayahs: 200 },
+      { id: 36, name: "يس", type: "مكية", ayahs: 83 },
+      { id: 55, name: "الرحمن", type: "مدنية", ayahs: 78 },
+      { id: 67, name: "الملك", type: "مكية", ayahs: 30 },
+      { id: 112, name: "الإخلاص", type: "مكية", ayahs: 4 },
+      { id: 113,type: "مكية", ayahs: 5 },114, name: "الناس", type: "مكية", ayahs: 6 }
+    ];
+
+    const ARTICLES = [
+      { id: 1, category: "العقيدة والتوحيد", title: "شروط قبول الدعاء وآدابه", content: "من أعظم النعم الدعاء. شروطه: الإخلاص، اليقين بالإجابة، وطهارة المأكل." },
+      { id: 2, category: "الفقه والأحكام", title: "المنهج النبوي في سعة الرزق وقضاء الدين", content: "من أسباب سعة الرزق: الاستغفار، صلة الرحم، وتقوى الله تعالى." },
+      { id: 4, category: "الأخلاق والرقائق", title: "مكانة الصلاة والخشوع فيها", content: "الصلاة عماد الدين، وأول ما يحاسب عليه العبد يوم القيامة، وفيها طمأنينة للقلوب." },
+      { id: 16, category: "السيرة النبوية", title: "مولد النبي ﷺ ونشأته المباركة", content: "ولد النبي ﷺ في عام الفيل، وعُرف في قومه بالصادق الأمين لشدة أمانته وصدقه." },
+      { id: 17, category: "السيرة النبوية", title: "الهجرة النبوية المباركة: دروس وعبر", content: "جمعت الهجرة بين التخطيط المحكم والتوكل الصادق على الله تعالى." }
+    ];
+
+    function App() {
+      const [tab, setTab] = useState("articles");
+      const [reciter, setReciter] = useState(RECITERS[0]);
+      const [surah, setSurah] = useState(SURAHS[0]);
+      const [isPlaying, setIsPlaying] = useState(false);
+      const audioRef = useRef(null);
+
+      const getAudioUrl = (surahId) => {
+        const padded = String(surahId).padStart(3, "0");
+        return `${reciter.url}${padded}.mp3`;
+      };
+
+      const togglePlay = () => {
+        if (!audioRef.current) return;
+        if (isPlaying) {
+          audioRef.current.pause();
+          setIsPlaying(false);
+        } else {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      };
+
+      return (
+        <div className="max-w-5xl mx-auto p-4 md:p-6 space-y-6">
+          {/* الهيدر */}
+          <header className="text-center space-y-3 bg-emerald-900/40 p-6 rounded-3xl border border-amber-500/30 shadow-2xl">
+            <span className="text-xs text-amber-300 font-serif border border-amber-500/30 px-3 py-1 rounded-full">
+              بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
+            </span>
+            <h1 className="text-3xl md:text-5xl font-extrabold font-serif text-amber-300">
+              المكتبة الإسلامية الشاملة
+            </h1>
+            <p className="text-sm text-emerald-200/80">المصحف الشريف، تلاوات القراء، الأحاديث النبوية، الأذكار، والمقالات الشرعية</p>
+
+            {/* أزرار التنقل */}
+            <div className="flex flex-wrap justify-center gap-2 pt-3">
+              <button onClick={() => setTab("articles")} className={`px-4 py-2 rounded-xl text-sm font-bold ${tab === "articles" ? "bg-amber-400 text-emerald-950" : "bg-emerald-900/60 text-emerald-200"}`}>📚 المقالات والبحوث</button>
+              <button onClick={() => setTab("quran")} className={`px-4 py-2 rounded-xl text-sm font-bold ${tab === "quran" ? "bg-amber-400 text-emerald-950" : "bg-emerald-900/60 text-emerald-200"}`}>🎙️ القراء والتلاوة</button>
+            </div>
+          </header>
+
+          {/* قسم المقالات */}
+          {tab === "articles" && (
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold font-serif text-amber-300">المقالات والبحوث الإسلامية</h2>
+              <div className="grid gap-4">
+                {ARTICLES.map((art) => (
+                  <div key={art.id} className="bg-emerald-900/50 border border-emerald-800 p-5 rounded-2xl space-y-2">
+                    <span className="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-1 rounded-lg border border-amber-500/30">{art.category}</span>
+                    <h3 className="text-xl font-bold font-serif text-amber-200">{art.title}</h3>
+                    <p className="text-sm text-emerald-100 leading-relaxed">{art.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* قسم القراء والتلاوة */}
+          {tab === "quran" && (
+            <div className="space-y-6">
+              <div className="bg-emerald-900/40 p-4 rounded-2xl border border-emerald-700">
+                <label className="text-sm font-bold text-amber-300 block mb-2">اختر القارئ المفضل:</label>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                  {RECITERS.map((r) => (
+                    <button key={r.id} onClick={() => setReciter(r)} className={`p-3 rounded-xl text-right text-xs border ${reciter.id === r.id ? "bg-amber-400 text-emerald-950 font-bold" : "bg-emerald-950 text-emerald-200"}`}>
+                      <div className="font-bold">{r.name}</div>
+                      <div className="opacity-80">{r.subtext}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {SURAHS.map((s) => (
+                  <div key={s.id} className="bg-emerald-900/50 p-4 rounded-2xl border border-emerald-800 flex justify-between items-center">
+                    <div>
+                      <h4 className="font-bold text-amber-200 font-serif">سورة {s.name}</h4>
+                      <p className="text-xs text-emerald-300">{s.type} • {s.ayahs} آية</p>
+                    </div>
+                    <button onClick={() => { setSurah(s); setIsPlaying(true); if (audioRef.current) { audioRef.current.src = getAudioUrl(s.id); audioRef.current.play(); } }} className="px-3 py-1.5 bg-amber-400 text-emerald-950 font-bold rounded-lg text-xs">
+                      تشغيل
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* مشغل الصوت الثابت */}
+          <div className="fixed bottom-0 left-0 right-0 bg-emerald-950/95 border-t border-amber-500/40 p-4 shadow-2xl flex items-center justify-between max-w-5xl mx-auto rounded-t-2xl">
+            <div>
+              <h4 className="font-bold text-amber-300 text-sm">سورة {surah.name}</h4>
+              <p className="text-xs text-emerald-300">{reciter.name}</p>
+            </div>
+            <button onClick={togglePlay} className="px-6 py-2 bg-amber-400 text-emerald-950 font-bold rounded-xl text-sm">
+              {isPlaying ? "إيقاف مؤقت" : "تشغيل التلاوة"}
+            </button>
+            <audio ref={audioRef} src={getAudioUrl(surah.id)} onEnded={() => setIsPlaying(false)} />
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
     <!-- ads.txt: google.com, pub-2244311957196913, DIRECT, f08c47fec0942fa0 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
